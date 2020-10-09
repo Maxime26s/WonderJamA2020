@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3540970854887084820}
   - component: {fileID: -1389012596295783958}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: Node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95,4 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8116943a51b70c44b568395b68ac2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nodeType: 0
+  sprites:
+  - {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   gameObjects: []

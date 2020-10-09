@@ -19,13 +19,13 @@ public class NodeManager : MonoBehaviour
     bool onCd = false;
 
     bool end = false;
-    /*
+    
     private void OnEnable()
     {
         //if (end)
         //CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE
     }
-    */
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +33,7 @@ public class NodeManager : MonoBehaviour
             nodeAmount++;
         offset = (nodeDistance.x * (nodeAmount - 1)) / 2;
         MapMaker();
-        player.transform.position = start.transform.position;
+        Instantiate(player, start.transform.position, Quaternion.identity, transform);
 
         currentNode = start;
         currentIndex = 0;
@@ -67,6 +67,7 @@ public class NodeManager : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Space))
             {
+                //currentNode.GetComponent<Node>().SelectNode();
                 NextLevel();
                 //START LEVEL START LEVEL START LEVEL START LEVEL START LEVEL START LEVEL 
                 gameObject.SetActive(false);
@@ -97,7 +98,7 @@ public class NodeManager : MonoBehaviour
         {
             if (i % 2 == 0) {
                 nextType = 1;
-                nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, 0), Quaternion.identity));
+                nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, 0), Quaternion.identity, transform));
                 if (i == 0)
                     start = nextNode[0];
             }
@@ -107,13 +108,13 @@ public class NodeManager : MonoBehaviour
                 switch (nextType)
                 {
                     case 2:
-                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, nodeDistance.y/2), Quaternion.identity));
-                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, -nodeDistance.y/2), Quaternion.identity));
+                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, nodeDistance.y/2), Quaternion.identity, transform));
+                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, -nodeDistance.y/2), Quaternion.identity, transform));
                         break;
                     case 3:
-                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, nodeDistance.y), Quaternion.identity));
-                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, 0), Quaternion.identity));
-                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, -nodeDistance.y), Quaternion.identity));
+                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, nodeDistance.y), Quaternion.identity, transform));
+                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, 0), Quaternion.identity, transform));
+                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, -nodeDistance.y), Quaternion.identity, transform));
                         break;
                 }
             }
