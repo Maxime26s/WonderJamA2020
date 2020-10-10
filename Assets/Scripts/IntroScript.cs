@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class IntroScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class IntroScript : MonoBehaviour
     public GameObject xelor;
     public GameObject rolex;
     public GameObject nuke;
+    public List<GameObject> eyes;
     public List<AudioClip> sounds;
 
     // Start is called before the first frame update
@@ -95,6 +97,14 @@ public class IntroScript : MonoBehaviour
         {
             earth.transform.position = new Vector3(0, i, 0);
             yield return null;
+        }
+
+        for(float i = 0; i <= 100f; i += 0.01f) 
+        {
+            foreach(GameObject eye in eyes)
+            {
+                eye.GetComponent<Light2D>().intensity = i;
+            }
         }
     }
 
