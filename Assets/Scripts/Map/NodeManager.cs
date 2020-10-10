@@ -28,7 +28,7 @@ public class NodeManager : MonoBehaviour
     {
         timer.RefreshText();
         timer.enabled = false;
-        timer.timer.color = new Color(255, 0, 0, 1);
+        timer.timer.color = new Color32(152, 221, 227, 255);
         //if (end)
         //CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE
     }
@@ -36,7 +36,7 @@ public class NodeManager : MonoBehaviour
     private void OnDisable()
     {
         timer.enabled = true;
-
+        timer.timer.color = new Color32(255, 255, 255, 255);
     }
 
     // Start is called before the first frame update
