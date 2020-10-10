@@ -58,14 +58,16 @@ public class NodeManager : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
+            /*
             IEnumerator SwitchTarget(float cdSelect)
             {
                 onCd = true;
                 yield return new WaitForSeconds(cdSelect);
                 onCd = false;
             }
+            */
             float y = Input.GetAxisRaw("Vertical");
-            if (y != 0)
+            if (Mathf.Abs(y) > 0.2)
             {
                 if (y > 0 && currentIndex > 0 && !onCd)
                 {
