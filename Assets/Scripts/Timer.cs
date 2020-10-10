@@ -41,6 +41,12 @@ public class Timer : MonoBehaviour
         if (minutes > 0)
             timer.text = string.Format("{0:#0}:{1:00}", minutes, seconds);
         else
+        {
+            if (seconds < 10)
+                timer.color = new Color32(255, 54, 74, 255);
+            else
+                timer.color = new Color32(240, 139, 31, 255);
             timer.text = string.Format("{0:#0}:{1:00}", seconds, (int)miliseconds);
+        }
     }
 }
