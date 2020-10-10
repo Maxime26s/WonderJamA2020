@@ -15,7 +15,7 @@ public class NodeManager : MonoBehaviour
     int currentIndex;
     List<GameObject> choices = new List<GameObject>();
 
-    public float cdSelect = 0.3f;
+    public float cdSelect;
     bool onCd = false;
 
     bool end = false;
@@ -33,7 +33,7 @@ public class NodeManager : MonoBehaviour
             nodeAmount++;
         offset = (nodeDistance.x * (nodeAmount - 1)) / 2;
         MapMaker();
-        Instantiate(player, start.transform.position, Quaternion.identity, transform);
+        player = Instantiate(player, start.transform.position, Quaternion.identity, transform);
 
         currentNode = start;
         currentIndex = 0;
@@ -70,15 +70,17 @@ public class NodeManager : MonoBehaviour
                 //currentNode.GetComponent<Node>().SelectNode();
                 NextLevel();
                 //START LEVEL START LEVEL START LEVEL START LEVEL START LEVEL START LEVEL 
-                gameObject.SetActive(false);
+                //gameObject.SetActive(false);
             }
         }
     }
 
     void NextLevel()
     {
+        Debug.Log("lol1");
         if(currentNode.GetComponent<Node>().gameObjects.Count != 0)
         {
+            Debug.Log("lol2");
             choices = currentNode.GetComponent<Node>().gameObjects;
             currentNode = choices[0];
             currentIndex = 0;
@@ -100,7 +102,18 @@ public class NodeManager : MonoBehaviour
                 nextType = 1;
                 nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, 0), Quaternion.identity, transform));
                 if (i == 0)
+                {
                     start = nextNode[0];
+                }
+                else if (i == nodeAmount - 1)
+                {
+                    if(GameManager.Instance.dungeon == 4)
+                        nextNode[0].GetComponent<Node>().RefreshType(GameManager.NodeType.Boss);
+                    else
+                        nextNode[0].GetComponent<Node>().RefreshType(GameManager.NodeType.Miniboss);
+                }
+                else
+                    nextNode[0].GetComponent<Node>().RefreshType(GameManager.NodeType.Enemy);
             }
             else
             {
