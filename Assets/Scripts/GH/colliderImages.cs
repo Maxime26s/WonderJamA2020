@@ -6,6 +6,8 @@ public class colliderImages : MonoBehaviour
     public int speed;
     public bool actif;
     public int nbTouches;
+    public int multiplicateurMax;
+    public double secParTouche;
     
 
     void Update()
@@ -17,7 +19,7 @@ public class colliderImages : MonoBehaviour
 
         if (finalsScore.compteurPassages == nbTouches)
         {
-            finalsScore.timeAdded = (2 * Convert.ToSingle(finalsScore.compteur) / Convert.ToSingle(nbTouches))*Convert.ToSingle(finalsScore.compteur);
+            finalsScore.timeAdded = (multiplicateurMax * Convert.ToSingle(finalsScore.compteur) / Convert.ToSingle(nbTouches)) * secParTouche * Convert.ToSingle(finalsScore.compteur);
             Debug.Log(finalsScore.compteur);
             Debug.Log(nbTouches);
             Debug.Log(finalsScore.timeAdded);

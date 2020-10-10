@@ -4351,6 +4351,8 @@ MonoBehaviour:
   speed: 14
   actif: 1
   nbTouches: 40
+  multiplicateurMax: 2
+  secParTouche: 0.2
 --- !u!1 &1620582674
 GameObject:
   m_ObjectHideFlags: 0
