@@ -154,14 +154,14 @@ public class DuelManager : MonoBehaviour
         //Dpad haut
         if (Input.GetAxis("Vertical2") <= -0.7f)
         {
-            UpdateHeader(inventory.spells[0]);
+            UpdateHeader(inventory.spells[2]);
         }
 
         //Dpad bas
         if (Input.GetAxis("Vertical2") >= 0.7f)
         {
             if (inventory.spellCount >= 3)
-                UpdateHeader(inventory.spells[2]);
+                UpdateHeader(inventory.spells[0]);
         }
 
         doublePress = false;
