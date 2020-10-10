@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     public List<GameObject> cards = new List<GameObject>();
     public GameObject boss;
     public int dungeon = 0;
+    public Animator animator;
 
     public enum NodeType
     {
@@ -47,6 +48,17 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void SceneTransition()
+    {
+        IEnumerator animationPlay()
+        {
+            animator.SetBool("Play", true);
+            yield return new WaitForSeconds(1f);
+            animator.SetBool("Play", false);
+        }
+        StartCoroutine(animationPlay());
     }
 
     public void InstantiateTreaure()

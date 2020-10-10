@@ -66,7 +66,7 @@ public class NodeManager : MonoBehaviour
                 onCd = false;
             }
             */
-            float y = Input.GetAxisRaw("Vertical");
+            float y = -Input.GetAxisRaw("Vertical");
             if (Mathf.Abs(y) > 0.2)
             {
                 if (y > 0 && currentIndex > 0 && !onCd)
@@ -95,6 +95,7 @@ public class NodeManager : MonoBehaviour
             {
                 //currentNode.GetComponent<Node>().SelectNode();
                 NextLevel();
+                GameManager.Instance.SceneTransition();
                 //START LEVEL START LEVEL START LEVEL START LEVEL START LEVEL START LEVEL 
                 //gameObject.SetActive(false);
             }
