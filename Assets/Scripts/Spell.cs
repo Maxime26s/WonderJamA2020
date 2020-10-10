@@ -10,6 +10,7 @@ public class Spell : ScriptableObject
     public string name;
     public Type type;
     public Sprite sprite;
+    public Material material;
     public float damage;
     public List<BoutonManette> listeInputs = new List<BoutonManette>();
 }
