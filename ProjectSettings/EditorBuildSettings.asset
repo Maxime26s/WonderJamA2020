@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Instruction.unity
     guid: e667b385d83b64443af820958d1e7446
+  - enabled: 1
+    path: Assets/Scenes/SpamChest.unity
+    guid: 0766e666b6e638b42838a27f9e016d72
+  - enabled: 1
+    path: Assets/Scenes/Labyrinthe1.unity
+    guid: f5c8a09e2b02fb2439e7b5d972d45cc5
   m_configObjects: {}
