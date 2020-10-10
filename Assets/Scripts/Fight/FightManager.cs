@@ -16,7 +16,7 @@ public class FightManager : MonoBehaviour
         IEnumerator Wait()
         {
             yield return new WaitForSeconds(0.15f);
-            Init(GameManager.Instance.map.GetComponent<NodeManager>().currentNode.GetComponent<Node>().nodeType);
+            Init(GameManager.Instance.mapManager.currentNode.GetComponent<Node>().nodeType);
         }
         StartCoroutine(Wait());
     }
