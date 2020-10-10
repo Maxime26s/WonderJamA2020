@@ -112,14 +112,14 @@ public class DuelManager : MonoBehaviour
             }
 
             //joystick bas
-            if (Input.GetAxisRaw("Vertical") == -1)
+            if (Input.GetAxisRaw("Vertical") == 1)
             {
                 OnBoutonDown("UP");
                 buttonPressedName = "";
             }
 
             //joystick haut
-            if (Input.GetAxisRaw("Vertical") == 1)
+            if (Input.GetAxisRaw("Vertical") == -1)
             {
                 OnBoutonDown("DOWN");
                 buttonPressedName = "";

@@ -12,6 +12,7 @@ public class SpamMiniGame : MonoBehaviour
     public Sprite imageA;
     public Sprite imageAPushed;
     private bool waiting=false;
+    public bool ok = false;
     private void Start()
     {
         n = Random.Range(20, 45);
@@ -21,7 +22,7 @@ public class SpamMiniGame : MonoBehaviour
     public void Update()
     {
         
-         if (Input.GetButtonDown("ButtonA"))
+         if (Input.GetButtonDown("A"))
         {
             image.sprite = imageAPushed;
             if (n > 0)
@@ -30,7 +31,7 @@ public class SpamMiniGame : MonoBehaviour
                 text.text = "Appuyez " + n + " fois sur le boutton A pour ouvrir le coffre.";
             }
         }
-        if (Input.GetButtonUp("ButtonA"))
+        if (Input.GetButtonUp("A"))
         {
             image.sprite = imageA;
         }
@@ -38,9 +39,21 @@ public class SpamMiniGame : MonoBehaviour
         {
             //chest open
             text.text = "GG";
+            StartCoroutine(WaitAndPrint());
+            if (ok)
+            {
+                Application.LoadLevel(2);
+            }
         }
     }
-   
-        
+    private IEnumerator WaitAndPrint()
+    {
+        Color r = image.GetComponent<SpriteRenderer>().color;
+        r.a = 0f;
+        image.GetComponent<SpriteRenderer>().color = r;
+        yield return new WaitForSeconds(5f);
+        ok = true;
+
+    }
 
 }

@@ -44,7 +44,7 @@ public class SpamCookie : MonoBehaviour
             miliseconds -= Time.deltaTime * 100;
             timer.text = string.Format("{0}:{1}", seconds, (int)miliseconds);
 
-            if (Input.GetButtonDown("ButtonA"))
+            if (Input.GetButtonDown("A"))
             {
                 sprite.sprite = buttonAPushed;
                 n++;
@@ -59,7 +59,7 @@ public class SpamCookie : MonoBehaviour
                 }
 
             }
-            if (Input.GetButtonUp("ButtonA"))
+            if (Input.GetButtonUp("A"))
             {
                 sprite.sprite = buttonA;
             }
@@ -86,7 +86,7 @@ public class SpamCookie : MonoBehaviour
         ok = true;
         if (good)
         {
-          Application.LoadLevel(0);
+          Application.LoadLevel(2);
         } 
     }
     IEnumerator FadeIn()
