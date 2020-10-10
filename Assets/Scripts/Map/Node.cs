@@ -9,9 +9,9 @@ public class Node : MonoBehaviour
     int lastNodeType;
     public List<GameObject> gameObjects = new List<GameObject>();
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        nodeType = (GameManager.NodeType)Random.Range(0, sprites.Count);
+        nodeType = (GameManager.NodeType)Random.Range(0, sprites.Count-4);
         GetComponent<SpriteRenderer>().sprite = sprites[(int)nodeType];
     }
 
@@ -25,6 +25,9 @@ public class Node : MonoBehaviour
     {
         switch (nodeType)
         {
+            case GameManager.NodeType.Time:
+                GameManager.Instance.InstantiateTime();
+                break;
             case GameManager.NodeType.Treasure:
                 GameManager.Instance.InstantiateTreaure();
                 break;
@@ -45,4 +48,9 @@ public class Node : MonoBehaviour
                 break;
         }
     }
+
+    public void RefreshType(GameManager.NodeType newType)
+    {
+        nodeType = newType;
+        GetComponent<SpriteRenderer>().sprite = sprites[(int)nodeType];    }
 }

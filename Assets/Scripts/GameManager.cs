@@ -23,15 +23,18 @@ public class GameManager : MonoBehaviour
     public List<GameObject> traps = new List<GameObject>();
     public List<GameObject> cards = new List<GameObject>();
     public GameObject boss;
+    public int dungeon = 0;
 
     public enum NodeType
     {
-        Enemy,
         Treasure,
         Trap,
         Card,
+        Time,
+        Enemy,
         Miniboss,
-        Boss
+        Boss,
+        Start
     }
 
     // Start is called before the first frame update
@@ -62,6 +65,11 @@ public class GameManager : MonoBehaviour
     }
 
     public void InstantiateEnemy()
+    {
+        //Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity);
+    }
+
+    public void InstantiateTime()
     {
         //Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity);
     }

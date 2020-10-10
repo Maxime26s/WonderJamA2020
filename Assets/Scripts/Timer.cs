@@ -9,29 +9,38 @@ public class Timer : MonoBehaviour
     public float minutes = 5;
     public float seconds = 0;
     public float miliseconds = 0;
+    public bool enabled = false;
 
     void Update()
     {
-        if (miliseconds <= 0)
+        if (enabled)
         {
-            if (seconds <= 0)
+            if (miliseconds <= 0)
             {
-                minutes--;
-                seconds = 59;
-            }
-            else if (seconds >= 0)
-            {
-                seconds--;
+                if (seconds <= 0)
+                {
+                    minutes--;
+                    seconds = 59;
+                }
+                else if (seconds >= 0)
+                {
+                    seconds--;
+                }
+
+                miliseconds = 100;
             }
 
-            miliseconds = 100;
+            miliseconds -= Time.deltaTime * 100;
+
+            RefreshText();
         }
+    }
 
-        miliseconds -= Time.deltaTime * 100;
-
-        if(minutes>0)
-            timer.text = string.Format("{0}:{1}", minutes, seconds);
+    public void RefreshText()
+    {
+        if (minutes > 0)
+            timer.text = string.Format("{0:#0}:{1:00}", minutes, seconds);
         else
-            timer.text = string.Format("{0}:{1}", seconds, (int)miliseconds);
+            timer.text = string.Format("{0:#0}:{1:00}", seconds, (int)miliseconds);
     }
 }
