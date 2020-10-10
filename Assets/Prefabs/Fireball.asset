@@ -15,6 +15,7 @@ MonoBehaviour:
   name: fireball
   type: 1
   sprite: {fileID: 21300000, guid: 68a5b13b0cffc834ba0f9e2fbb11d312, type: 3}
+  material: {fileID: 2100000, guid: 7834f73b060064140b47edf65fb5ad48, type: 2}
   damage: 3
   listeInputs:
   - {fileID: 11400000, guid: 0e288f91361a7674d8cc6ec441fecd10, type: 2}
