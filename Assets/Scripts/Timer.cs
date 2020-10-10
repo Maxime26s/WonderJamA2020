@@ -49,4 +49,34 @@ public class Timer : MonoBehaviour
             timer.text = string.Format("{0:#0}:{1:00}", seconds, (int)miliseconds);
         }
     }
+
+    public void AddTime(float secondes)
+    {
+        if(secondes + seconds > 59)
+        {
+            minutes++;
+            secondes -= 60 - seconds;
+            seconds = 0;
+            seconds += secondes;
+        }
+        else
+        {
+            seconds -= secondes;
+        }
+    }
+
+    public void RemoveTime(float secondes)
+    {
+        if (secondes > seconds)
+        {
+            minutes--;
+            secondes -= seconds;
+            seconds = 59;
+            seconds -= secondes;
+        }
+        else
+        {
+            seconds -= secondes;
+        }
+    }
 }

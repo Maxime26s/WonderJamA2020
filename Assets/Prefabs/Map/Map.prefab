@@ -167,4 +167,5 @@ MonoBehaviour:
   timer: {fileID: 0}
   currentNode: {fileID: 0}
   cdSelect: 0.275
+  stop: 0
   nbPoints: 3
