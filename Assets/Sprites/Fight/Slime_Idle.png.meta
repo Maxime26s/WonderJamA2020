@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9bb25b476c7432d4d9f80f0bce7b9e15
+guid: 3b3081ce1303aec4891478f056a21806
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2804390136751414082
-    second: Rolex_Idle_0
+      213: 7363166705265310760
+    second: Slime_Idle_0
   - first:
-      213: -2357130028785682446
-    second: Rolex_Idle_1
+      213: -5053397183770984521
+    second: Slime_Idle_1
   - first:
-      213: -3052577763018132289
-    second: Rolex_Idle_2
+      213: 2562226924957090973
+    second: Slime_Idle_2
   - first:
-      213: -1100647212080698282
-    second: Rolex_Idle_3
+      213: -5823576197350583881
+    second: Slime_Idle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rolex_Idle_0
+      name: Slime_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +115,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb4a257670ec419d0800000000000000
-      internalID: -2804390136751414082
+      spriteID: 82c72515b193f2660800000000000000
+      internalID: 7363166705265310760
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_1
+      name: Slime_Idle_1
       rect:
         serializedVersion: 2
         x: 512
@@ -136,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f7b2d83abac94fd0800000000000000
-      internalID: -2357130028785682446
+      spriteID: 7bffe50190abed9b0800000000000000
+      internalID: -5053397183770984521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_2
+      name: Slime_Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -157,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb43c02a2b013a5d0800000000000000
-      internalID: -3052577763018132289
+      spriteID: d94420020dbde8320800000000000000
+      internalID: 2562226924957090973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_3
+      name: Slime_Idle_3
       rect:
         serializedVersion: 2
         x: 512
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65ce7ec2137b9b0f0800000000000000
-      internalID: -1100647212080698282
+      spriteID: 7b19f7a9d408e2fa0800000000000000
+      internalID: -5823576197350583881
       vertices: []
       indices: 
       edges: []

@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9bb25b476c7432d4d9f80f0bce7b9e15
+guid: 794999d2fffe412408a96e0438acee0a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2804390136751414082
-    second: Rolex_Idle_0
+      213: 6370703953791027370
+    second: FireMage_Idle_0
   - first:
-      213: -2357130028785682446
-    second: Rolex_Idle_1
+      213: -8540080540929902311
+    second: FireMage_Idle_1
   - first:
-      213: -3052577763018132289
-    second: Rolex_Idle_2
+      213: 5152234210120814459
+    second: FireMage_Idle_2
   - first:
-      213: -1100647212080698282
-    second: Rolex_Idle_3
+      213: 7533825882476178998
+    second: FireMage_Idle_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rolex_Idle_0
+      name: FireMage_Idle_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +115,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb4a257670ec419d0800000000000000
-      internalID: -2804390136751414082
+      spriteID: aa804e61e79496850800000000000000
+      internalID: 6370703953791027370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_1
+      name: FireMage_Idle_1
       rect:
         serializedVersion: 2
         x: 512
@@ -136,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f7b2d83abac94fd0800000000000000
-      internalID: -2357130028785682446
+      spriteID: 919b5accef98b7980800000000000000
+      internalID: -8540080540929902311
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_2
+      name: FireMage_Idle_2
       rect:
         serializedVersion: 2
         x: 0
@@ -157,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb43c02a2b013a5d0800000000000000
-      internalID: -3052577763018132289
+      spriteID: b7fcdd567b9608740800000000000000
+      internalID: 5152234210120814459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_3
+      name: FireMage_Idle_3
       rect:
         serializedVersion: 2
         x: 512
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65ce7ec2137b9b0f0800000000000000
-      internalID: -1100647212080698282
+      spriteID: 63ee2a469b68d8860800000000000000
+      internalID: 7533825882476178998
       vertices: []
       indices: 
       edges: []

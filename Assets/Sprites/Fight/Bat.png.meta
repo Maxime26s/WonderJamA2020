@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 9bb25b476c7432d4d9f80f0bce7b9e15
+guid: d6b974911273e38428a5c8687bc8260a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2804390136751414082
-    second: Rolex_Idle_0
+      213: 8647823593821616703
+    second: Bat_0
   - first:
-      213: -2357130028785682446
-    second: Rolex_Idle_1
+      213: 5681806813702538305
+    second: Bat_1
   - first:
-      213: -3052577763018132289
-    second: Rolex_Idle_2
+      213: 697682191857345388
+    second: Bat_2
   - first:
-      213: -1100647212080698282
-    second: Rolex_Idle_3
+      213: 6993031405965254486
+    second: Bat_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -101,7 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rolex_Idle_0
+      name: Bat_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,14 +115,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb4a257670ec419d0800000000000000
-      internalID: -2804390136751414082
+      spriteID: f3abafd8dbd330870800000000000000
+      internalID: 8647823593821616703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_1
+      name: Bat_1
       rect:
         serializedVersion: 2
         x: 512
@@ -136,14 +136,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f7b2d83abac94fd0800000000000000
-      internalID: -2357130028785682446
+      spriteID: 144422d8135d9de40800000000000000
+      internalID: 5681806813702538305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_2
+      name: Bat_2
       rect:
         serializedVersion: 2
         x: 0
@@ -157,14 +157,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fb43c02a2b013a5d0800000000000000
-      internalID: -3052577763018132289
+      spriteID: c63e5cbc14aaea900800000000000000
+      internalID: 697682191857345388
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Rolex_Idle_3
+      name: Bat_3
       rect:
         serializedVersion: 2
         x: 512
@@ -178,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65ce7ec2137b9b0f0800000000000000
-      internalID: -1100647212080698282
+      spriteID: 65f95b7530d3c0160800000000000000
+      internalID: 6993031405965254486
       vertices: []
       indices: 
       edges: []
