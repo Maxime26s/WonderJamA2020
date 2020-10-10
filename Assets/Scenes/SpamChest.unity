@@ -340,7 +340,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text: {fileID: 485657227}
   image: {fileID: 2039752936}
-  imageA: {fileID: 21300000, guid: 5d64d8c5759bc8849b058676562f12e3, type: 3}
+  imageA: {fileID: 21300000, guid: 9eb014ede783b274498a46598880a464, type: 3}
   imageAPushed: {fileID: 21300000, guid: 0f9efbbabf4fd3f46921d3c426355217, type: 3}
 --- !u!114 &485657227
 MonoBehaviour:
@@ -684,12 +684,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5d64d8c5759bc8849b058676562f12e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9eb014ede783b274498a46598880a464, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
