@@ -1230,10 +1230,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nbOfStars: 50
-  fadeSpeed: 0.001
+  fadeSpeed: 0.5
   shakeDuration: 3
   redDuration: 10
-  textSpeed: 0.3
+  textSpeed: 85
   star: {fileID: 2954129274432110413, guid: c0ab299d8279b6b478a45eab89c95031, type: 3}
   fade: {fileID: 1720341874}
   earth: {fileID: 88470794}
