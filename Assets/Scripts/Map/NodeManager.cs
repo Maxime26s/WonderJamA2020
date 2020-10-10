@@ -64,21 +64,31 @@ public class NodeManager : MonoBehaviour
                 yield return new WaitForSeconds(cdSelect);
                 onCd = false;
             }
-            float y = Input.GetAxis("Vertical");
-            if(y > 0 && currentIndex > 0 && !onCd)
+            float y = Input.GetAxisRaw("Vertical");
+            if (y != 0)
             {
-                StartCoroutine(SwitchTarget(cdSelect));
-                currentIndex--;
-                currentNode = choices[currentIndex];
-                player.transform.position = currentNode.transform.position;
+                if (y > 0 && currentIndex > 0 && !onCd)
+                {
+                    //StartCoroutine(SwitchTarget(cdSelect));
+                    currentIndex--;
+                    currentNode = choices[currentIndex];
+                    player.transform.position = currentNode.transform.position;
+                }
+                else if (y < 0 && currentIndex < choices.Count - 1 && !onCd)
+                {
+                    //StartCoroutine(SwitchTarget(cdSelect));
+                    currentIndex++;
+                    currentNode = choices[currentIndex];
+                    player.transform.position = currentNode.transform.position;
+                }
+                onCd = true;
             }
-            else if(y < 0 && currentIndex < choices.Count - 1 && !onCd)
+            else
             {
-                StartCoroutine(SwitchTarget(cdSelect));
-                currentIndex++;
-                currentNode = choices[currentIndex];
-                player.transform.position = currentNode.transform.position;
+                onCd = false;
             }
+            
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 //currentNode.GetComponent<Node>().SelectNode();
