@@ -28,7 +28,7 @@ public class NodeManager : MonoBehaviour
     {
         timer.RefreshText();
         timer.enabled = false;
-        timer.timer.color = new Color(255, 0, 0, 1);
+        timer.timer.color = new Color32(152, 221, 227, 255);
         //if (end)
         //CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE
     }
@@ -36,7 +36,7 @@ public class NodeManager : MonoBehaviour
     private void OnDisable()
     {
         timer.enabled = true;
-
+        timer.timer.color = new Color32(255, 255, 255, 255);
     }
 
     // Start is called before the first frame update
@@ -58,27 +58,39 @@ public class NodeManager : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
+            /*
             IEnumerator SwitchTarget(float cdSelect)
             {
                 onCd = true;
                 yield return new WaitForSeconds(cdSelect);
                 onCd = false;
             }
-            float y = Input.GetAxis("Vertical");
-            if(y > 0 && currentIndex > 0 && !onCd)
+            */
+            float y = Input.GetAxisRaw("Vertical");
+            if (Mathf.Abs(y) > 0.2)
             {
-                StartCoroutine(SwitchTarget(cdSelect));
-                currentIndex--;
-                currentNode = choices[currentIndex];
-                player.transform.position = currentNode.transform.position;
+                if (y > 0 && currentIndex > 0 && !onCd)
+                {
+                    //StartCoroutine(SwitchTarget(cdSelect));
+                    currentIndex--;
+                    currentNode = choices[currentIndex];
+                    player.transform.position = currentNode.transform.position;
+                }
+                else if (y < 0 && currentIndex < choices.Count - 1 && !onCd)
+                {
+                    //StartCoroutine(SwitchTarget(cdSelect));
+                    currentIndex++;
+                    currentNode = choices[currentIndex];
+                    player.transform.position = currentNode.transform.position;
+                }
+                onCd = true;
             }
-            else if(y < 0 && currentIndex < choices.Count - 1 && !onCd)
+            else
             {
-                StartCoroutine(SwitchTarget(cdSelect));
-                currentIndex++;
-                currentNode = choices[currentIndex];
-                player.transform.position = currentNode.transform.position;
+                onCd = false;
             }
+            
+
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 //currentNode.GetComponent<Node>().SelectNode();
