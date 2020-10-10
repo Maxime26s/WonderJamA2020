@@ -77,25 +77,31 @@ public class retourner_carte : MonoBehaviour
                 case 1:
                 case 2:
                     texto.text = "Du temps à été ajouté à votre compteur!";
+                    GameManager.Instance.AjoutTemps(20);
                     break;
                 case 3:
                 case 4:
                 case 5:
                     texto.text = "Du temps à été enlevé à votre compteur!";
+                    GameManager.Instance.PerteTemps(15);
                     break;
                 case 6:
                 case 7:
                     texto.text = "vous passez par dessus le prochain ennemi!";
+                    GameManager.Instance.SkipEnemy();
                     break;
                 case 8:
                 case 9:
                     texto.text = "vous reculez à la salle précédente du donjon!";
+                    GameManager.Instance.ReculeCase();
                     break;
                 case 10:
                     texto.text = "vous passez directement au boss du donjon!";
+                    GameManager.Instance.TpBoss();
                     break;
                 case 11:
                     texto.text = "vous retournez à la première salle du donjon!";
+                    GameManager.Instance.TpStart();
                     break;
                 default:
                     break;
