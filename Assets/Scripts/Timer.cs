@@ -51,6 +51,36 @@ public class Timer : MonoBehaviour
         }
     }
 
+    public void AddTime(float secondes)
+    {
+        if(secondes + seconds > 59)
+        {
+            minutes++;
+            secondes -= 60 - seconds;
+            seconds = 0;
+            seconds += secondes;
+        }
+        else
+        {
+            seconds -= secondes;
+        }
+    }
+
+    public void RemoveTime(float secondes)
+    {
+        if (secondes > seconds)
+        {
+            minutes--;
+            secondes -= seconds;
+            seconds = 59;
+            seconds -= secondes;
+        }
+        else
+        {
+            seconds -= secondes;
+        }
+    }
+
     public void LoseTime(float damage)
     {
         Debug.Log(damage);

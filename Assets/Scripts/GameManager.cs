@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -24,6 +25,13 @@ public class GameManager : MonoBehaviour
     public List<GameObject> cards = new List<GameObject>();
     public GameObject boss;
     public int dungeon = 0;
+    public Animator animator;
+
+    public bool skipEnemy = false;
+
+    public GameObject map;
+    public NodeManager mapManager;
+
 
     public enum NodeType
     {
@@ -49,38 +57,171 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void InstantiateTreaure()
+    public void SceneTransition()
     {
-        Instantiate(treasures[Random.Range(0, treasures.Count)], Vector3.zero, Quaternion.identity);
+        IEnumerator animationPlay()
+        {
+            animator.SetBool("Play", true);
+            yield return new WaitForSeconds(1f);
+            animator.SetBool("Play", false);
+        }
+        StartCoroutine(animationPlay());
     }
 
-    public void InstantiateTrap()
+    public void LoadScenesFromMap()
     {
-        Instantiate(traps[Random.Range(0, traps.Count)], Vector3.zero, Quaternion.identity);
+        SceneTransition();
+        switch (mapManager.currentNode.GetComponent<Node>().nodeType)
+        {
+            case NodeType.Enemy:
+            case NodeType.Miniboss:
+            case NodeType.Boss:
+                LoadFight();
+                break;
+            case NodeType.Treasure:
+                LoadTreasure();
+                break;
+            case NodeType.Card:
+                LoadCard();
+                break;
+            case NodeType.Time:
+                LoadTime();
+                break;
+            case NodeType.Trap:
+                LoadTrap();
+                break;
+        }
     }
 
-    public void InstantiateCard()
+    public void LoadMap()
     {
-        Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity);
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+            map.SetActive(true);
+            yield return new WaitForSeconds(0.5f);
+            mapManager.stop = false;
+        }
+        StartCoroutine(Wait());
     }
 
-    public void InstantiateEnemy()
+    public void LoadFight()
     {
-        //Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity);
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            map.SetActive(false);
+            SceneManager.LoadScene("Fight", LoadSceneMode.Additive);
+            mapManager.NextLevel();
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Fight"));
+        }
+        StartCoroutine(Wait());
     }
 
-    public void InstantiateTime()
+    public void LoadTreasure()
     {
-        //Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity);
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            map.SetActive(false);
+            SceneManager.LoadScene("Treasure", LoadSceneMode.Additive);
+            mapManager.NextLevel();
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Treasure"));
+        }
+        StartCoroutine(Wait());
     }
 
-    public void InstantiateMiniboss()
+    public void LoadCard()
     {
-        //Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity);
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            map.SetActive(false);
+            SceneManager.LoadScene("Card", LoadSceneMode.Additive);
+            mapManager.NextLevel();
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Card"));
+        }
+        StartCoroutine(Wait());
     }
 
-    public void InstantiateBoss()
+    public void LoadTime()
     {
-        //Instantiate(cards[Random.Range(0, cards.Count)], Vector3.zero, Quaternion.identity);
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            map.SetActive(false);
+            SceneManager.LoadScene("Time", LoadSceneMode.Additive);
+            mapManager.NextLevel();
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Time"));
+        }
+        StartCoroutine(Wait());
+    }
+
+    public void LoadTrap()
+    {
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            map.SetActive(false);
+            SceneManager.LoadScene("Trap", LoadSceneMode.Additive);
+            mapManager.NextLevel();
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Trap"));
+        }
+        StartCoroutine(Wait());
+    }
+
+    public void PerteTemps(float secondes)
+    {
+        mapManager.timer.RemoveTime(secondes);
+    }
+
+    public void AjoutTemps(float secondes)
+    {
+        mapManager.timer.AddTime(secondes);
+    }
+
+    public void TpBoss()
+    {
+        while(mapManager.currentNode.GetComponent<Node>().gameObjects.Count != 0)
+        {
+            mapManager.choices = mapManager.currentNode.GetComponent<Node>().gameObjects;
+            mapManager.currentNode = mapManager.choices[0];
+            mapManager.currentIndex = 0;
+        }
+        mapManager.player.transform.position = mapManager.currentNode.transform.position;
+    }
+
+    public void TpStart()
+    {
+        mapManager.choices = new List<GameObject>();
+        mapManager.choices.Add(mapManager.start);
+        mapManager.currentNode = mapManager.start;
+        mapManager.currentIndex = 0;
+        mapManager.player.transform.position = mapManager.currentNode.transform.position;
+    }
+
+    public void SkipEnemy()
+    {
+        skipEnemy = true;
+    }
+
+    public void ReculeCase()
+    {
+        GameObject oldNode = mapManager.currentNode.GetComponent<Node>().lastNode;
+        if (oldNode != mapManager.start)
+        {
+            oldNode = oldNode.GetComponent<Node>().lastNode;
+            mapManager.choices = new List<GameObject>();
+            mapManager.choices.Add(oldNode);
+            mapManager.currentNode = oldNode;
+            mapManager.currentIndex = 0;
+            mapManager.player.transform.position = mapManager.currentNode.transform.position;
+        }
     }
 }
