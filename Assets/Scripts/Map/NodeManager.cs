@@ -91,10 +91,8 @@ public class NodeManager : MonoBehaviour
 
     void NextLevel()
     {
-        Debug.Log("lol1");
         if(currentNode.GetComponent<Node>().gameObjects.Count != 0)
         {
-            Debug.Log("lol2");
             choices = currentNode.GetComponent<Node>().gameObjects;
             currentNode = choices[0];
             currentIndex = 0;
