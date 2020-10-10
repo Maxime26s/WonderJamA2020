@@ -6,30 +6,29 @@ using UnityEngine;
 public class Superposes : MonoBehaviour
 {
     private bool trigg = false;
-
-
-    
+    private bool wrong;
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.anyKey)
+        if (!wrong)
         {
-            if (Input.GetButton(other.name))
+            if (Input.anyKey)
             {
-                finalsScore.compteur++;
-                     Destroy(other.gameObject);
+                if (Input.GetButton(other.name))
+                {
+                    finalsScore.compteur++;
+                    Destroy(other.gameObject);
+                }
+                else if (!Input.GetButton(other.name))
+                {
+                    wrong = true;
+                }
             }
-                 else if (!Input.GetButton(other.name))
-                 {
-                     
-                     
-                     Debug.Log("NO");
-                 }
         }
     }
     private void OnTriggerExit2D(Collider2D other)
          {
-             Debug.Log("Passage");
              finalsScore.compteurPassages++;
+             wrong = false;
          }
 }

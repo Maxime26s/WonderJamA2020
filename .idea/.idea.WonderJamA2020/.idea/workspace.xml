@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcbfae56-4649-483c-8120-e0cdd2db6197" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,10 +30,10 @@
         <option value="$PROJECT_DIR$/Assets/colliderImages.cs" />
         <option value="$PROJECT_DIR$/Assets/Superposes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GH/StaticScore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GH/finalsScore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" />
       </list>
     </option>
   </component>
@@ -73,7 +74,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602274284472</updated>
-      <workItem from="1602274286194" duration="16734000" />
+      <workItem from="1602274286194" duration="17230000" />
     </task>
     <servers />
   </component>

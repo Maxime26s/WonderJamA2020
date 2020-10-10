@@ -20,9 +20,6 @@ public class colliderImages : MonoBehaviour
         if (finalsScore.compteurPassages == nbTouches)
         {
             finalsScore.timeAdded = (multiplicateurMax * Convert.ToSingle(finalsScore.compteur) / Convert.ToSingle(nbTouches)) * secParTouche * Convert.ToSingle(finalsScore.compteur);
-            Debug.Log(finalsScore.compteur);
-            Debug.Log(nbTouches);
-            Debug.Log(finalsScore.timeAdded);
             finalsScore.compteurPassages = 0;
             finalsScore.isFinished = true;
         }

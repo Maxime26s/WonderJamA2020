@@ -1051,7 +1051,7 @@ GameObject:
   - component: {fileID: 320852320}
   - component: {fileID: 320852321}
   m_Layer: 0
-  m_Name: Charles
+  m_Name: BckGrnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1266,7 +1266,7 @@ GameObject:
   - component: {fileID: 492060551}
   - component: {fileID: 492060550}
   m_Layer: 0
-  m_Name: Jacob
+  m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4271,7 +4271,7 @@ GameObject:
   - component: {fileID: 1610548996}
   - component: {fileID: 1610548997}
   m_Layer: 5
-  m_Name: SlidingBoi
+  m_Name: TouchesScripted
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

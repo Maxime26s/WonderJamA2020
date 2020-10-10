@@ -8,14 +8,12 @@ public class affichageScoreFinal : MonoBehaviour
 {
     public TextMeshProUGUI tmp;
     
-    // Start is called before the first frame update
     void Start()
     {
         tmp = gameObject.GetComponent<TextMeshProUGUI>();
         tmp.SetText("");
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (finalsScore.isFinished)
