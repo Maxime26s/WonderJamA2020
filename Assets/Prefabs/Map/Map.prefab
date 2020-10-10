@@ -117,8 +117,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nodePrefab: {fileID: 3540970854887084821, guid: 6dfb5c0fe9e90c248a0698d1a49b57d7, type: 3}
-  nodeDistance: {x: 1.75, y: 2.5}
-  nodeAmount: 9
+  pathPrefab: {fileID: 6965059872747778245, guid: 642e15a711db12c42b79efbda9191a38, type: 3}
+  nodeDistance: {x: 2.25, y: 2.5}
+  nodeAmount: 7
   player: {fileID: 7042890809312695464, guid: a145d40d27908184ea5061febec7c968, type: 3}
   currentNode: {fileID: 0}
   cdSelect: 0.275
+  nbPoints: 3

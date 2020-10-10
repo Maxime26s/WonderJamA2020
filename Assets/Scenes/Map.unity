@@ -160,8 +160,8 @@ Camera:
   m_GameObject: {fileID: 205702936}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.19206706, g: 0, b: 0.2264151, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -256,6 +256,7 @@ MonoBehaviour:
   traps: []
   cards: []
   boss: {fileID: 0}
+  dungeon: 0
 --- !u!1 &298037853
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &298037854
 RectTransform:
   m_ObjectHideFlags: 0
@@ -289,10 +290,10 @@ RectTransform:
   m_Father: {fileID: 1091564633}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.4, y: 0.85}
+  m_AnchorMax: {x: 0.6, y: 0.95}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 200, y: 50}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &298037855
 MonoBehaviour:
@@ -341,14 +342,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -403,10 +404,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07907df76e39cc24faae1c0a7a5f2c4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  timer: {fileID: 298037855}
   minutes: 5
   seconds: 0
   miliseconds: 0
+  enabled: 0
 --- !u!1 &694973856
 GameObject:
   m_ObjectHideFlags: 0
@@ -491,7 +493,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1091564630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -579,6 +581,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4463105251859769, guid: c74dbfe25b01bf14184068618010a859, type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 298037857}
     - target: {fileID: 2279386355973198825, guid: c74dbfe25b01bf14184068618010a859, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

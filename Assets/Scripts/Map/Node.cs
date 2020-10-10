@@ -11,7 +11,7 @@ public class Node : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        nodeType = (GameManager.NodeType)Random.Range(0, sprites.Count-3);
+        nodeType = (GameManager.NodeType)Random.Range(0, sprites.Count-4);
         GetComponent<SpriteRenderer>().sprite = sprites[(int)nodeType];
     }
 
@@ -52,7 +52,5 @@ public class Node : MonoBehaviour
     public void RefreshType(GameManager.NodeType newType)
     {
         nodeType = newType;
-        GetComponent<SpriteRenderer>().sprite = sprites[(int)nodeType];
-        Debug.Log(2 + ", time: " + Time.time);
-    }
+        GetComponent<SpriteRenderer>().sprite = sprites[(int)nodeType];    }
 }

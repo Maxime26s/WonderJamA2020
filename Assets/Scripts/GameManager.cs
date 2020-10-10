@@ -33,7 +33,8 @@ public class GameManager : MonoBehaviour
         Time,
         Enemy,
         Miniboss,
-        Boss
+        Boss,
+        Start
     }
 
     // Start is called before the first frame update
