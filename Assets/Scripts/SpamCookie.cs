@@ -92,18 +92,17 @@ public class SpamCookie : MonoBehaviour
     IEnumerator FadeIn()
     {
         
-        for (float f = 0.00f; f < 1; f += 0.05f)
+        for (float f = 0.00f; f < 1; f += 1 * Time.deltaTime)
         {
             Color r = Go.GetComponent<SpriteRenderer>().color;
             r.a = f;
             Go.GetComponent<SpriteRenderer>().color = r;
-            yield return new WaitForSeconds(0.01f);
-         }
-        
+            yield return new WaitForSeconds(0.0001f);
+        }
     }
     IEnumerator FadeOut()
     {
-        for (float f = 1f; f >= 0; f -= 0.05f)
+        for (float f = 1f; f >= 0; f -= 1 * Time.deltaTime)
         {
             Color r = Go.GetComponent<SpriteRenderer>().color;
             r.a = f;
@@ -116,7 +115,7 @@ public class SpamCookie : MonoBehaviour
             }
             ok1 = true;
             Debug.Log(f);
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.0001f);
         }
     }
 }

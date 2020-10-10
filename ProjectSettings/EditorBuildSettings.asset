@@ -5,22 +5,25 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/Jeu.unity
-    guid: 49d430b555c97184fbaa4a873afcf5fd
+    path: Assets/Scenes/Menu.unity
+    guid: 9bae81a0e61a90e4b93971fb5f3dacf7
   - enabled: 1
-    path: Assets/Scenes/Instruction.unity
-    guid: e667b385d83b64443af820958d1e7446
+    path: Assets/Scenes/Intro.unity
+    guid: fe50d4455402c2643ae5a74f2380e6f3
+  - enabled: 1
+    path: Assets/Scenes/Map.unity
+    guid: b4d243d2420bd9b4a8261a890477a15d
+  - enabled: 1
+    path: Assets/Scenes/Fight.unity
+    guid: c9c5d6aa4539be246958715f0093cbc6
   - enabled: 1
     path: Assets/Scenes/SpamChest.unity
     guid: 0766e666b6e638b42838a27f9e016d72
   - enabled: 1
     path: Assets/Scenes/Labyrinthe1.unity
     guid: f5c8a09e2b02fb2439e7b5d972d45cc5
+  - enabled: 1
+    path: Assets/Scenes/SpamCookie.unity
+    guid: eb2f25550b4f24249963be3c7bc2c0bb
   m_configObjects: {}

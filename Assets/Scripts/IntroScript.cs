@@ -126,8 +126,10 @@ public class IntroScript : MonoBehaviour
             Color c = fade.GetComponent<SpriteRenderer>().color;
             c.a = ft;
             fade.GetComponent<SpriteRenderer>().color = c;
-            yield return null;
+            
         }
+        Application.LoadLevel(2);
+        yield return null;
     }
 
     IEnumerator ApproachEarth() 
