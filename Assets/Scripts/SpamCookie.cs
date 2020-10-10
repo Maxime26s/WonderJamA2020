@@ -9,6 +9,7 @@ public class SpamCookie : MonoBehaviour
     public SpriteRenderer sprite;
     public Sprite buttonA;
     public Sprite buttonAPushed;
+    public SpriteRenderer Go;
     public float seconds = 7;
     public float miliseconds = 0;
     public TextMeshProUGUI timer;
@@ -16,15 +17,21 @@ public class SpamCookie : MonoBehaviour
     public TextMeshProUGUI text;
     public bool ok = false;
     public bool good = false;
-    void Start()
+    private bool ok1 = false;
+    void Awake()
     {
+        Color r = Go.GetComponent<SpriteRenderer>().color;
+        r.a = 0;
+        Go.GetComponent<SpriteRenderer>().color = r;
         points.text = "0";
         n = 0;
         StartCoroutine(WaitAndPrint());
     }
+    
+        
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
         if (ok)
         {
@@ -39,13 +46,22 @@ public class SpamCookie : MonoBehaviour
 
             if (Input.GetButtonDown("ButtonA"))
             {
-                sprite.sprite = buttonA;
+                sprite.sprite = buttonAPushed;
                 n++;
                 points.text = "" + n;
+                if (!ok1)
+                {
+                    for(int i = 0; i < 20; i++)
+                    {
+                        StartCoroutine("FadeOut");
+                    }
+                    
+                }
+
             }
             if (Input.GetButtonUp("ButtonA"))
             {
-                sprite.sprite = buttonAPushed;
+                sprite.sprite = buttonA;
             }
             if (seconds <= 0 && miliseconds <= 0)
             {
@@ -59,10 +75,48 @@ public class SpamCookie : MonoBehaviour
     private IEnumerator WaitAndPrint()
     {
         yield return new WaitForSeconds(5f);
+        if (!ok1)
+        {
+            for(int i = 0; i < 20; i++)
+            {
+                 StartCoroutine("FadeIn");
+            }
+       
+        }      
         ok = true;
         if (good)
         {
           Application.LoadLevel(0);
         } 
+    }
+    IEnumerator FadeIn()
+    {
+        
+        for (float f = 0.00f; f < 1; f += 0.05f)
+        {
+            Color r = Go.GetComponent<SpriteRenderer>().color;
+            r.a = f;
+            Go.GetComponent<SpriteRenderer>().color = r;
+            yield return new WaitForSeconds(0.01f);
+         }
+        
+    }
+    IEnumerator FadeOut()
+    {
+        for (float f = 1f; f >= 0; f -= 0.05f)
+        {
+            Color r = Go.GetComponent<SpriteRenderer>().color;
+            r.a = f;
+            Go.GetComponent<SpriteRenderer>().color = r;
+            if (f < 0.05f)
+            {
+                f = 0;
+                r.a = f;
+                Go.GetComponent<SpriteRenderer>().color = r;
+            }
+            ok1 = true;
+            Debug.Log(f);
+            yield return new WaitForSeconds(0.01f);
+        }
     }
 }
