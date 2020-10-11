@@ -8,27 +8,32 @@ using UnityEngine.SceneManagement;
 public class DuelManager : MonoBehaviour
 {
 
-    bool buttonPressed = false;
+    public bool buttonPressed = false;
     bool doublePress = false;
     bool initialized = false;
-    string buttonPressedName = "";
+    public string buttonPressedName = "";
+    string lastSpell = "";
+    float multDebuff = 1f;
 
-
+    public float arbitraryMultiplier;
     public Inventory inventory;
+    public Timer timer;
     public List<string> currentSequence = new List<string>();
 
     public TextMeshProUGUI spellName;
     public TextMeshProUGUI spellDamage;
-    public Image spellIcon;
+    public Image spellIcon, enemyElement;
     public List<Image> combo, spellChoice;
     public Sprite transparent;
     public Spell currentSpell = null;
+    public GameObject enemy;
+    public AnimOnly playerAnim;
 
 
     // Start is called before the first frame update
     void Start()
     {
-
+        timer = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
     }
 
     private void OnEnable()
@@ -45,60 +50,51 @@ public class DuelManager : MonoBehaviour
         }
 
         if (!initialized)
-            OnPlayerCreated();
-
+        {
+            enemy = GameObject.FindGameObjectWithTag("Enemy");
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if(player != null)
+                playerAnim = player.GetComponent<AnimOnly>();
+            if (enemy != null && playerAnim != null)
+                OnPlayerCreated();
+        }
 
         if (Input.GetAxisRaw("Horizontal") <= 0.2
             && Input.GetAxisRaw("Vertical") <= 0.2
             && Input.GetAxisRaw("Horizontal") >= -0.2
             && Input.GetAxisRaw("Vertical") >= -0.2
-            && (buttonPressedName == "Vertical" || buttonPressedName == "Horizontal"))
+            && !Input.GetButton("A")
+            && !Input.GetButton("B")
+            && !Input.GetButton("X")
+            && !Input.GetButton("Y"))
         {
             buttonPressed = false;
             buttonPressedName = "";
         }
-        else if (Input.GetAxisRaw("Horizontal") <= 0.2
-        && Input.GetAxisRaw("Vertical") <= 0.2
-        && Input.GetAxisRaw("Horizontal") >= -0.2
-        && Input.GetAxisRaw("Vertical") >= -0.2)
-        {
-            if (buttonPressedName != "")
-            {
-                if (Input.GetButtonUp(buttonPressedName))
-                {
-                    buttonPressed = false;
-                    buttonPressedName = "";
-                }
-            }
-            else
-            {
-                buttonPressed = false;
-                buttonPressedName = "";
-            }
-        }
+
 
         if (!buttonPressed)
         {
             //A
-            if (Input.GetButtonDown("A"))
+            if (Input.GetButton("A"))
             {
                 OnBoutonDown("A");
             }
 
             //B
-            if (Input.GetButtonDown("B"))
+            if (Input.GetButton("B"))
             {
                 OnBoutonDown("B");
             }
 
             //X
-            if (Input.GetButtonDown("X"))
+            if (Input.GetButton("X"))
             {
                 OnBoutonDown("X");
             }
 
             //Y
-            if (Input.GetButtonDown("Y"))
+            if (Input.GetButton("Y"))
             {
                 OnBoutonDown("Y");
             }
@@ -107,30 +103,33 @@ public class DuelManager : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal") == -1)
             {
                 OnBoutonDown("LEFT");
-                buttonPressedName = "";
+                if (!buttonPressed)
+                    buttonPressedName = "";
             }
 
             //joystick droite
             if (Input.GetAxisRaw("Horizontal") == 1)
             {
                 OnBoutonDown("RIGHT");
-                buttonPressedName = "";
+                if (!buttonPressed)
+                    buttonPressedName = "";
             }
 
             //joystick bas
             if (Input.GetAxisRaw("Vertical") == 1)
             {
                 OnBoutonDown("UP");
-                buttonPressedName = "";
+                if (!buttonPressed)
+                    buttonPressedName = "";
             }
 
             //joystick haut
             if (Input.GetAxisRaw("Vertical") == -1)
             {
                 OnBoutonDown("DOWN");
-                buttonPressedName = "";
+                if (!buttonPressed)
+                    buttonPressedName = "";
             }
-
 
 
             if (doublePress)
@@ -140,39 +139,33 @@ public class DuelManager : MonoBehaviour
             }
             else if (currentSequence.Count > 0)
                 VerifySequence();
-
-
         }
 
         //Dpad droite
-        if (Input.GetAxis("Horizontal2") >= 0.7f)
+        if (Input.GetAxisRaw("Horizontal2") == 1)
         {
-            if (inventory.spellCount >= 2)
                 UpdateHeader(inventory.spells[1]);
         }
 
         //Dpad gauche
-        if (Input.GetAxis("Horizontal2") <= -0.7f)
+        if (Input.GetAxisRaw("Horizontal2") == -1)
         {
-            if (inventory.spellCount >= 4)
                 UpdateHeader(inventory.spells[3]);
         }
 
         //Dpad haut
-        if (Input.GetAxis("Vertical2") <= -0.7f)
+        if (Input.GetAxisRaw("Vertical2") == -1)
+        {
+            UpdateHeader(inventory.spells[0]);
+        }
+
+        //Dpad bas
+        if (Input.GetAxisRaw("Vertical2") == 1)
         {
             UpdateHeader(inventory.spells[2]);
         }
 
-        //Dpad bas
-        if (Input.GetAxis("Vertical2") >= 0.7f)
-        {
-            if (inventory.spellCount >= 3)
-                UpdateHeader(inventory.spells[0]);
-        }
-
         doublePress = false;
-
     }
 
     public void VerifySequence()
@@ -180,47 +173,71 @@ public class DuelManager : MonoBehaviour
         bool allFailed = true;
         Spell spellCasted = null;
 
-        //foreach (Spell spell in inventory.spells)
-        //{
-            bool failed = false;
-            for (int i = 0; i < currentSequence.Count; i++)
+        bool failed = false;
+        for (int i = 0; i < currentSequence.Count; i++)
+        {
+            if (i < currentSpell.listeInputs.Count)
             {
-                if (i < currentSpell.listeInputs.Count)
+                if (currentSequence[i] == currentSpell.listeInputs[i].name && !failed)
                 {
-                    if (currentSequence[i] == currentSpell.listeInputs[i].name && !failed)
+                    combo[i].color = new Color32(100, 100, 100, 255);
+                    if (i + 1 == currentSpell.listeInputs.Count)
                     {
-                        combo[i].color = new Color32(100, 100, 100, 255);
-                        if (i + 1 == currentSpell.listeInputs.Count)
-                        {
-                            spellCasted = currentSpell;
-                            currentSequence.Clear();
-                        }
-                    }
-                    else
-                    {
-                        failed = true;
+                        spellCasted = currentSpell;
+                        currentSequence.Clear();
                     }
                 }
                 else
+                {
                     failed = true;
-
+                }
             }
-            if (!failed)
-                allFailed = false;
-        //}
+            else
+                failed = true;
+
+        }
+        if (!failed)
+            allFailed = false;
 
         if (allFailed)
         {
             currentSequence.Clear();
             for (int j = 0; j < combo.Count; j++)
                 combo[j].color = new Color32(255, 255, 255, 255);
-            Debug.Log("fail");
+            timer.LoseTime(currentSpell.damage);
         }
+
         if (spellCasted != null)
         {
+            StartCoroutine(playerAnim.AttackAnim());
             //Do stuff
-            Debug.Log(spellCasted.name + " casted");
+            float effectivBuff = 1f;
+            Type enType = enemy.GetComponent<Enemy>().type;
+            Type spType = spellCasted.type;
+
+            if (enType == Type.Fire && spType == Type.Water
+                || enType == Type.Water && spType == Type.Air
+                || enType == Type.Air && spType == Type.Earth
+                || enType == Type.Earth && spType == Type.Fire)
+            {
+                effectivBuff = 1.5f;
+            }
+            else if (spType == Type.Fire && enType == Type.Water
+                || spType == Type.Water && enType == Type.Air
+                || spType == Type.Air && enType == Type.Earth
+                || spType == Type.Earth && enType == Type.Fire)
+            {
+                effectivBuff = 0.5f;
+            }
+
+            if (lastSpell == spellCasted.name)
+                multDebuff *= 0.7f;
+            else
+                multDebuff = 1f;
+
+            lastSpell = spellCasted.name;
             currentSequence.Clear();
+            enemy.GetComponent<Timer>().LoseTime(spellCasted.damage * multDebuff * effectivBuff * arbitraryMultiplier);
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(0.15f);
@@ -239,7 +256,6 @@ public class DuelManager : MonoBehaviour
             buttonPressedName = name;
         buttonPressed = true;
         currentSequence.Add(name);
-        Debug.Log(name);
     }
 
 
@@ -265,6 +281,8 @@ public class DuelManager : MonoBehaviour
 
     public void OnPlayerCreated()
     {
+        inventory = Inventory.Instance;
+        Debug.Log(inventory);
         currentSequence.Clear();
         for (int i = 0; i < spellChoice.Count; i++)
         {
@@ -276,8 +294,33 @@ public class DuelManager : MonoBehaviour
             spellChoice[i].sprite = inventory.spells[i].sprite;
             spellChoice[i].material = inventory.spells[i].material;
         }
-        Debug.Log(inventory.spells[0].name);
         UpdateHeader(inventory.spells[0]);
+        if (enemy.GetComponent<Enemy>().type == Type.Air)
+        {
+            enemyElement.sprite = spellChoice[1].sprite;
+            enemyElement.material = spellChoice[1].material;
+        }
+        if (enemy.GetComponent<Enemy>().type == Type.Fire)
+        {
+            enemyElement.sprite = spellChoice[2].sprite;
+            enemyElement.material = spellChoice[2].material;
+        }
+        if (enemy.GetComponent<Enemy>().type == Type.Earth)
+        {
+            enemyElement.sprite = spellChoice[0].sprite;
+            enemyElement.material = spellChoice[0].material;
+        }
+        if (enemy.GetComponent<Enemy>().type == Type.Water)
+        {
+            enemyElement.sprite = spellChoice[3].sprite;
+            enemyElement.material = spellChoice[3].material;
+        }
         initialized = true;
     }
+
+    public void EndFight()
+    {
+        GameManager.Instance.LoadMap();
+    }
+
 }

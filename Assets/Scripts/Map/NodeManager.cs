@@ -28,14 +28,24 @@ public class NodeManager : MonoBehaviour
     bool onCd = false;
     public bool stop = false;
     bool end = false;
+    bool aDown = false;
+    bool dungeonSwitch = false;
 
     public int nbPoints;
-    
+
     private void OnEnable()
     {
         timer.RefreshText();
-        timer.enabled = false;
+        timer.running = false;
         timer.timer.color = new Color32(152, 221, 227, 255);
+        if (dungeonSwitch)
+        {
+            StartCoroutine(WaitAnimationDungeon("Done"));
+            GameManager.Instance.dungeon++;
+            StartCoroutine(WaitAnimationDungeon("Init"));
+            MapMaker();
+            dungeonSwitch = false;
+        }
         if (end)
         {
             stop = true;
@@ -53,7 +63,7 @@ public class NodeManager : MonoBehaviour
 
     private void OnDisable()
     {
-        timer.enabled = true;
+        timer.running = true;
         timer.timer.color = new Color32(255, 255, 255, 255);
     }
 
@@ -71,9 +81,12 @@ public class NodeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!Input.GetButton("A"))
+            aDown = false;
+
         if (!stop)
         {
-            float y = -Input.GetAxisRaw("Vertical");
+            float y = Input.GetAxisRaw("Vertical");
             if (Mathf.Abs(y) > 0.2)
             {
                 if (y > 0 && currentIndex > 0 && !onCd)
@@ -94,21 +107,22 @@ public class NodeManager : MonoBehaviour
             {
                 onCd = false;
             }
-            if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.Space))
+            if (!aDown)
             {
-                //NextLevel();
-
-                
-                if(currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
+                if ((Input.GetButton("A")) || Input.GetKeyDown(KeyCode.Space))
                 {
-                    if(currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
-                        GameManager.Instance.skipEnemy = false;
-                    NextLevel();
-                }
-                else
-                {
-                    stop = true;
-                    GameManager.Instance.LoadScenesFromMap();
+                    aDown = true;
+                    if (currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
+                    {
+                        if (currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
+                            GameManager.Instance.skipEnemy = false;
+                        NextLevel();
+                    }
+                    else
+                    {
+                        stop = true;
+                        GameManager.Instance.LoadScenesFromMap();
+                    }
                 }
             }
         }
@@ -116,7 +130,7 @@ public class NodeManager : MonoBehaviour
 
     public void NextLevel()
     {
-        if(currentNode.GetComponent<Node>().gameObjects.Count != 0)
+        if (currentNode.GetComponent<Node>().gameObjects.Count != 0)
         {
             choices = currentNode.GetComponent<Node>().gameObjects;
             currentNode = choices[0];
@@ -127,10 +141,7 @@ public class NodeManager : MonoBehaviour
         {
             if (GameManager.Instance.dungeon < 4)
             {
-                StartCoroutine(WaitAnimationDungeon("Done"));
-                GameManager.Instance.dungeon++;
-                StartCoroutine(WaitAnimationDungeon("Init"));
-                MapMaker();
+                dungeonSwitch = true;
             }
             else
             {
@@ -148,7 +159,8 @@ public class NodeManager : MonoBehaviour
         List<GameObject> nextNode = new List<GameObject>(), oldNode = new List<GameObject>();
         for (int i = 0; i < nodeAmount; i++)
         {
-            if (i % 2 == 0) {
+            if (i % 2 == 0)
+            {
                 nextType = 1;
                 nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, 0), Quaternion.identity, currentDungeonGO.transform));
                 if (i == 0)
@@ -158,14 +170,15 @@ public class NodeManager : MonoBehaviour
                 }
                 else
                 {
+                    nextNode[0].GetComponent<Node>().RefreshType(GameManager.NodeType.Enemy);
                     GameObject temp;
                     switch (oldType)
                     {
                         case 2:
-                            for(int j=1;j < nbPoints+1; j++)
+                            for (int j = 1; j < nbPoints + 1; j++)
                             {
-                                temp = Instantiate(pathPrefab, new Vector2((nodeDistance.x * i) - (nodeDistance.x / (nbPoints + 3) * (j+1)) - offset, (nodeDistance.y / 2) / (nbPoints + 3) * (j+1)), Quaternion.identity, currentDungeonGO.transform);
-                                if(j % 2 == 0)
+                                temp = Instantiate(pathPrefab, new Vector2((nodeDistance.x * i) - (nodeDistance.x / (nbPoints + 3) * (j + 1)) - offset, (nodeDistance.y / 2) / (nbPoints + 3) * (j + 1)), Quaternion.identity, currentDungeonGO.transform);
+                                if (j % 2 == 0)
                                     temp.transform.localScale = new Vector3(0.1f, 0.1f);
                                 else
                                     temp.transform.localScale = new Vector3(0.05f, 0.05f);
@@ -223,8 +236,8 @@ public class NodeManager : MonoBehaviour
                 switch (nextType)
                 {
                     case 2:
-                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, nodeDistance.y/2), Quaternion.identity, currentDungeonGO.transform));
-                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, -nodeDistance.y/2), Quaternion.identity, currentDungeonGO.transform));
+                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, nodeDistance.y / 2), Quaternion.identity, currentDungeonGO.transform));
+                        nextNode.Add(Instantiate(nodePrefab, new Vector2(nodeDistance.x * i - offset, -nodeDistance.y / 2), Quaternion.identity, currentDungeonGO.transform));
 
                         for (int j = 1; j < nbPoints + 1; j++)
                         {
@@ -274,11 +287,11 @@ public class NodeManager : MonoBehaviour
                         break;
                 }
             }
-            if(nextNode[0] != start)
+            if (nextNode[0] != start)
                 switch (nextType)
                 {
                     case 1:
-                        for(int j = 0; j < oldType; j++)
+                        for (int j = 0; j < oldType; j++)
                         {
                             oldNode[j].GetComponent<Node>().gameObjects.Add(nextNode[0]);
                         }
@@ -292,9 +305,9 @@ public class NodeManager : MonoBehaviour
                         break;
                 }
 
-            for(int j = 0; j < nextNode.Count; j++)
+            for (int j = 0; j < nextNode.Count; j++)
             {
-                if(nextNode[j] != start)
+                if (nextNode[j] != start)
                     nextNode[j].GetComponent<Node>().lastNode = oldNode[0];
             }
 
