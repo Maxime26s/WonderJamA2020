@@ -247,9 +247,9 @@ public class DuelManager : MonoBehaviour
             //Do stuff
             float effectivBuff = 1f;
             Type enType = enemy.GetComponent<Enemy>().type;
-            Type spType = spellCasted.type; 
+            Type spType = spellCasted.type;
 
-            if(enType == Type.Fire && spType == Type.Water
+            if (enType == Type.Fire && spType == Type.Water
                 || enType == Type.Water && spType == Type.Air
                 || enType == Type.Air && spType == Type.Earth
                 || enType == Type.Earth && spType == Type.Fire)
@@ -297,7 +297,7 @@ public class DuelManager : MonoBehaviour
 
     public void UpdateHeader(Spell spell)
     {
-        
+
         spellName.text = spell.name;
         spellDamage.text = "Damage: " + spell.damage;
         spellIcon.sprite = spell.sprite;
