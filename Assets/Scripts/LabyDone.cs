@@ -6,6 +6,7 @@ public class LabyDone : MonoBehaviour
 {
     public void OnTriggerEnter2D(Collider2D collision)
     {
+            
             Application.LoadLevel(2);
     }
 }

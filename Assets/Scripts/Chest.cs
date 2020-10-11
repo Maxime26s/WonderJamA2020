@@ -8,6 +8,7 @@ public class Chest : MonoBehaviour
 {
     bool right = false;
     bool first = true;
+    public bool Labyrinthe = false;
     int amount;
     public Vector2 range;
     bool stop = false;
@@ -49,27 +50,30 @@ public class Chest : MonoBehaviour
                 }
                 StartCoroutine(WaitAndLeave());
             }
-
-            float x = Input.GetAxisRaw("Horizontal");
-            if(x > 0.4  && (right || first))
+            if (!Labyrinthe)
             {
-                first = false;
-                amount--;
-                right = !right;
-                transform.eulerAngles = new Vector3(0,0, Random.Range(5, 25));
-                float scale = Random.Range(0.8f, 1.1f);
-                transform.localScale = new Vector3(scale, scale, 1);
-                Instantiate(particleShake, transform.position, Quaternion.identity);
-            } else if (x < -0.4 && (!right || first))
-            {
-                first = false;
-                amount--;
-                right = !right;
-                transform.eulerAngles = new Vector3(0, 0, Random.Range(-25, -5));
-                float scale = Random.Range(0.8f, 1.1f);
-                transform.localScale = new Vector3(scale, scale, 1);
-                Instantiate(particleShake, transform.position, Quaternion.identity);
+                float x = Input.GetAxisRaw("Horizontal");
+                            if(x > 0.4  && (right || first))
+                            {
+                                first = false;
+                                amount--;
+                                right = !right;
+                                transform.eulerAngles = new Vector3(0,0, Random.Range(5, 25));
+                                float scale = Random.Range(0.8f, 1.1f);
+                                transform.localScale = new Vector3(scale, scale, 1);
+                                Instantiate(particleShake, transform.position, Quaternion.identity);
+                            } else if (x < -0.4 && (!right || first))
+                            {
+                                first = false;
+                                amount--;
+                                right = !right;
+                                transform.eulerAngles = new Vector3(0, 0, Random.Range(-25, -5));
+                                float scale = Random.Range(0.8f, 1.1f);
+                                transform.localScale = new Vector3(scale, scale, 1);
+                                Instantiate(particleShake, transform.position, Quaternion.identity);
+                            }
             }
+            
         }
     }
 }
