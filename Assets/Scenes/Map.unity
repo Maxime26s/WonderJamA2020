@@ -2281,8 +2281,6 @@ MonoBehaviour:
   seconds: 0
   miliseconds: 0
   enabled: 0
-  textDamage: {fileID: 0}
-  canv: {fileID: 8925235203500011749, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
 --- !u!1 &2038552777
 GameObject:
   m_ObjectHideFlags: 0

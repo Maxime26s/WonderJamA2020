@@ -746,6 +746,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 5552629806380064399, guid: e8782b7836d8755428bbf94e0f323a4b, type: 3}
+  - {fileID: 7596770581519476150, guid: 593649a6997e1c74d89105c00fa20bf1, type: 3}
+  - {fileID: 7832371389730611422, guid: a1dafbb9a30731941af012ebda4c2e5f, type: 3}
+  - {fileID: 7116053169827269102, guid: 57dc0671e24a88a41a4964b916e13fce, type: 3}
+  - {fileID: 7790352549354622962, guid: d5b564841038be548acf80f3a8510169, type: 3}
+  - {fileID: 1694840887664535685, guid: 074af2f05ae87314c92bce7adb3ca6ad, type: 3}
+  - {fileID: 1090007585743130752, guid: d43f8b042c3ba3746bc75033e807619a, type: 3}
+  - {fileID: 1730403283090195557, guid: 417273fbaf4a65c418f22a92caaa2b8b, type: 3}
   miniBosses: []
   boss: {fileID: 0}
   offsety: 3
