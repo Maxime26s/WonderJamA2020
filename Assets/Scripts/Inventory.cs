@@ -4,12 +4,25 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+
+    public static Inventory Instance { get; private set; }
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     public List<Spell> spells = new List<Spell>();
     public int spellCount;
     public List<Spell> prefabs = new List<Spell>();
     public List<BoutonManette> boutons = new List<BoutonManette>();
     bool firstIt = true;
-    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -73,13 +86,5 @@ public class Inventory : MonoBehaviour
         {
             spell.listeInputs.Add(boutons[Random.Range(0, 7)]);
         }
-    }
-
-    public IEnumerator AttackAnim()
-    {
-        Debug.Log(anim.parameterCount);
-        anim.SetBool("attacking", true);
-        yield return new WaitForSeconds(1f);
-        anim.SetBool("attacking", false);
     }
 }
