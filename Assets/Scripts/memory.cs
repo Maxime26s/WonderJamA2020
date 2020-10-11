@@ -11,7 +11,6 @@ public class memory : MonoBehaviour
     public Image good;
     public Sprite bien;
     public Sprite mauvais;
-    public TextMeshProUGUI mot;
 
     public Sprite abut;
     public Sprite bbut;
@@ -21,10 +20,11 @@ public class memory : MonoBehaviour
 
     int button_to_be_pressed;
     int progress = 0;
-    bool stop = false;
+    bool stop = true;
 
     List<Sprite> sprites = new List<Sprite>();
     List<int> secance = new List<int>();
+    public List<Image> images = new List<Image>();
 
     float startSeconds;
 
@@ -35,6 +35,11 @@ public class memory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        button_affiche.sprite = invisible;
+        for(int i = 0; i < images.Count; i++)
+        {
+            images[i].sprite = invisible;
+        }
         startSeconds = GameManager.Instance.mapManager.timer.minutes * 60 + GameManager.Instance.mapManager.timer.seconds;
         sprites.Add(abut);
         sprites.Add(bbut);
@@ -46,6 +51,8 @@ public class memory : MonoBehaviour
         {
             secance.Add(r());
         }
+        StartCoroutine(showsec(5));
+        show1 = false;
     }
 
     // Update is called once per frame
@@ -69,12 +76,6 @@ public class memory : MonoBehaviour
             {
                 button_to_be_pressed = secance[progress];
             }
-        
-            if (show1)
-            {
-                StartCoroutine(showsec(5));
-                show1 = false;
-            }
 
             if (!buttonPressed)
             {
@@ -88,6 +89,7 @@ public class memory : MonoBehaviour
                     }
                     else
                     {
+                        images[progress].sprite = mauvais;
                         progress = 0;
                         StartCoroutine(showWrong());
                     }
@@ -102,6 +104,7 @@ public class memory : MonoBehaviour
                     }
                     else
                     {
+                        images[progress].sprite = mauvais;
                         progress = 0;
                         StartCoroutine(showWrong());
                     }
@@ -116,6 +119,7 @@ public class memory : MonoBehaviour
                     }
                     else
                     {
+                        images[progress].sprite = mauvais;
                         progress = 0;
                         StartCoroutine(showWrong());
                     }
@@ -130,6 +134,7 @@ public class memory : MonoBehaviour
                     }
                     else
                     {
+                        images[progress].sprite = mauvais;
                         progress = 0;
                         StartCoroutine(showWrong());
                     }
@@ -138,14 +143,14 @@ public class memory : MonoBehaviour
 
             Debug.Log(progress);
             
-            if(progress == 5)
+            if(progress >= 5)
             {
                 reussi = true;
                 good.sprite = bien;
                 //mot.text = "Bravo!!!";
                 IEnumerator WaitASec()
                 {
-                    yield return new WaitForSeconds(1.5f);
+                    yield return new WaitForSeconds(0.5f);
                     GameManager.Instance.LoadMap();
                 }
                 StartCoroutine(WaitASec());
@@ -160,7 +165,7 @@ public class memory : MonoBehaviour
     }
     IEnumerator showsec(int nb)
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         for (int i = 0; i < nb; i++)
         {
             button_affiche.sprite = sprites[secance[i]];
@@ -168,24 +173,20 @@ public class memory : MonoBehaviour
             button_affiche.sprite = sprites[4];
             yield return new WaitForSeconds(0.25f);
         }
-        
+        stop = false;
     }
     IEnumerator showWrong()
     {
-        good.sprite = mauvais;
-        //mot.text = "Oupss! Essaie encore!";
-        yield return new WaitForSeconds(0.4f);
-        good.sprite = invisible;
-        //mot.text = "";
+        yield return new WaitForSeconds(0.1f);
+        for (int i = 0; i < images.Count; i++)
+        {
+            images[i].sprite = invisible;
+        }
 
     }
     IEnumerator showGood()
     {
-        good.sprite = bien;
-        //mot.text = "Oui!";
-        yield return new WaitForSeconds(0.4f);
-        good.sprite = invisible;
-        //mot.text = "";
-
+        images[progress-1].sprite = bien;
+        yield return null;
     }
 }
