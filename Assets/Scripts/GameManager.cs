@@ -17,6 +17,14 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        /*
+        IEnumerator WaitAndKill()
+        {
+            yield return new WaitForSeconds(1.15f);
+            if (SceneManager.GetActiveScene().name == "Menu")
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        }
+        StartCoroutine(WaitAndKill());*/
     }
 
     public List<GameObject> enemies = new List<GameObject>(); //miniboss = better boss
@@ -48,13 +56,13 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void SceneTransition()
@@ -177,6 +185,19 @@ public class GameManager : MonoBehaviour
         StartCoroutine(Wait());
     }
 
+    public void LoadDeath()
+    {
+        IEnumerator Wait()
+        {
+            yield return new WaitForSeconds(0.5f);
+            map.SetActive(false);
+            SceneManager.LoadScene("Death", LoadSceneMode.Additive);
+            yield return new WaitForSeconds(0.1f);
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Death"));
+        }
+        StartCoroutine(Wait());
+    }
+
     public void PerteTemps(float secondes)
     {
         mapManager.timer.RemoveTime(secondes);
@@ -189,7 +210,7 @@ public class GameManager : MonoBehaviour
 
     public void TpBoss()
     {
-        while(mapManager.currentNode.GetComponent<Node>().gameObjects.Count != 0)
+        while (mapManager.currentNode.GetComponent<Node>().gameObjects.Count != 0)
         {
             mapManager.choices = mapManager.currentNode.GetComponent<Node>().gameObjects;
             mapManager.currentNode = mapManager.choices[0];

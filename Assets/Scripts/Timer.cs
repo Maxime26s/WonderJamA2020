@@ -9,7 +9,8 @@ public class Timer : MonoBehaviour
     public float minutes = 5;
     public float seconds = 0;
     public float miliseconds = 0;
-    public bool enabled = false;
+    public bool running = false;
+    public bool player;
     //public GameObject textDamage, canv;
     
     private void Start()
@@ -21,7 +22,7 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (enabled)
+        if (running)
         {
             if (miliseconds <= 0)
             {
@@ -39,7 +40,14 @@ public class Timer : MonoBehaviour
             }
 
             miliseconds -= Time.deltaTime * 100;
-
+            if(minutes < 0)
+            {
+                minutes = 0;
+                seconds = 0;
+                miliseconds = 0;
+                running = false;
+                GameManager.Instance.LoadDeath();
+            }
             RefreshText();
         }
     }
@@ -69,7 +77,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            seconds -= secondes;
+            seconds += secondes;
         }
     }
 
