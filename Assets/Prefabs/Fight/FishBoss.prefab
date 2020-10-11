@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 3899237628388306911}
   m_Layer: 0
   m_Name: FishBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,10 +252,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 5440348727054157310}
-  minutes: 1
-  seconds: 30
+  minutes: 0
+  seconds: 20
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!114 &3899237628388306911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,13 +272,14 @@ MonoBehaviour:
   type: 2
   timer: {fileID: 2858256825808414011}
   name: fishboss
-  maxDamage: 12
-  minDamage: 7
+  maxDamage: 5
+  minDamage: 2
   text: {fileID: 5440348727054157310}
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 7397710429881628454}
+  calledEnd: 0
 --- !u!1 &5950888217660578129
 GameObject:
   m_ObjectHideFlags: 0

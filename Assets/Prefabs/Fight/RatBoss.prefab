@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 7164062891364105749}
   m_Layer: 0
   m_Name: RatBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,7 +153,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 60ef334e9a52742409083efc5cd2ad03, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -217,10 +217,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 6041593504521521152}
-  minutes: 1
-  seconds: 0
+  minutes: 0
+  seconds: 50
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!114 &7164062891364105749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,13 +237,14 @@ MonoBehaviour:
   type: 0
   timer: {fileID: 3451526080803168727}
   name: ratboss
-  maxDamage: 8
-  minDamage: 6
+  maxDamage: 6
+  minDamage: 3
   text: {fileID: 6041593504521521152}
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 2454778645377457663}
+  calledEnd: 0
 --- !u!1 &4787247364586775821
 GameObject:
   m_ObjectHideFlags: 0

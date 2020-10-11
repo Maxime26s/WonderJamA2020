@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5602128610366257914}
   m_Layer: 0
   m_Name: RockBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c3ff9aa3ec8ae1448bf202bd7188cb09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 1423518110676449203}
+  calledEnd: 0
 --- !u!114 &5602128610366257914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,10 +141,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3241852865842450723}
-  minutes: 2
+  minutes: 1
   seconds: 0
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!1 &2791941958411235678
 GameObject:
   m_ObjectHideFlags: 0

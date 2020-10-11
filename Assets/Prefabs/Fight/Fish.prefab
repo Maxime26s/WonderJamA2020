@@ -226,6 +226,7 @@ MonoBehaviour:
   playerTime: {fileID: 4716723560822531356}
   attack: 0
   anim: {fileID: 3699336028653543485}
+  calledEnd: 0
 --- !u!114 &4716723560822531356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,9 +241,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 7187430111139871874}
   minutes: 0
-  seconds: 20
+  seconds: 10
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!1 &8314912653315204917
 GameObject:
   m_ObjectHideFlags: 0

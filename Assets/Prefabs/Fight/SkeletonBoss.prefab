@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 6963079802687642545}
   m_Layer: 0
   m_Name: SkeletonBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,7 +188,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 769df41e19979af45bd9eb2dbc7ba5b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -254,13 +254,14 @@ MonoBehaviour:
   type: 1
   timer: {fileID: 6963079802687642545}
   name: skeletonboss
-  maxDamage: 12
-  minDamage: 10
+  maxDamage: 7
+  minDamage: 3
   text: {fileID: 7577744087612496756}
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 3601512244035347219}
+  calledEnd: 0
 --- !u!114 &6963079802687642545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,10 +275,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 7577744087612496756}
-  minutes: 1
-  seconds: 0
+  minutes: 0
+  seconds: 45
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!1 &7729007602905661790
 GameObject:
   m_ObjectHideFlags: 0

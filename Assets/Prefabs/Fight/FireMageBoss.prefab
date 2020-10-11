@@ -114,7 +114,7 @@ GameObject:
   - component: {fileID: 2428531164472802785}
   m_Layer: 0
   m_Name: FireMageBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,9 +218,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 6870179443598421342}
   minutes: 0
-  seconds: 55
+  seconds: 45
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!114 &2428531164472802785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,13 +237,14 @@ MonoBehaviour:
   type: 1
   timer: {fileID: 7197637379124818597}
   name: firemageboss
-  maxDamage: 10
-  minDamage: 8
+  maxDamage: 6
+  minDamage: 3
   text: {fileID: 6870179443598421342}
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 958420523163097093}
+  calledEnd: 0
 --- !u!1 &3858024361116796467
 GameObject:
   m_ObjectHideFlags: 0

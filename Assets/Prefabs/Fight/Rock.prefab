@@ -153,7 +153,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: c3ff9aa3ec8ae1448bf202bd7188cb09, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -226,6 +226,7 @@ MonoBehaviour:
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 1694840887664535686}
+  calledEnd: 0
 --- !u!114 &7941779927471090428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,9 +241,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 2003055446983011572}
   minutes: 0
-  seconds: 45
+  seconds: 25
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!1 &1908662058485933296
 GameObject:
   m_ObjectHideFlags: 0

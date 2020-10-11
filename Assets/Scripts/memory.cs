@@ -140,8 +140,6 @@ public class memory : MonoBehaviour
                     }
                 }
             }
-
-            Debug.Log(progress);
             
             if(progress >= 5)
             {

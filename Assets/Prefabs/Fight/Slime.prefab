@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 421613347417393136}
   - component: {fileID: 640304524992171271}
   - component: {fileID: 8886161840540203649}
-  - component: {fileID: 1386797873043239046}
   - component: {fileID: 7119661873722235140}
+  - component: {fileID: 1386797873043239046}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Enemy
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b2367c3c9a9845f429a0378be9594b88, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,6 +105,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7119661873722235140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730403283090195557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ed8c0f14e128f46abcba5a733474c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  timer: {fileID: 1386797873043239046}
+  name: slime
+  maxDamage: 2
+  minDamage: 1
+  text: {fileID: 3267095891969530824}
+  attackCD: 0
+  playerTime: {fileID: 0}
+  attack: 0
+  anim: {fileID: 8886161840540203649}
+  calledEnd: 0
 --- !u!114 &1386797873043239046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,29 +144,8 @@ MonoBehaviour:
   minutes: 0
   seconds: 25
   miliseconds: 0
-  enabled: 0
---- !u!114 &7119661873722235140
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730403283090195557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47ed8c0f14e128f46abcba5a733474c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  type: 2
-  timer: {fileID: 1386797873043239046}
-  name: slime
-  maxDamage: 5
-  minDamage: 4
-  text: {fileID: 3267095891969530824}
-  attackCD: 0
-  playerTime: {fileID: 0}
-  attack: 0
-  anim: {fileID: 8886161840540203649}
+  running: 0
+  player: 0
 --- !u!1 &2931375081619108489
 GameObject:
   m_ObjectHideFlags: 0
