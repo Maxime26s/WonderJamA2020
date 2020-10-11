@@ -83,9 +83,6 @@ public class NodeManager : MonoBehaviour
     {
         if (!Input.GetButton("A"))
             aDown = false;
-        
-        if(Input.GetKeyDown(KeyCode.J))
-            NextLevel();
 
         if (!stop)
         {
