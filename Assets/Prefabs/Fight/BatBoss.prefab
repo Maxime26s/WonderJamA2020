@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1151603130094268565}
   m_Layer: 0
   m_Name: BatBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 3543145751167527309}
+  calledEnd: 0
 --- !u!114 &1151603130094268565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +144,8 @@ MonoBehaviour:
   minutes: 1
   seconds: 0
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!1 &5286189968090055604
 GameObject:
   m_ObjectHideFlags: 0

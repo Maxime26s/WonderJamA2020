@@ -15,7 +15,7 @@ public class DuelManager : MonoBehaviour
     string lastSpell = "";
     float multDebuff = 1f;
 
-
+    public float arbitraryMultiplier;
     public Inventory inventory;
     public Timer timer;
     public List<string> currentSequence = new List<string>();
@@ -26,8 +26,10 @@ public class DuelManager : MonoBehaviour
     public List<Image> combo, spellChoice;
     public Sprite transparent;
     public Spell currentSpell = null;
-    public GameObject enemy;
+    public GameObject enemy, smoke;
     public AnimOnly playerAnim;
+    public List<ParticleSystem> particles;
+    public List<AudioClip> particleSounds;
 
 
     // Start is called before the first frame update
@@ -215,6 +217,28 @@ public class DuelManager : MonoBehaviour
             Type enType = enemy.GetComponent<Enemy>().type;
             Type spType = spellCasted.type;
 
+            if(spType == Type.Water)
+            {
+                Instantiate(particles[0], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
+                this.GetComponent<AudioSource>().clip = particleSounds[0];
+            }
+            else if(spType == Type.Air)
+            {
+                Instantiate(particles[1], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
+                this.GetComponent<AudioSource>().clip = particleSounds[1];
+            }
+            else if(spType == Type.Earth)
+            {
+                Instantiate(particles[2], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
+                this.GetComponent<AudioSource>().clip = particleSounds[2];
+            }
+            else if(spType == Type.Fire)
+            {
+                Instantiate(particles[3], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
+                this.GetComponent<AudioSource>().clip = particleSounds[3];
+            }
+            this.GetComponent<AudioSource>().Play();
+
             if (enType == Type.Fire && spType == Type.Water
                 || enType == Type.Water && spType == Type.Air
                 || enType == Type.Air && spType == Type.Earth
@@ -262,7 +286,7 @@ public class DuelManager : MonoBehaviour
     public void UpdateHeader(Spell spell)
     {
         spellName.text = spell.name;
-        spellDamage.text = "Damage: " + spell.damage;
+        spellDamage.text = "Dégats: " + spell.damage;
         spellIcon.sprite = spell.sprite;
         spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
@@ -282,6 +306,7 @@ public class DuelManager : MonoBehaviour
     public void OnPlayerCreated()
     {
         inventory = Inventory.Instance;
+        Debug.Log(inventory);
         currentSequence.Clear();
         for (int i = 0; i < spellChoice.Count; i++)
         {
@@ -294,6 +319,12 @@ public class DuelManager : MonoBehaviour
             spellChoice[i].material = inventory.spells[i].material;
         }
         UpdateHeader(inventory.spells[0]);
+        UpdateEnemyElement();
+        initialized = true;
+    }
+
+    public void UpdateEnemyElement()
+    {
         if (enemy.GetComponent<Enemy>().type == Type.Air)
         {
             enemyElement.sprite = spellChoice[1].sprite;
@@ -314,12 +345,24 @@ public class DuelManager : MonoBehaviour
             enemyElement.sprite = spellChoice[3].sprite;
             enemyElement.material = spellChoice[3].material;
         }
-        initialized = true;
     }
 
     public void EndFight()
     {
+        enemy.GetComponent<SpriteRenderer>().enabled = false;
+        Instantiate(smoke, new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
+        this.GetComponent<AudioSource>().clip = particleSounds[4];
+        this.GetComponent<AudioSource>().Play();
+        StartCoroutine("ChangeMap");
+    }
+
+    IEnumerator ChangeMap()
+    {
+        yield return new WaitForSeconds(1f);
+
         GameManager.Instance.LoadMap();
+
+        yield return null;
     }
 
 }

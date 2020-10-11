@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 2644263315908076097}
   m_Layer: 0
   m_Name: GoblinBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -354,7 +354,8 @@ MonoBehaviour:
   minutes: 1
   seconds: 30
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!114 &2644263315908076097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,3 +378,4 @@ MonoBehaviour:
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 9223355066684534397}
+  calledEnd: 0

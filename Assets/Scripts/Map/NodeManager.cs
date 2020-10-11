@@ -55,7 +55,7 @@ public class NodeManager : MonoBehaviour
                 yield return new WaitForSeconds(1.1f);
                 GameManager.Instance.SceneTransition();
                 yield return new WaitForSeconds(1f);
-                SceneManager.LoadScene("End", LoadSceneMode.Single);
+                SceneManager.LoadScene("Ending", LoadSceneMode.Single);
             }
             StartCoroutine(End());
         }
@@ -83,6 +83,9 @@ public class NodeManager : MonoBehaviour
     {
         if (!Input.GetButton("A"))
             aDown = false;
+        
+        if(Input.GetKeyDown(KeyCode.J))
+            NextLevel();
 
         if (!stop)
         {
