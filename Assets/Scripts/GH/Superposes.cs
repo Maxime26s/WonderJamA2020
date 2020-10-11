@@ -2,11 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Superposes : MonoBehaviour
 {
     public GHController ghc;
-    private bool trigg = false;
     private bool wrong;
 
     private void OnTriggerStay2D(Collider2D other)
@@ -19,6 +19,11 @@ public class Superposes : MonoBehaviour
                 {
                     ghc.hit++;
                     ghc.combo++;
+                    if (ghc.comboMax < ghc.combo)
+                        ghc.comboMax = ghc.combo;
+                    Instantiate(ghc.particles, other.gameObject.transform.position, Quaternion.identity);
+                    ghc.comboText.GetComponent<TextMeshProUGUI>().text = string.Format("Combo: {0:#0}", ghc.combo);
+                    ghc.comboMaxText.GetComponent<TextMeshProUGUI>().text = string.Format("Max Combo: {0:#0}", ghc.comboMax);
                     //finalsScore.compteur++;
                     Destroy(other.gameObject);
                 }

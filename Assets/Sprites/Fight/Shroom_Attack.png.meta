@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: 0335bd70141380344b81b35931f315a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7080239791658017121
+    second: Shroom_Attack_0
+  - first:
+      213: -3672875922586586128
+    second: Shroom_Attack_1
+  - first:
+      213: 557665169174988940
+    second: Shroom_Attack_2
+  - first:
+      213: -2551678860467941838
+    second: Shroom_Attack_3
+  - first:
+      213: -1177256339638479520
+    second: Shroom_Attack_4
+  - first:
+      213: 2260525346461018939
+    second: Shroom_Attack_5
+  - first:
+      213: -2844336225466079425
+    second: Shroom_Attack_6
+  - first:
+      213: -933919767994176530
+    second: Shroom_Attack_7
+  - first:
+      213: -2566317295624370606
+    second: Shroom_Attack_8
+  - first:
+      213: -9111055436156840762
+    second: Shroom_Attack_0
+  - first:
+      213: -9108900972165466419
+    second: Shroom_Attack_1
+  - first:
+      213: 2553776610507300039
+    second: Shroom_Attack_2
+  - first:
+      213: -5760183487398645957
+    second: Shroom_Attack_3
+  - first:
+      213: -306097738987555477
+    second: Shroom_Attack_4
+  - first:
+      213: 5151604680446295112
+    second: Shroom_Attack_5
+  - first:
+      213: -6560361776094696288
+    second: Shroom_Attack_6
+  - first:
+      213: -8350478552370226845
+    second: Shroom_Attack_7
+  - first:
+      213: -893550662307359330
+    second: Shroom_Attack_8
+  - first:
+      213: -1678056496690290708
+    second: Shroom_Attack_9
+  - first:
+      213: 3734136786210528391
+    second: Shroom_Attack_10
+  - first:
+      213: -4617502219004072465
+    second: Shroom_Attack_11
+  - first:
+      213: 8572167011476523958
+    second: Shroom_Attack_12
+  - first:
+      213: -334399369822625516
+    second: Shroom_Attack_13
+  - first:
+      213: -5008490320549870850
+    second: Shroom_Attack_14
+  - first:
+      213: -7038538406147013732
+    second: Shroom_Attack_15
+  - first:
+      213: 1305685833084426205
+    second: Shroom_Attack_16
+  - first:
+      213: -2213232054097278518
+    second: Shroom_Attack_17
+  - first:
+      213: -4271262570491061395
+    second: Shroom_Attack_18
+  - first:
+      213: -7627293229110877714
+    second: Shroom_Attack_19
+  - first:
+      213: 3959379001075775394
+    second: Shroom_Attack_20
+  - first:
+      213: 7379102884385022339
+    second: Shroom_Attack_21
+  - first:
+      213: -5259162933462273889
+    second: Shroom_Attack_22
+  - first:
+      213: -1789998621283174550
+    second: Shroom_Attack_23
+  - first:
+      213: -69223962525374507
+    second: Shroom_Attack_24
+  - first:
+      213: -620041737138215554
+    second: Shroom_Attack_25
+  - first:
+      213: -7411897017588119301
+    second: Shroom_Attack_26
+  - first:
+      213: -3795888482856938706
+    second: Shroom_Attack_27
+  - first:
+      213: 8846155443574438917
+    second: Shroom_Attack_28
+  - first:
+      213: -6376308768698533174
+    second: Shroom_Attack_29
+  - first:
+      213: -8187771857742179445
+    second: Shroom_Attack_30
+  - first:
+      213: 1535012324068793750
+    second: Shroom_Attack_31
+  - first:
+      213: -8818870589952486667
+    second: Shroom_Attack_32
+  - first:
+      213: 7479133240350492427
+    second: Shroom_Attack_33
+  - first:
+      213: 7854305511726312376
+    second: Shroom_Attack_34
+  - first:
+      213: -385708071965522152
+    second: Shroom_Attack_35
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shroom_Attack_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4dafe6a570f8180800000000000000
+      internalID: -9111055436156840762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6fddba3dea69180800000000000000
+      internalID: -9108900972165466419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc1df8fb46d07320800000000000000
+      internalID: 2553776610507300039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3f688013a7bf00b0800000000000000
+      internalID: -5760183487398645957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 514
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65b8196ab580cbf0800000000000000
+      internalID: -306097738987555477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cbd39992d2e7740800000000000000
+      internalID: 5151604680446295112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac23d119b9e4f4a0800000000000000
+      internalID: -6560361776094696288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_7
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3695475dff32d1c80800000000000000
+      internalID: -8350478552370226845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shroom_Attack_8
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e95da5828687993f0800000000000000
+      internalID: -893550662307359330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

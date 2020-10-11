@@ -49,4 +49,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ae98b7da78776434b90d99e0813c9311, type: 2}
   - {fileID: 11400000, guid: 94d48caf49d93314d92e1ef3aabcca47, type: 2}
   spellCount: 4
-  dm: {fileID: 0}
+  prefabs: []
+  boutons: []
+  anim: {fileID: 0}
