@@ -38,7 +38,7 @@ public class Enemy : MonoBehaviour
         if(attack)
         {
             attackCD = Random.Range(3.0f, 5.0f);
-            playerTime.LoseTime(Random.Range(minDamage, maxDamage));
+            playerTime.RemoveTime(Random.Range((int)minDamage, (int)maxDamage), Random.Range(10, 90));
             attack = false;
 
             if (lastBoss)

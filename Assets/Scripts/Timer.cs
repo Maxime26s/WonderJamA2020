@@ -97,6 +97,33 @@ public class Timer : MonoBehaviour
         }
     }
 
+    public void RemoveTime(float secondes, float millisecondes)
+    {
+        if (millisecondes >= miliseconds)
+        {
+            seconds--;
+            millisecondes -= miliseconds;
+            miliseconds = 100;
+            miliseconds -= millisecondes;
+        }
+        else
+        {
+            miliseconds -= millisecondes;
+        }
+
+        if (secondes >= seconds)
+        {
+            minutes--;
+            secondes -= seconds;
+            seconds = 59;
+            seconds -= secondes;
+        }
+        else
+        {
+            seconds -= secondes;
+        }
+    }
+
     public void LoseTime(float damage)
     {
         seconds -= damage;
