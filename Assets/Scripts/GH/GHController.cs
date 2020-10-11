@@ -5,8 +5,8 @@ using TMPro;
 
 public class GHController : MonoBehaviour
 {
-    public int hit = 0, combo = 0, comboMax = 0, total;
-    public GameObject result;
+    public float hit = 0, combo = 0, comboMax = 0, total;
+    public GameObject result, guide, particles, comboText, comboMaxText;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +15,9 @@ public class GHController : MonoBehaviour
         {
             yield return new WaitForSeconds(24f);
             int resultat = (int)(comboMax / total * hit);
+            Debug.Log(resultat);
             GameManager.Instance.AjoutTemps(resultat);
+            guide.SetActive(false);
             result.SetActive(true); //change for a fade
             TextMeshProUGUI text = result.GetComponentInChildren<TextMeshProUGUI>();
             if (resultat < total/2)

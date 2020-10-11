@@ -29,6 +29,7 @@ public class NodeManager : MonoBehaviour
     public bool stop = false;
     bool end = false;
     bool aDown = false;
+    bool dungeonSwitch = false;
 
     public int nbPoints;
 
@@ -37,6 +38,14 @@ public class NodeManager : MonoBehaviour
         timer.RefreshText();
         timer.running = false;
         timer.timer.color = new Color32(152, 221, 227, 255);
+        if (dungeonSwitch)
+        {
+            StartCoroutine(WaitAnimationDungeon("Done"));
+            GameManager.Instance.dungeon++;
+            StartCoroutine(WaitAnimationDungeon("Init"));
+            MapMaker();
+            dungeonSwitch = false;
+        }
         if (end)
         {
             stop = true;
@@ -132,10 +141,7 @@ public class NodeManager : MonoBehaviour
         {
             if (GameManager.Instance.dungeon < 4)
             {
-                StartCoroutine(WaitAnimationDungeon("Done"));
-                GameManager.Instance.dungeon++;
-                StartCoroutine(WaitAnimationDungeon("Init"));
-                MapMaker();
+                dungeonSwitch = true;
             }
             else
             {

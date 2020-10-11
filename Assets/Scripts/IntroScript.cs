@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.Rendering.Universal;
+using UnityEngine.SceneManagement;
 
 public class IntroScript : MonoBehaviour
 {
@@ -19,10 +20,12 @@ public class IntroScript : MonoBehaviour
     public GameObject nuke;
     public List<GameObject> eyes;
     public List<AudioClip> sounds;
+    public bool input;
 
     // Start is called before the first frame update
     void Start()
     {
+        input = false;
         Camera camera = Camera.main;
         float halfHeight = camera.orthographicSize;
         float halfWidth = camera.aspect * halfHeight;
@@ -39,7 +42,10 @@ public class IntroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.anyKey)
+        {
+            SceneManager.LoadScene("Map");
+        }
     }
 
     IEnumerator Intro()
@@ -110,12 +116,12 @@ public class IntroScript : MonoBehaviour
 
     IEnumerator MoveText() 
     {
-        for(float i = -400; i <= 2000f; i += textSpeed * Time.deltaTime) 
+        for(float i = -560f; i <= 3800f; i += textSpeed * Time.deltaTime) 
         {
             text.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, i);
             yield return null;
         }
-        StartCoroutine("FadeOut");
+        SceneManager.LoadScene("Map");
     }
 
     IEnumerator FadeIn() 
@@ -136,7 +142,6 @@ public class IntroScript : MonoBehaviour
             Color c = fade.GetComponent<SpriteRenderer>().color;
             c.a = ft;
             fade.GetComponent<SpriteRenderer>().color = c;
-            
         }
         Application.LoadLevel(2);
         yield return null;

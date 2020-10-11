@@ -11,10 +11,11 @@ public class Chest : MonoBehaviour
     int amount;
     public Vector2 range;
     bool stop = false;
-    public GameObject reward, particle;
+    public GameObject reward, guide, particleDestroy, particleShake;
     public List<Spell> loots = new List<Spell>();
-    public Image spellImage;
+    public Image spellSprite;
     public TextMeshProUGUI spellText;
+
 
     // Start is called before the first frame update
     void Start()
@@ -32,14 +33,16 @@ public class Chest : MonoBehaviour
                 stop = true;
                 IEnumerator WaitAndLeave()
                 {
-                    particle.SetActive(true);
+                    Instantiate(particleDestroy, transform.position, Quaternion.identity);
                     gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     Spell given = loots[Random.Range(0, 15)];
                     spellText.gameObject.SetActive(true);
-                    spellImage.gameObject.SetActive(true);
+                    spellSprite.gameObject.SetActive(true);
                     spellText.text = given.name;
-                    spellImage.sprite = given.sprite;
+                    spellSprite.sprite = given.sprite;
+                    spellSprite.material = given.material;
                     Inventory.Instance.AddSpell(given.name);
+                    guide.SetActive(false);
                     reward.SetActive(true);
                     yield return new WaitForSeconds(3f);
                     GameManager.Instance.LoadMap();
@@ -54,16 +57,18 @@ public class Chest : MonoBehaviour
                 amount--;
                 right = !right;
                 transform.eulerAngles = new Vector3(0,0, Random.Range(5, 25));
-                float scale = Random.Range(0.9f, 1.2f);
+                float scale = Random.Range(0.8f, 1.1f);
                 transform.localScale = new Vector3(scale, scale, 1);
+                Instantiate(particleShake, transform.position, Quaternion.identity);
             } else if (x < -0.4 && (!right || first))
             {
                 first = false;
                 amount--;
                 right = !right;
                 transform.eulerAngles = new Vector3(0, 0, Random.Range(-25, -5));
-                float scale = Random.Range(0.9f, 1.2f);
+                float scale = Random.Range(0.8f, 1.1f);
                 transform.localScale = new Vector3(scale, scale, 1);
+                Instantiate(particleShake, transform.position, Quaternion.identity);
             }
         }
     }

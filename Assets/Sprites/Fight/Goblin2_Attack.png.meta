@@ -23,6 +23,27 @@ TextureImporter:
   - first:
       213: -2498592120631495801
     second: Goblin2_Attack_6
+  - first:
+      213: 7921278053364492030
+    second: Goblin2_Attack_0
+  - first:
+      213: 5378136587987883117
+    second: Goblin2_Attack_1
+  - first:
+      213: 8271744420548398498
+    second: Goblin2_Attack_2
+  - first:
+      213: -1817899530661334562
+    second: Goblin2_Attack_3
+  - first:
+      213: -5743927011333279669
+    second: Goblin2_Attack_4
+  - first:
+      213: -7867114450082916654
+    second: Goblin2_Attack_5
+  - first:
+      213: 8819322229937703642
+    second: Goblin2_Attack_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -53,7 +74,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -87,7 +108,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -99,7 +120,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,19 +134,19 @@ TextureImporter:
       name: Goblin2_Attack_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 32
+        y: 1088
+        width: 384
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 950c85edc3fd65180800000000000000
-      internalID: -9126862142298341287
+      spriteID: ef663e9bb680eed60800000000000000
+      internalID: 7921278053364492030
       vertices: []
       indices: 
       edges: []
@@ -134,19 +155,19 @@ TextureImporter:
       name: Goblin2_Attack_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 544
+        y: 1088
+        width: 352
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f25fe2c4422ec280800000000000000
-      internalID: -9021235324852940046
+      spriteID: d649c807bbaf2aa40800000000000000
+      internalID: 5378136587987883117
       vertices: []
       indices: 
       edges: []
@@ -155,19 +176,19 @@ TextureImporter:
       name: Goblin2_Attack_2
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1088
+        y: 1088
+        width: 320
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 510297bac6eb570d0800000000000000
-      internalID: -3425622567602806763
+      spriteID: 2ad4b9399b32bc270800000000000000
+      internalID: 8271744420548398498
       vertices: []
       indices: 
       edges: []
@@ -176,19 +197,19 @@ TextureImporter:
       name: Goblin2_Attack_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 576
+        width: 320
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abc0ac665e458d880800000000000000
-      internalID: -8586019345333089094
+      spriteID: ed1f49d220685c6e0800000000000000
+      internalID: -1817899530661334562
       vertices: []
       indices: 
       edges: []
@@ -197,19 +218,19 @@ TextureImporter:
       name: Goblin2_Attack_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 576
+        y: 576
+        width: 320
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 29dd3764bc1371ab0800000000000000
-      internalID: -5037502909060489838
+      spriteID: b4075b9d0d87940b0800000000000000
+      internalID: -5743927011333279669
       vertices: []
       indices: 
       edges: []
@@ -218,19 +239,19 @@ TextureImporter:
       name: Goblin2_Attack_5
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1088
+        y: 576
+        width: 320
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 11c05620bde15c470800000000000000
-      internalID: 8414165404798487569
+      spriteID: 2d61773e61562d290800000000000000
+      internalID: -7867114450082916654
       vertices: []
       indices: 
       edges: []
@@ -239,19 +260,19 @@ TextureImporter:
       name: Goblin2_Attack_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 64
+        y: 64
+        width: 320
+        height: 416
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7837b2354b7335dd0800000000000000
-      internalID: -2498592120631495801
+      spriteID: ada842367d6846a70800000000000000
+      internalID: 8819322229937703642
       vertices: []
       indices: 
       edges: []

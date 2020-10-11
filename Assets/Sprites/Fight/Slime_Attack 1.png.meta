@@ -101,6 +101,99 @@ TextureImporter:
   - first:
       213: 3568477676249493163
     second: Slime_Attack 1_32
+  - first:
+      213: -3324504013304890475
+    second: Slime_Attack 1_0
+  - first:
+      213: 7956921083907506002
+    second: Slime_Attack 1_1
+  - first:
+      213: 5815813770806330933
+    second: Slime_Attack 1_2
+  - first:
+      213: 3952577442624095593
+    second: Slime_Attack 1_3
+  - first:
+      213: -8897912904478793712
+    second: Slime_Attack 1_4
+  - first:
+      213: 3565310598438249760
+    second: Slime_Attack 1_5
+  - first:
+      213: 7573542392761308215
+    second: Slime_Attack 1_6
+  - first:
+      213: 637247880687790579
+    second: Slime_Attack 1_7
+  - first:
+      213: 8959866075454829604
+    second: Slime_Attack 1_8
+  - first:
+      213: 2827596149556427101
+    second: Slime_Attack 1_9
+  - first:
+      213: 2679367061665071109
+    second: Slime_Attack 1_10
+  - first:
+      213: 3888555029574885908
+    second: Slime_Attack 1_11
+  - first:
+      213: 8694581364555373646
+    second: Slime_Attack 1_12
+  - first:
+      213: -54123751196142627
+    second: Slime_Attack 1_13
+  - first:
+      213: -340492249229942396
+    second: Slime_Attack 1_14
+  - first:
+      213: -819232105444375869
+    second: Slime_Attack 1_15
+  - first:
+      213: -3177650907514618639
+    second: Slime_Attack 1_16
+  - first:
+      213: 7938225438876948146
+    second: Slime_Attack 1_17
+  - first:
+      213: -1487153453896010729
+    second: Slime_Attack 1_18
+  - first:
+      213: 8898743337345219869
+    second: Slime_Attack 1_19
+  - first:
+      213: 3547442983079465772
+    second: Slime_Attack 1_20
+  - first:
+      213: -9012070728736272105
+    second: Slime_Attack 1_21
+  - first:
+      213: -6782728525824692325
+    second: Slime_Attack 1_22
+  - first:
+      213: -422191058376654613
+    second: Slime_Attack 1_23
+  - first:
+      213: -5516298518932979742
+    second: Slime_Attack 1_24
+  - first:
+      213: 882736838306898314
+    second: Slime_Attack 1_25
+  - first:
+      213: -7014201705000755693
+    second: Slime_Attack 1_26
+  - first:
+      213: 1127811182890956642
+    second: Slime_Attack 1_27
+  - first:
+      213: -3084207789527114672
+    second: Slime_Attack 1_28
+  - first:
+      213: 3789938433087637302
+    second: Slime_Attack 1_29
+  - first:
+      213: 1338184597328620486
+    second: Slime_Attack 1_30
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -131,7 +224,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -165,7 +258,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -177,7 +270,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -191,19 +284,19 @@ TextureImporter:
       name: Slime_Attack 1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2560
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 31
+        y: 2590
+        width: 451
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 397f55382f8cc1300800000000000000
-      internalID: 224275025372772243
+      spriteID: 59bf990c63dfcd1d0800000000000000
+      internalID: -3324504013304890475
       vertices: []
       indices: 
       edges: []
@@ -212,19 +305,19 @@ TextureImporter:
       name: Slime_Attack 1_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 2560
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 574
+        y: 2590
+        width: 388
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51950bfe914d3aa00800000000000000
-      internalID: 766689569443698965
+      spriteID: 25f7f187199ac6e60800000000000000
+      internalID: 7956921083907506002
       vertices: []
       indices: 
       edges: []
@@ -233,19 +326,19 @@ TextureImporter:
       name: Slime_Attack 1_2
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 2560
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1118
+        y: 2590
+        width: 324
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f12c8c77f4b641c0800000000000000
-      internalID: -4519726200980233742
+      spriteID: 5368cb0afcbe5b050800000000000000
+      internalID: 5815813770806330933
       vertices: []
       indices: 
       edges: []
@@ -254,19 +347,19 @@ TextureImporter:
       name: Slime_Attack 1_3
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 2560
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1694
+        y: 2590
+        width: 195
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57fa08c74cdcef1a0800000000000000
-      internalID: -6773750545732554891
+      spriteID: 965c4de0e306ad630800000000000000
+      internalID: 3952577442624095593
       vertices: []
       indices: 
       edges: []
@@ -275,19 +368,19 @@ TextureImporter:
       name: Slime_Attack 1_4
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 2560
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2239
+        y: 2590
+        width: 130
+        height: 355
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b69f0f2b7a99b5f60800000000000000
-      internalID: 8024176106631395691
+      spriteID: 0106d264b53448480800000000000000
+      internalID: -8897912904478793712
       vertices: []
       indices: 
       edges: []
@@ -296,19 +389,19 @@ TextureImporter:
       name: Slime_Attack 1_5
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 2560
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2686
+        y: 2590
+        width: 196
+        height: 451
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8a6e86f48df939e10800000000000000
-      internalID: 2203280394108331688
+      spriteID: 025e8d579178a7130800000000000000
+      internalID: 3565310598438249760
       vertices: []
       indices: 
       edges: []
@@ -317,19 +410,19 @@ TextureImporter:
       name: Slime_Attack 1_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 2048
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 94
+        y: 2078
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a61434555a6d2c9b0800000000000000
-      internalID: -5061247025622597270
+      spriteID: 73456eb0ea0aa1960800000000000000
+      internalID: 7573542392761308215
       vertices: []
       indices: 
       edges: []
@@ -338,19 +431,19 @@ TextureImporter:
       name: Slime_Attack 1_7
       rect:
         serializedVersion: 2
-        x: 512
-        y: 2048
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 607
+        y: 2078
+        width: 226
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2285161582906bea0800000000000000
-      internalID: -5857484196580075486
+      spriteID: 3f9244a3295f7d800800000000000000
+      internalID: 637247880687790579
       vertices: []
       indices: 
       edges: []
@@ -359,19 +452,19 @@ TextureImporter:
       name: Slime_Attack 1_8
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 2048
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1118
+        y: 2078
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d32d78e1b9e4702e0800000000000000
-      internalID: -2159671068161748419
+      spriteID: 424fe8669b6d75c70800000000000000
+      internalID: 8959866075454829604
       vertices: []
       indices: 
       edges: []
@@ -380,19 +473,19 @@ TextureImporter:
       name: Slime_Attack 1_9
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 2048
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1630
+        y: 2078
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c8837849289c9d060800000000000000
-      internalID: 6978830660262115468
+      spriteID: d59b29e77b3ad3720800000000000000
+      internalID: 2827596149556427101
       vertices: []
       indices: 
       edges: []
@@ -401,19 +494,19 @@ TextureImporter:
       name: Slime_Attack 1_10
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 2048
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2143
+        y: 2078
+        width: 226
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bebb660a696e15e50800000000000000
-      internalID: 6796466847289359339
+      spriteID: 500cd6d85260f2520800000000000000
+      internalID: 2679367061665071109
       vertices: []
       indices: 
       edges: []
@@ -422,19 +515,19 @@ TextureImporter:
       name: Slime_Attack 1_11
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 2048
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2654
+        y: 2078
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: faf89f1eef1cb9490800000000000000
-      internalID: -7738378234248982609
+      spriteID: 412ae5b623ce6f530800000000000000
+      internalID: 3888555029574885908
       vertices: []
       indices: 
       edges: []
@@ -443,19 +536,19 @@ TextureImporter:
       name: Slime_Attack 1_12
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1536
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 94
+        y: 1567
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d284287eaf2d8b960800000000000000
-      internalID: 7618070744764925997
+      spriteID: e4cdd096fab59a870800000000000000
+      internalID: 8694581364555373646
       vertices: []
       indices: 
       edges: []
@@ -464,19 +557,19 @@ TextureImporter:
       name: Slime_Attack 1_13
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1536
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 607
+        y: 1567
+        width: 226
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c3a4e73796b714880800000000000000
-      internalID: -8628479718225720772
+      spriteID: dd3da0c2cb6bf3ff0800000000000000
+      internalID: -54123751196142627
       vertices: []
       indices: 
       edges: []
@@ -485,19 +578,19 @@ TextureImporter:
       name: Slime_Attack 1_14
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1536
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1118
+        y: 1567
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 306450f5886e569c0800000000000000
-      internalID: -3934485226054138365
+      spriteID: 48120e37a14564bf0800000000000000
+      internalID: -340492249229942396
       vertices: []
       indices: 
       edges: []
@@ -506,19 +599,19 @@ TextureImporter:
       name: Slime_Attack 1_15
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1536
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1630
+        y: 1567
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9411657308fb3c950800000000000000
-      internalID: 6468224047239270729
+      spriteID: 3c284669db081a4f0800000000000000
+      internalID: -819232105444375869
       vertices: []
       indices: 
       edges: []
@@ -527,19 +620,19 @@ TextureImporter:
       name: Slime_Attack 1_16
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1536
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2143
+        y: 1567
+        width: 226
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2cfc962bb2ced7fb0800000000000000
-      internalID: -4648299567955456062
+      spriteID: 1fcb465e557b6e3d0800000000000000
+      internalID: -3177650907514618639
       vertices: []
       indices: 
       edges: []
@@ -548,19 +641,19 @@ TextureImporter:
       name: Slime_Attack 1_17
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 1536
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2654
+        y: 1567
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13194157c291b35b0800000000000000
-      internalID: -5387684850485128911
+      spriteID: 2b6da376afd3a2e60800000000000000
+      internalID: 7938225438876948146
       vertices: []
       indices: 
       edges: []
@@ -569,19 +662,19 @@ TextureImporter:
       name: Slime_Attack 1_18
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 94
+        y: 1054
+        width: 228
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b6fbc4c732b3c1a0800000000000000
-      internalID: -6790387860549929291
+      spriteID: 714780e10d19c5be0800000000000000
+      internalID: -1487153453896010729
       vertices: []
       indices: 
       edges: []
@@ -590,19 +683,19 @@ TextureImporter:
       name: Slime_Attack 1_19
       rect:
         serializedVersion: 2
-        x: 512
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 607
+        y: 1054
+        width: 226
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d6ce10d75ec90bb0800000000000000
-      internalID: -4969213837277477165
+      spriteID: d1df5d1faefae7b70800000000000000
+      internalID: 8898743337345219869
       vertices: []
       indices: 
       edges: []
@@ -611,19 +704,19 @@ TextureImporter:
       name: Slime_Attack 1_20
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1118
+        y: 1054
+        width: 228
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9f72b38ed5444e50800000000000000
-      internalID: 6792630959976120222
+      spriteID: c235763199c0b3130800000000000000
+      internalID: 3547442983079465772
       vertices: []
       indices: 
       edges: []
@@ -632,19 +725,19 @@ TextureImporter:
       name: Slime_Attack 1_21
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1630
+        y: 1054
+        width: 228
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a8d9f92aabde2850800000000000000
-      internalID: 6354257648161511587
+      spriteID: 7119af29b61bee280800000000000000
+      internalID: -9012070728736272105
       vertices: []
       indices: 
       edges: []
@@ -653,19 +746,19 @@ TextureImporter:
       name: Slime_Attack 1_22
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2143
+        y: 1054
+        width: 226
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 75ec6fc128f9fdfe0800000000000000
-      internalID: -1162034797657797033
+      spriteID: b9f6f4a9758eed1a0800000000000000
+      internalID: -6782728525824692325
       vertices: []
       indices: 
       edges: []
@@ -674,19 +767,19 @@ TextureImporter:
       name: Slime_Attack 1_23
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 1024
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2654
+        y: 1054
+        width: 228
+        height: 484
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c583ba9d5d6c96860800000000000000
-      internalID: 7523763274281334876
+      spriteID: be00d122873142af0800000000000000
+      internalID: -422191058376654613
       vertices: []
       indices: 
       edges: []
@@ -695,19 +788,19 @@ TextureImporter:
       name: Slime_Attack 1_24
       rect:
         serializedVersion: 2
-        x: 0
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 31
+        y: 703
+        width: 483
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dece3632ded2fc30800000000000000
-      internalID: 4391817581074239189
+      spriteID: 2ef7cff39bb2273b0800000000000000
+      internalID: -5516298518932979742
       vertices: []
       indices: 
       edges: []
@@ -716,19 +809,19 @@ TextureImporter:
       name: Slime_Attack 1_25
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 607
+        y: 542
+        width: 226
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fff213464d02b8f0800000000000000
-      internalID: -526343611024736263
+      spriteID: a812f6d3a7c104c00800000000000000
+      internalID: 882736838306898314
       vertices: []
       indices: 
       edges: []
@@ -737,19 +830,19 @@ TextureImporter:
       name: Slime_Attack 1_26
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1022
+        y: 607
+        width: 483
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de68b35b6a5619800800000000000000
-      internalID: 617386390606022381
+      spriteID: 31e9d7e46bc88ae90800000000000000
+      internalID: -7014201705000755693
       vertices: []
       indices: 
       edges: []
@@ -758,19 +851,19 @@ TextureImporter:
       name: Slime_Attack 1_27
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 1726
+        y: 511
+        width: 228
+        height: 483
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30022ca96826c98a0800000000000000
-      internalID: -6297049848709242877
+      spriteID: 267bde1ab4ac6af00800000000000000
+      internalID: 1127811182890956642
       vertices: []
       indices: 
       edges: []
@@ -779,19 +872,19 @@ TextureImporter:
       name: Slime_Attack 1_28
       rect:
         serializedVersion: 2
-        x: 2048
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2078
+        y: 703
+        width: 483
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39f8940f263d10da0800000000000000
-      internalID: -5980266408279699565
+      spriteID: 05c5eb33b51b235d0800000000000000
+      internalID: -3084207789527114672
       vertices: []
       indices: 
       edges: []
@@ -800,19 +893,19 @@ TextureImporter:
       name: Slime_Attack 1_29
       rect:
         serializedVersion: 2
-        x: 2560
-        y: 512
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        x: 2654
+        y: 190
+        width: 418
+        height: 835
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9f10f2ea1a34ffe0800000000000000
-      internalID: -1156235317176426598
+      spriteID: 6370ac8cce0989430800000000000000
+      internalID: 3789938433087637302
       vertices: []
       indices: 
       edges: []
@@ -822,60 +915,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
+        y: 94
+        width: 482
+        height: 228
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa58bd61182faefc0800000000000000
-      internalID: -3464690327059987030
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Attack 1_31
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 543273ea6933d06e0800000000000000
-      internalID: -1869781548027927739
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Slime_Attack 1_32
-      rect:
-        serializedVersion: 2
-        x: 2560
-        y: 0
-        width: 512
-        height: 512
-      alignment: 9
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bae23c93a87c58130800000000000000
-      internalID: 3568477676249493163
+      spriteID: 6cbebaf1dcf229210800000000000000
+      internalID: 1338184597328620486
       vertices: []
       indices: 
       edges: []

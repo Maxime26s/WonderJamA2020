@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     }
 
     public List<GameObject> enemies = new List<GameObject>(); //miniboss = better boss
+    public List<GameObject> miniBoss = new List<GameObject>();
     public List<GameObject> treasures = new List<GameObject>();
     public List<GameObject> traps = new List<GameObject>();
     public List<GameObject> cards = new List<GameObject>();
@@ -189,11 +190,19 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
+            SceneManager.LoadScene("Death");
+            yield return new WaitForSeconds(0f);
+            /*
+            SceneTransition();
             yield return new WaitForSeconds(0.5f);
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
             map.SetActive(false);
+            T
             SceneManager.LoadScene("Death", LoadSceneMode.Additive);
             yield return new WaitForSeconds(0.1f);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Death"));
+            yield return new WaitForSeconds(0.7f);
+            SceneManager.UnloadSceneAsync("Map");*/
         }
         StartCoroutine(Wait());
     }
