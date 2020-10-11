@@ -36,8 +36,19 @@ public class NodeManager : MonoBehaviour
         timer.RefreshText();
         timer.enabled = false;
         timer.timer.color = new Color32(152, 221, 227, 255);
-        //if (end)
-        //CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE CHANGE SCENE
+        if (end)
+        {
+            stop = true;
+            IEnumerator End()
+            {
+                dungeons[GameManager.Instance.dungeon].GetComponent<Animator>().SetBool("Done", true);
+                yield return new WaitForSeconds(1.1f);
+                GameManager.Instance.SceneTransition();
+                yield return new WaitForSeconds(1f);
+                SceneManager.LoadScene("End", LoadSceneMode.Single);
+            }
+            StartCoroutine(End());
+        }
     }
 
     private void OnDisable()
@@ -54,6 +65,7 @@ public class NodeManager : MonoBehaviour
         offset = (nodeDistance.x * (nodeAmount - 1)) / 2;
         player = Instantiate(player, transform);
         MapMaker();
+        StartCoroutine(WaitAnimationDungeon("Init"));
     }
 
     // Update is called once per frame
@@ -115,14 +127,15 @@ public class NodeManager : MonoBehaviour
         {
             if (GameManager.Instance.dungeon < 4)
             {
-                dungeons[GameManager.Instance.dungeon].GetComponent<Image>().color = new Color32(50, 50, 50, 255);
-                dungeons[GameManager.Instance.dungeon].GetComponentInChildren<TextMeshProUGUI>().color = new Color32(50, 50, 50, 255);
+                StartCoroutine(WaitAnimationDungeon("Done"));
                 GameManager.Instance.dungeon++;
-                dungeons[GameManager.Instance.dungeon].GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-                dungeons[GameManager.Instance.dungeon].GetComponentInChildren<TextMeshProUGUI>().color = new Color32(255, 255, 255, 255);
+                StartCoroutine(WaitAnimationDungeon("Init"));
                 MapMaker();
             }
-            end = true;
+            else
+            {
+                end = true;
+            }
         }
     }
 
@@ -293,5 +306,13 @@ public class NodeManager : MonoBehaviour
 
         currentNode = start;
         currentIndex = 0;
+    }
+
+    IEnumerator WaitAnimationDungeon(string name)
+    {
+        Animator animator = dungeons[GameManager.Instance.dungeon].GetComponent<Animator>();
+        animator.SetBool(name, true);
+        yield return new WaitForSeconds(0.1f);
+        animator.SetBool(name, false);
     }
 }
