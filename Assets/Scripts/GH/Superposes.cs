@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Superposes : MonoBehaviour
 {
@@ -18,6 +19,9 @@ public class Superposes : MonoBehaviour
                 {
                     ghc.hit++;
                     ghc.combo++;
+                    Instantiate(ghc.particles, other.gameObject.transform.position, Quaternion.identity);
+                    ghc.comboText.GetComponent<TextMeshProUGUI>().text = string.Format("Combo: {0:#0}", ghc.combo);
+                    ghc.comboMaxText.GetComponent<TextMeshProUGUI>().text = string.Format("Max Combo: {0:#0}", ghc.comboMax);
                     //finalsScore.compteur++;
                     Destroy(other.gameObject);
                 }
