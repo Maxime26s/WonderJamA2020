@@ -32,6 +32,7 @@ public class FightManager : MonoBehaviour
         player = Instantiate(player, new Vector2(player.transform.position.x, player.transform.position.y - offsety), Quaternion.identity);
         switch (type)
         {
+            default:
             case GameManager.NodeType.Enemy:
                 enemy = enemies[Random.Range(0, enemies.Count)];
                 enemy = Instantiate(enemy, new Vector2(enemy.transform.position.x, enemy.transform.position.y - offsety), Quaternion.identity);

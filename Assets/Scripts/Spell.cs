@@ -13,4 +13,5 @@ public class Spell : ScriptableObject
     public Material material;
     public float damage;
     public List<BoutonManette> listeInputs = new List<BoutonManette>();
+    public int difficulty;
 }
