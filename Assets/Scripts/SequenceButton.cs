@@ -25,7 +25,7 @@ public class SequenceButton : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            int a = Random.Range(0, 3);
+            int a = Random.Range(0, 4);
             nombre[i] = a;
 
             if (nombre[i] == 0) {
@@ -44,35 +44,27 @@ public class SequenceButton : MonoBehaviour
                 butseq[i] = yButton;
             }
         }
-        Debug.Log(nombre[0]);
-        Debug.Log(nombre[1]);
-        Debug.Log(nombre[2]);
-        Debug.Log(nombre[3]);
     }
     void Update()
     {
         
 
        if (ok)
-        {
-            spriteButton.GetComponent<SpriteRenderer>().enabled = true;
+        { 
             ok = false;
             switch (compteur)
             {
                 case 0:
-                    StartCoroutine(WaitAndPrint(2,spriteButton,butseq[compteur]));
+                    StartCoroutine(WaitAndPrint(2,spriteButton,butseq[0]));
                     break;
                 case 1:
-                    StartCoroutine(WaitAndPrint1(2,spriteButton,butseq[compteur],butseq[compteur-1]));
+                    StartCoroutine(WaitAndPrint1(2,spriteButton,butseq[1],butseq[0]));
                     break;
                 case 2:
                     StartCoroutine(WaitAndPrint2(2, spriteButton, butseq[2],butseq[1],butseq[0]));
                     break;
                 case 3:
                     StartCoroutine(WaitAndPrint3(2, spriteButton, butseq[3],butseq[2], butseq[1],butseq[0]));
-                    break;
-                default:
-                    Application.LoadLevel(2);
                     break;
             }
         }
@@ -105,24 +97,16 @@ public class SequenceButton : MonoBehaviour
         sr1.sprite = sprite;
         yield return new WaitForSeconds(f);
         ok1 = true;
-        sr1.GetComponent<SpriteRenderer>().enabled = false;
-        Debug.Log("hello");
     }
     public IEnumerator WaitAndPrint1(float f, SpriteRenderer sr1,Sprite sprite,Sprite sprite1)
     {
-        spriteButton.GetComponent<SpriteRenderer>().enabled = true;
         sr1.sprite = sprite1;
         yield return new WaitForSeconds(f);
-        spriteButton.GetComponent<SpriteRenderer>().enabled = false;
-        spriteButton.GetComponent<SpriteRenderer>().enabled = true;
         StartCoroutine(WaitAndPrint(2,sr1,sprite));
-        Debug.Log("hi");
     }
     public IEnumerator WaitAndPrint2(float f, SpriteRenderer sr1,Sprite sprite, Sprite sprite1,Sprite sprite2)
     {
         yield return new WaitForSeconds(f);
-        spriteButton.GetComponent<SpriteRenderer>().enabled = false;
-        spriteButton.GetComponent<SpriteRenderer>().enabled = true;
         sr1.sprite = sprite2;
         StartCoroutine(WaitAndPrint1(2, sr1, sprite,sprite1));
     }
