@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 1989114049299320151}
   - component: {fileID: 1989114049299320150}
   - component: {fileID: 1989114049299320153}
+  - component: {fileID: -8137830947818950225}
   m_Layer: 0
   m_Name: Rolex
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,3 +103,44 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-8137830947818950225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989114049299320152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e613f468847e9a54190602077e76da46, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spells: []
+  spellCount: 0
+  prefabs:
+  - {fileID: 11400000, guid: ae98b7da78776434b90d99e0813c9311, type: 2}
+  - {fileID: 11400000, guid: 8afcb2d684abdf047af1e4db6272d126, type: 2}
+  - {fileID: 11400000, guid: 0f857eb99c0704e42b7f206b2c14ee37, type: 2}
+  - {fileID: 11400000, guid: 29d473796b74715498e59dfd9c061f58, type: 2}
+  - {fileID: 11400000, guid: 8c84947bc3a32ec41a3651d2e4594993, type: 2}
+  - {fileID: 11400000, guid: c3b516915ca8a15499b9efe99c5c72bc, type: 2}
+  - {fileID: 11400000, guid: 51dc19e8f0ff841448cee7111d9b9d59, type: 2}
+  - {fileID: 11400000, guid: 662b90499a87bd94397ba0a8cd452780, type: 2}
+  - {fileID: 11400000, guid: 12a7c4f8f8b509f4fa98b5f86e4eeffc, type: 2}
+  - {fileID: 11400000, guid: ab6b39be85111f5409b1426ebff2aa12, type: 2}
+  - {fileID: 11400000, guid: 9b17d605e9e41bc4a8fe7b4978854a9d, type: 2}
+  - {fileID: 11400000, guid: 91116775027579649955c347ef71bf4c, type: 2}
+  - {fileID: 11400000, guid: 94d48caf49d93314d92e1ef3aabcca47, type: 2}
+  - {fileID: 11400000, guid: 06ee834b07ed2a74c96c2014b08234c4, type: 2}
+  - {fileID: 11400000, guid: 25a4ce4c9f8a5f34188585c43f5281ca, type: 2}
+  - {fileID: 11400000, guid: fa2c0f10fdf15ed47b65e94d75eb7cf4, type: 2}
+  boutons:
+  - {fileID: 11400000, guid: ab033d325baec0e4aba51ef245033e78, type: 2}
+  - {fileID: 11400000, guid: 7b78894972cf66744bac5a4f16d47e66, type: 2}
+  - {fileID: 11400000, guid: ffc657f5c264d014d8ec58949f18f247, type: 2}
+  - {fileID: 11400000, guid: aac12c70d506e1a489ccc65755b8f601, type: 2}
+  - {fileID: 11400000, guid: 2303ed4cfa2404645a76b66cc75cc6a1, type: 2}
+  - {fileID: 11400000, guid: 8ea619d1a52b2194ab025685a8f99353, type: 2}
+  - {fileID: 11400000, guid: 2fc1dba075d1f1c4d8f0ff828c3e5121, type: 2}
+  - {fileID: 11400000, guid: 0e288f91361a7674d8cc6ec441fecd10, type: 2}
+  anim: {fileID: 1989114049299320153}

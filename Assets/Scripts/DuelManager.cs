@@ -51,7 +51,8 @@ public class DuelManager : MonoBehaviour
         if (!initialized)
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy");
-            if (enemy != null)
+            inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
+            if (enemy != null && inventory != null)
                 OnPlayerCreated();
         }
 
