@@ -19,6 +19,8 @@ public class Superposes : MonoBehaviour
                 {
                     ghc.hit++;
                     ghc.combo++;
+                    if (ghc.comboMax < ghc.combo)
+                        ghc.comboMax = ghc.combo;
                     Instantiate(ghc.particles, other.gameObject.transform.position, Quaternion.identity);
                     ghc.comboText.GetComponent<TextMeshProUGUI>().text = string.Format("Combo: {0:#0}", ghc.combo);
                     ghc.comboMaxText.GetComponent<TextMeshProUGUI>().text = string.Format("Max Combo: {0:#0}", ghc.comboMax);
