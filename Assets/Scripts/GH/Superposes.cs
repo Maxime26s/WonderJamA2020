@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Superposes : MonoBehaviour
 {
+    public GHController ghc;
     private bool trigg = false;
     private bool wrong;
 
@@ -16,19 +17,26 @@ public class Superposes : MonoBehaviour
             {
                 if (Input.GetButton(other.name))
                 {
-                    finalsScore.compteur++;
+                    ghc.hit++;
+                    ghc.combo++;
+                    //finalsScore.compteur++;
                     Destroy(other.gameObject);
                 }
                 else if (!Input.GetButton(other.name))
                 {
+                    if(ghc.comboMax < ghc.combo)
+                        ghc.comboMax = ghc.combo;
+                    ghc.combo = 0;
                     wrong = true;
+
                 }
             }
         }
     }
+
     private void OnTriggerExit2D(Collider2D other)
          {
-             finalsScore.compteurPassages++;
+             //finalsScore.compteurPassages++;
              wrong = false;
          }
 }

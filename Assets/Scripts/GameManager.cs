@@ -155,10 +155,10 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
             map.SetActive(false);
-            SceneManager.LoadScene("Time", LoadSceneMode.Additive);
+            SceneManager.LoadScene("GH", LoadSceneMode.Additive);
             mapManager.NextLevel();
             yield return new WaitForSeconds(0.1f);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Time"));
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("GH"));
         }
         StartCoroutine(Wait());
     }

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = System.Random;
 
 public class controlTrack : MonoBehaviour
 {
@@ -21,8 +20,7 @@ public class controlTrack : MonoBehaviour
     {
         if (selectorBase <= 0 || selectorBase>3)
         {
-            Random rand = new Random();
-                    selectorBase = rand.Next(1, 4);
+            selectorBase = Random.Range(0, 3);
         }
         
         switch (selectorBase)
@@ -52,10 +50,5 @@ public class controlTrack : MonoBehaviour
                 audioGH3.SetActive(true);
                 break;
         }
-        {
-            
-        }
-
-
     }
 }
