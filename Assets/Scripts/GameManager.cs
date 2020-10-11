@@ -189,11 +189,19 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
+            SceneManager.LoadScene("Death");
+            yield return new WaitForSeconds(0f);
+            /*
+            SceneTransition();
             yield return new WaitForSeconds(0.5f);
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
             map.SetActive(false);
+            T
             SceneManager.LoadScene("Death", LoadSceneMode.Additive);
             yield return new WaitForSeconds(0.1f);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Death"));
+            yield return new WaitForSeconds(0.7f);
+            SceneManager.UnloadSceneAsync("Map");*/
         }
         StartCoroutine(Wait());
     }

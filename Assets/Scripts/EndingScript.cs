@@ -172,7 +172,7 @@ public class EndingScript : MonoBehaviour
 
     IEnumerator RollCredits()
     {
-        for(float i = -400; i <= 2200f; i += textSpeed * Time.deltaTime) 
+        for(float i = -560; i <= 2400f; i += textSpeed * Time.deltaTime) 
         {
             text.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, i);
             yield return null;
