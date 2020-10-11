@@ -261,7 +261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3646072171400902725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3646072171250876010}
@@ -353,8 +353,8 @@ MonoBehaviour:
   type: 3
   timer: {fileID: 3646072171400902745}
   name: goblin2
-  maxDamage: 10
-  minDamage: 9
+  maxDamage: 8
+  minDamage: 4
   text: {fileID: 3646072170177607585}
   attackCD: 0
   playerTime: {fileID: 0}
@@ -375,8 +375,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3646072170177607585}
-  minutes: 1
-  seconds: 5
+  minutes: 45
+  seconds: 0
   miliseconds: 0
   running: 0
   player: 0

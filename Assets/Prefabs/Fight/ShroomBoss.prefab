@@ -219,7 +219,7 @@ MonoBehaviour:
   type: 0
   timer: {fileID: 3493299595337903513}
   name: shroom
-  maxDamage: 8
+  maxDamage: 6
   minDamage: 6
   text: {fileID: 3493299596342467940}
   attackCD: 0
@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3493299596342467940}
-  minutes: 1
-  seconds: 10
+  minutes: 50
+  seconds: 0
   miliseconds: 0
   running: 0
   player: 0
