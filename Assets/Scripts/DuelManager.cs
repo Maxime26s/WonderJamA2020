@@ -263,6 +263,30 @@ public class DuelManager : MonoBehaviour
             currentSequence.Clear();
             float temp = spellCasted.damage * multDebuff * effectivBuff;
             enemy.GetComponent<Timer>().RemoveTime((int)temp, (int)((temp - (int)temp) * 100f));
+
+            IEnumerator Red()
+            {
+                for (float j = 1f; j >= 0f; j -= 0.01f + Time.deltaTime)
+                {
+                    Color c = enemy.GetComponent<SpriteRenderer>().color;
+                    c.g = j;
+                    c.b = j;
+                    enemy.GetComponent<SpriteRenderer>().color = c;
+                    yield return null;
+                }
+                yield return new WaitForSeconds(0.3f);
+                for (float j = 0f; j <= 1f; j += 0.01f + Time.deltaTime)
+                {
+                    Color c = enemy.GetComponent<SpriteRenderer>().color;
+                    c.g = j;
+                    c.b = j;
+                    enemy.GetComponent<SpriteRenderer>().color = c;
+                    yield return null;
+                }
+            }
+            StartCoroutine(Red());
+            
+
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(0.15f);
