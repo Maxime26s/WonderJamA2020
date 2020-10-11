@@ -195,7 +195,7 @@ Animator:
   m_GameObject: {fileID: 3493299595337903517}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9dce06bf7d3ff9841a3cebd9d6509514, type: 2}
+  m_Controller: {fileID: 9100000, guid: d4c2859bf8fb91847803588c05d2aa7d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47ed8c0f14e128f46abcba5a733474c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 3
+  type: 0
   timer: {fileID: 3493299595337903513}
   name: shroom
   maxDamage: 8
@@ -226,6 +226,7 @@ MonoBehaviour:
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 3493299595337903516}
+  calledEnd: 0
 --- !u!114 &3493299595337903513
 MonoBehaviour:
   m_ObjectHideFlags: 0

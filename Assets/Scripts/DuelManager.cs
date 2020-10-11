@@ -261,7 +261,7 @@ public class DuelManager : MonoBehaviour
 
             lastSpell = spellCasted.name;
             currentSequence.Clear();
-            enemy.GetComponent<Timer>().LoseTime(spellCasted.damage * multDebuff * effectivBuff * arbitraryMultiplier);
+            enemy.GetComponent<Timer>().LoseTime(spellCasted.damage * multDebuff * effectivBuff);
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(0.15f);
@@ -286,7 +286,7 @@ public class DuelManager : MonoBehaviour
     public void UpdateHeader(Spell spell)
     {
         spellName.text = spell.name;
-        spellDamage.text = "Damage: " + spell.damage;
+        spellDamage.text = "Dégats: " + spell.damage;
         spellIcon.sprite = spell.sprite;
         spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
@@ -319,6 +319,12 @@ public class DuelManager : MonoBehaviour
             spellChoice[i].material = inventory.spells[i].material;
         }
         UpdateHeader(inventory.spells[0]);
+        UpdateEnemyElement();
+        initialized = true;
+    }
+
+    public void UpdateEnemyElement()
+    {
         if (enemy.GetComponent<Enemy>().type == Type.Air)
         {
             enemyElement.sprite = spellChoice[1].sprite;
@@ -339,7 +345,6 @@ public class DuelManager : MonoBehaviour
             enemyElement.sprite = spellChoice[3].sprite;
             enemyElement.material = spellChoice[3].material;
         }
-        initialized = true;
     }
 
     public void EndFight()
