@@ -17,7 +17,9 @@ public class GHController : MonoBehaviour
         IEnumerator Manager()
         {
             yield return new WaitForSeconds(24f);
-            int resultat = (int)(comboMax / total * hit * 2.5f);
+            int resultat = (int)(comboMax / total * hit * 1.5f);
+            if (resultat < 15)
+                resultat = 15;
             GameManager.Instance.AjoutTemps(resultat);
             IEnumerator Reset()
             {
