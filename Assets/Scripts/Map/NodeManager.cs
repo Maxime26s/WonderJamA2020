@@ -96,9 +96,9 @@ public class NodeManager : MonoBehaviour
             }
             if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.Space))
             {
-                NextLevel();
+                //NextLevel();
 
-                /*
+                
                 if(currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
                 {
                     if(currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
@@ -109,7 +109,7 @@ public class NodeManager : MonoBehaviour
                 {
                     stop = true;
                     GameManager.Instance.LoadScenesFromMap();
-                }*/
+                }
             }
         }
     }

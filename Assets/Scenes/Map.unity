@@ -1122,7 +1122,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 298037855}
-  minutes: 0
-  seconds: 10
+  minutes: 10
+  seconds: 0
   miliseconds: 0
   enabled: 0

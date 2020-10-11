@@ -97,6 +97,7 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
+            SceneTransition();
             yield return new WaitForSeconds(0.5f);
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
             map.SetActive(true);

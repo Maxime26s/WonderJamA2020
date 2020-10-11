@@ -106,6 +106,12 @@ public class retourner_carte : MonoBehaviour
                 default:
                     break;
             }
+            IEnumerator RetourMap()
+            {
+                yield return new WaitForSeconds(2.5f);
+                GameManager.Instance.LoadMap();
+            }
+            StartCoroutine(RetourMap());
         }
         if (Input.GetAxis("Horizontal")>0.9 && neutre && !over)
         {
