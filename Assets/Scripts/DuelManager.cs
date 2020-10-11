@@ -15,7 +15,7 @@ public class DuelManager : MonoBehaviour
     string lastSpell = "";
     float multDebuff = 1f;
 
-
+    public float arbitraryMultiplier;
     public Inventory inventory;
     public Timer timer;
     public List<string> currentSequence = new List<string>();
@@ -286,7 +286,7 @@ public class DuelManager : MonoBehaviour
     public void UpdateHeader(Spell spell)
     {
         spellName.text = spell.name;
-        spellDamage.text = "Damage: " + spell.damage;
+        spellDamage.text = "Dégats: " + spell.damage;
         spellIcon.sprite = spell.sprite;
         spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
@@ -306,6 +306,7 @@ public class DuelManager : MonoBehaviour
     public void OnPlayerCreated()
     {
         inventory = Inventory.Instance;
+        Debug.Log(inventory);
         currentSequence.Clear();
         for (int i = 0; i < spellChoice.Count; i++)
         {
@@ -318,6 +319,12 @@ public class DuelManager : MonoBehaviour
             spellChoice[i].material = inventory.spells[i].material;
         }
         UpdateHeader(inventory.spells[0]);
+        UpdateEnemyElement();
+        initialized = true;
+    }
+
+    public void UpdateEnemyElement()
+    {
         if (enemy.GetComponent<Enemy>().type == Type.Air)
         {
             enemyElement.sprite = spellChoice[1].sprite;
@@ -338,7 +345,6 @@ public class DuelManager : MonoBehaviour
             enemyElement.sprite = spellChoice[3].sprite;
             enemyElement.material = spellChoice[3].material;
         }
-        initialized = true;
     }
 
     public void EndFight()

@@ -16,10 +16,15 @@ public class Enemy : MonoBehaviour
     public bool attack;
     public Animator anim;
     public bool calledEnd;
+    public bool lastBoss;
+
+    List<Type> types = new List<Type> { Type.Fire, Type.Water, Type.Air, Type.Earth };
 
     // Start is called before the first frame update
     void Start()
     {
+        if(lastBoss)
+            type = types[Random.Range(0, 3)];
         calledEnd = false;
         timer.running = true;
         playerTime = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
@@ -35,6 +40,12 @@ public class Enemy : MonoBehaviour
             attackCD = Random.Range(3.0f, 5.0f);
             playerTime.LoseTime(Random.Range(minDamage, maxDamage));
             attack = false;
+
+            if (lastBoss)
+            {
+                GameObject.FindGameObjectWithTag("DuelManager").GetComponent<DuelManager>().UpdateEnemyElement();
+                type = types[Random.Range(0, 3)];
+            }
             
             StartCoroutine(WaitCoolDown());
             StartCoroutine(AttackAnim());
