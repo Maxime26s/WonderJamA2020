@@ -206,7 +206,7 @@ public class DuelManager : MonoBehaviour
             currentSequence.Clear();
             for (int j = 0; j < combo.Count; j++)
                 combo[j].color = new Color32(255, 255, 255, 255);
-            timer.LoseTime(currentSpell.damage);
+            timer.RemoveTime((int)currentSpell.damage, (int)((currentSpell.damage - (int)currentSpell.damage) * 100f));
         }
 
         if (spellCasted != null)
@@ -261,7 +261,8 @@ public class DuelManager : MonoBehaviour
 
             lastSpell = spellCasted.name;
             currentSequence.Clear();
-            enemy.GetComponent<Timer>().LoseTime(spellCasted.damage * multDebuff * effectivBuff);
+            float temp = spellCasted.damage * multDebuff * effectivBuff;
+            enemy.GetComponent<Timer>().RemoveTime((int)temp, (int)((temp - (int)temp) * 100f));
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(0.15f);
