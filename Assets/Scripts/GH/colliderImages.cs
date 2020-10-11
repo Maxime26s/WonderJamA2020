@@ -3,25 +3,31 @@ using UnityEngine;
 
 public class colliderImages : MonoBehaviour
 {
-    public int speed;
+    public double speed;
     public bool actif;
-    public int nbTouches;
-    public int multiplicateurMax;
+    public double nbTouches;
+    public double multiplicateurMax;
     public double secParTouche;
+    public double BPM;
     
 
     void Update()
     {
         if (actif)
         {
-            transform.Translate(new Vector3(Convert.ToSingle(-0.0005 * speed), 0, 0));
+            transform.Translate(new Vector3(Convert.ToSingle(-0.000532 * speed * (BPM/180.0)), 0, 0));
         }
 
         if (finalsScore.compteurPassages == nbTouches)
         {
-            finalsScore.timeAdded = (multiplicateurMax * Convert.ToSingle(finalsScore.compteur) / Convert.ToSingle(nbTouches)) * secParTouche * Convert.ToSingle(finalsScore.compteur);
+            Debug.Log(finalsScore.compteur);
+            Debug.Log(finalsScore.compteurPassages);
+            Debug.Log(nbTouches);
+
+            finalsScore.timeAdded = (multiplicateurMax * Convert.ToSingle(finalsScore.compteur) / nbTouches) * secParTouche * Convert.ToSingle(finalsScore.compteur);
             finalsScore.compteurPassages = 0;
             finalsScore.isFinished = true;
+            
         }
         
     }

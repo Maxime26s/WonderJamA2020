@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dcbfae56-4649-483c-8120-e0cdd2db6197" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.WonderJamA2020/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Charles.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Charles.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jacob.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Jacob.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/GuitarHero.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/GuitarHero.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +23,13 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../WonderJam2020/Assets/InGameUI/Scripts/ScoreBoard.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GH/finalsScore.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GH/controlTrack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///C# Console" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../WonderJam2020/Assets/InGameUI/Scripts/ScoreBoard.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BoutonManette.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -31,9 +39,11 @@
         <option value="$PROJECT_DIR$/Assets/Superposes.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GH/StaticScore.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GH/finalsScore.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GH/Superposes.cs" />
+        <option value="$PROJECT_DIR$/Assets/controlTrack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GH/colliderImages.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GH/controlTrack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GH/affichageScoreFinal.cs" />
       </list>
     </option>
   </component>
@@ -74,7 +84,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602274284472</updated>
-      <workItem from="1602274286194" duration="17230000" />
+      <workItem from="1602274286194" duration="25949000" />
     </task>
     <servers />
   </component>

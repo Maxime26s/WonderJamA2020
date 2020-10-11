@@ -13,6 +13,7 @@
           <e p="GH" t="Include">
             <e p="affichageScoreFinal.cs" t="Include" />
             <e p="colliderImages.cs" t="Include" />
+            <e p="controlTrack.cs" t="Include" />
             <e p="finalsScore.cs" t="Include" />
             <e p="Superposes.cs" t="Include" />
           </e>
