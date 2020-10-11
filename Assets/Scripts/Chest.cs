@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class Chest : MonoBehaviour
 {
@@ -10,6 +12,9 @@ public class Chest : MonoBehaviour
     public Vector2 range;
     bool stop = false;
     public GameObject reward, particle;
+    public List<Spell> loots = new List<Spell>();
+    public Image spellImage;
+    public TextMeshProUGUI spellText;
 
     // Start is called before the first frame update
     void Start()
@@ -29,10 +34,14 @@ public class Chest : MonoBehaviour
                 {
                     particle.SetActive(true);
                     gameObject.GetComponent<SpriteRenderer>().enabled = false;
-                    //Give spell
-                    //Show reward
+                    Spell given = loots[Random.Range(0, 15)];
+                    spellText.gameObject.SetActive(true);
+                    spellImage.gameObject.SetActive(true);
+                    spellText.text = given.name;
+                    spellImage.sprite = given.sprite;
+                    Inventory.Instance.AddSpell(given.name);
                     reward.SetActive(true);
-                    yield return new WaitForSeconds(2f);
+                    yield return new WaitForSeconds(3f);
                     GameManager.Instance.LoadMap();
                 }
                 StartCoroutine(WaitAndLeave());
