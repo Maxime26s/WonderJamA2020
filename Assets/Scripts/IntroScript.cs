@@ -20,10 +20,12 @@ public class IntroScript : MonoBehaviour
     public GameObject nuke;
     public List<GameObject> eyes;
     public List<AudioClip> sounds;
+    public bool input;
 
     // Start is called before the first frame update
     void Start()
     {
+        input = false;
         Camera camera = Camera.main;
         float halfHeight = camera.orthographicSize;
         float halfWidth = camera.aspect * halfHeight;
@@ -40,7 +42,10 @@ public class IntroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(Input.anyKey)
+        {
+            SceneManager.LoadScene("Map");
+        }
     }
 
     IEnumerator Intro()
