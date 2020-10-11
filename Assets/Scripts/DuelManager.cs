@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DuelManager : MonoBehaviour
 {
@@ -38,6 +39,11 @@ public class DuelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameManager.Instance.LoadMap();
+        }
+
         if (!initialized)
             OnPlayerCreated();
 
