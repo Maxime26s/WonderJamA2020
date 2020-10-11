@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class retourner_carte : MonoBehaviour
 {
-    public Text texto;
+    public TextMeshProUGUI texto;
     public Image im1;
     public Image im2;
     public Image im3;
-    public Image a_but;
     public Sprite carte1;
     public Sprite carte2;
     public Sprite carte3;
@@ -18,6 +18,7 @@ public class retourner_carte : MonoBehaviour
     public Sprite carte6;
     public Sprite verso;
     public Sprite verso_selected;
+    public Material defaultMaterial;
     int i=0;
     int random1;
     int random2;
@@ -75,20 +76,20 @@ public class retourner_carte : MonoBehaviour
             {
                 aDown = true;
                 images[i].sprite = sprites[randoms[i]];
+                images[i].material = defaultMaterial;
                 over = true;
-                a_but.enabled = false;
                 switch (randoms[i])
                 {
                     case 0:
                     case 1:
                     case 2:
-                        texto.text = "Du temps à été ajouté à votre compteur!";
+                        texto.text = "Du temps a ete ajoute a votre compteur!";
                         GameManager.Instance.AjoutTemps(20);
                         break;
                     case 3:
                     case 4:
                     case 5:
-                        texto.text = "Du temps à été enlevé à votre compteur!";
+                        texto.text = "Du temps a ete enleve a votre compteur!";
                         GameManager.Instance.PerteTemps(15);
                         break;
                     case 6:
@@ -98,7 +99,7 @@ public class retourner_carte : MonoBehaviour
                         break;
                     case 8:
                     case 9:
-                        texto.text = "vous reculez à la salle précédente du donjon!";
+                        texto.text = "vous reculez a la salle precedente du donjon!";
                         GameManager.Instance.ReculeCase();
                         break;
                     case 10:
@@ -106,7 +107,7 @@ public class retourner_carte : MonoBehaviour
                         GameManager.Instance.TpBoss();
                         break;
                     case 11:
-                        texto.text = "vous retournez à la première salle du donjon!";
+                        texto.text = "vous retournez a la première salle du donjon!";
                         GameManager.Instance.TpStart();
                         break;
                     default:
