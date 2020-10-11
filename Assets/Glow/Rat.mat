@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Air
+  m_Name: Rat
   m_Shader: {fileID: -6465566751694194690, guid: 3859dca5fcd42674885c3658aa86b040, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -20,14 +20,14 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Emission:
-        m_Texture: {fileID: 2800000, guid: a89d07aa09849dc42af4b5402ee5009a, type: 3}
+        m_Texture: {fileID: 2800000, guid: b7e45d968ce25344b9b9532982da43e3, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: d5c972eea08f6d3478904ebaca1c6c24, type: 3}
+        m_Texture: {fileID: 2800000, guid: 95d5b88f30b61a34ca854269750f5e7c, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats: []
     m_Colors:
-    - Color_7918784: {r: 0.34509805, g: 0.7607843, b: 0.84705883, a: 0}
+    - Color_7918784: {r: 1.1450981, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []

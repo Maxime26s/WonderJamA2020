@@ -120,8 +120,8 @@ MonoBehaviour:
   type: 3
   timer: {fileID: 1151603130094268565}
   name: batboss
-  maxDamage: 5
-  minDamage: 4
+  maxDamage: 3
+  minDamage: 1
   text: {fileID: 205473573605590078}
   attackCD: 0
   playerTime: {fileID: 0}
@@ -141,8 +141,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 205473573605590078}
-  minutes: 1
-  seconds: 0
+  minutes: 0
+  seconds: 45
   miliseconds: 0
   running: 0
   player: 0

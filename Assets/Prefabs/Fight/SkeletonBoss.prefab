@@ -188,7 +188,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 769df41e19979af45bd9eb2dbc7ba5b2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -254,8 +254,8 @@ MonoBehaviour:
   type: 1
   timer: {fileID: 6963079802687642545}
   name: skeletonboss
-  maxDamage: 12
-  minDamage: 10
+  maxDamage: 7
+  minDamage: 3
   text: {fileID: 7577744087612496756}
   attackCD: 0
   playerTime: {fileID: 0}
@@ -275,8 +275,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 7577744087612496756}
-  minutes: 1
-  seconds: 0
+  minutes: 0
+  seconds: 45
   miliseconds: 0
   running: 0
   player: 0

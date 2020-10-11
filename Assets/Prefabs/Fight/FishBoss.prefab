@@ -252,8 +252,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 5440348727054157310}
-  minutes: 1
-  seconds: 30
+  minutes: 0
+  seconds: 20
   miliseconds: 0
   running: 0
   player: 0
@@ -272,8 +272,8 @@ MonoBehaviour:
   type: 2
   timer: {fileID: 2858256825808414011}
   name: fishboss
-  maxDamage: 12
-  minDamage: 7
+  maxDamage: 5
+  minDamage: 2
   text: {fileID: 5440348727054157310}
   attackCD: 0
   playerTime: {fileID: 0}

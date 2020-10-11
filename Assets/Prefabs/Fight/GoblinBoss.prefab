@@ -287,7 +287,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 988ac7da9f81e6f4a93e3d23d0a2181e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3571816589786647885}
-  minutes: 1
-  seconds: 30
+  minutes: 0
+  seconds: 50
   miliseconds: 0
   running: 0
   player: 0
@@ -371,8 +371,8 @@ MonoBehaviour:
   type: 0
   timer: {fileID: 8669861935599472776}
   name: goblinboss
-  maxDamage: 8
-  minDamage: 7
+  maxDamage: 6
+  minDamage: 3
   text: {fileID: 3571816589786647885}
   attackCD: 0
   playerTime: {fileID: 0}
