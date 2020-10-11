@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 3d46cb49ce712e94c88bca49edb79b93
+guid: b5e6e8287e147284daece3a58a10a937
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1666395141669033270
-    second: Xelor_Idle_0
+      213: 5978353632680497757
+    second: Xelor_Idle_Emission_0
   - first:
-      213: -7840653681616412261
-    second: Xelor_Idle_1
+      213: -1590667226638152707
+    second: Xelor_Idle_Emission_1
   - first:
-      213: -7431488893927382572
-    second: Xelor_Idle_2
+      213: -7526026889612134219
+    second: Xelor_Idle_Emission_2
   - first:
-      213: 587581385001265416
-    second: Xelor_Idle_3
+      213: 8228873566855353122
+    second: Xelor_Idle_Emission_3
   - first:
-      213: 3130757519881493887
-    second: Xelor_Idle_4
+      213: 7343200236481315898
+    second: Xelor_Idle_Emission_4
   - first:
-      213: -7873190239570683929
-    second: Xelor_Idle_5
+      213: -3019620898333713713
+    second: Xelor_Idle_Emission_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Xelor_Idle_0
+      name: Xelor_Idle_Emission_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,20 +115,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aca61659276cfd8e0800000000000000
-      internalID: -1666395141669033270
+      spriteID: d52569944f067f250800000000000000
+      internalID: 5978353632680497757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Idle_1
+      name: Xelor_Idle_Emission_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -136,20 +136,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b912564a407603390800000000000000
-      internalID: -7840653681616412261
+      spriteID: dfb8068c590dce9e0800000000000000
+      internalID: -1590667226638152707
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Idle_2
+      name: Xelor_Idle_Emission_2
       rect:
         serializedVersion: 2
         x: 0
@@ -157,20 +157,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1a235893c0ed890800000000000000
-      internalID: -7431488893927382572
+      spriteID: 5b871a22b6e2e8790800000000000000
+      internalID: -7526026889612134219
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Idle_3
+      name: Xelor_Idle_Emission_3
       rect:
         serializedVersion: 2
         x: 1024
@@ -178,20 +178,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 809e1a11822872800800000000000000
-      internalID: 587581385001265416
+      spriteID: 223d30e19e4d23270800000000000000
+      internalID: 8228873566855353122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Idle_4
+      name: Xelor_Idle_Emission_4
       rect:
         serializedVersion: 2
         x: 0
@@ -199,20 +199,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7d5b6a706fa27b20800000000000000
-      internalID: 3130757519881493887
+      spriteID: a34880a85b948e560800000000000000
+      internalID: 7343200236481315898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Idle_5
+      name: Xelor_Idle_Emission_5
       rect:
         serializedVersion: 2
         x: 1024
@@ -220,14 +220,14 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e71159e03fccb290800000000000000
-      internalID: -7873190239570683929
+      spriteID: fca1976aac62816d0800000000000000
+      internalID: -3019620898333713713
       vertices: []
       indices: 
       edges: []

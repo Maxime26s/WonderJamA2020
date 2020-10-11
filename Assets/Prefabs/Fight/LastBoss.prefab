@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5027143418658386085}
   - component: {fileID: 1151603130094268565}
   m_Layer: 0
-  m_Name: BatBoss
+  m_Name: LastBoss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54,7 +54,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 8763c65e7b70e124d8fdcf53eb6fe205, type: 2}
+  - {fileID: 2100000, guid: 1fc58fbe11fb0a2479b62a573800819c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,9 +75,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8647823593821616703, guid: d6b974911273e38428a5c8687bc8260a, type: 3}
+  m_Sprite: {fileID: -1666395141669033270, guid: 3d46cb49ce712e94c88bca49edb79b93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 5.12, y: 5.12}
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 3543145751167527314}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5022d79768905fb47866c34b0597eee1, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8d3958a226ada5345bf1208115c870c3, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -119,9 +119,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 3
   timer: {fileID: 1151603130094268565}
-  name: batboss
-  maxDamage: 5
-  minDamage: 4
+  name: xelor
+  maxDamage: 10
+  minDamage: 3
   text: {fileID: 205473573605590078}
   attackCD: 0
   playerTime: {fileID: 0}

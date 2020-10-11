@@ -1,25 +1,28 @@
 fileFormatVersion: 2
-guid: 3d46cb49ce712e94c88bca49edb79b93
+guid: 9246029652111494098723fa5b1f5de4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1666395141669033270
-    second: Xelor_Idle_0
+      213: -9087577266532155448
+    second: smoke_0
   - first:
-      213: -7840653681616412261
-    second: Xelor_Idle_1
+      213: -1106684591460216115
+    second: smoke_1
   - first:
-      213: -7431488893927382572
-    second: Xelor_Idle_2
+      213: -5983078005227543334
+    second: smoke_2
   - first:
-      213: 587581385001265416
-    second: Xelor_Idle_3
+      213: 7818055727696256662
+    second: smoke_3
   - first:
-      213: 3130757519881493887
-    second: Xelor_Idle_4
+      213: 8013849657407384527
+    second: smoke_4
   - first:
-      213: -7873190239570683929
-    second: Xelor_Idle_5
+      213: -5181280606106272151
+    second: smoke_5
+  - first:
+      213: -7197358887858680917
+    second: smoke_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -107,127 +110,148 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Xelor_Idle_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 2048
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aca61659276cfd8e0800000000000000
-      internalID: -1666395141669033270
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Xelor_Idle_1
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 2048
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b912564a407603390800000000000000
-      internalID: -7840653681616412261
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Xelor_Idle_2
+      name: smoke_0
       rect:
         serializedVersion: 2
         x: 0
         y: 1024
-        width: 1024
-        height: 1024
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d1a235893c0ed890800000000000000
-      internalID: -7431488893927382572
+      spriteID: 8cf7f67cf9072e180800000000000000
+      internalID: -9087577266532155448
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Idle_3
+      name: smoke_1
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc29d9f3a3444a0f0800000000000000
+      internalID: -1106684591460216115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke_2
       rect:
         serializedVersion: 2
         x: 1024
         y: 1024
-        width: 1024
-        height: 1024
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 809e1a11822872800800000000000000
-      internalID: 587581385001265416
+      spriteID: ad4a5f20146d7fca0800000000000000
+      internalID: -5983078005227543334
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Idle_4
+      name: smoke_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69e1b8333405f7c60800000000000000
+      internalID: 7818055727696256662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb2721edc9e63f60800000000000000
+      internalID: 8013849657407384527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke_5
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96e3a678db46818b0800000000000000
+      internalID: -5181280606106272151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: smoke_6
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 512
+        height: 512
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7d5b6a706fa27b20800000000000000
-      internalID: 3130757519881493887
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Xelor_Idle_5
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 0
-        width: 1024
-        height: 1024
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7e71159e03fccb290800000000000000
-      internalID: -7873190239570683929
+      spriteID: babce288938dd1c90800000000000000
+      internalID: -7197358887858680917
       vertices: []
       indices: 
       edges: []

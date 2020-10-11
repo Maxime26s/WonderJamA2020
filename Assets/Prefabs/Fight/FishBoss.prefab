@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 3899237628388306911}
   m_Layer: 0
   m_Name: FishBoss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,7 +255,8 @@ MonoBehaviour:
   minutes: 1
   seconds: 30
   miliseconds: 0
-  enabled: 0
+  running: 0
+  player: 0
 --- !u!114 &3899237628388306911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,6 +279,7 @@ MonoBehaviour:
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 7397710429881628454}
+  calledEnd: 0
 --- !u!1 &5950888217660578129
 GameObject:
   m_ObjectHideFlags: 0
