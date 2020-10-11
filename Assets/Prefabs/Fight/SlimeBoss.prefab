@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 542387697141614143}
   - component: {fileID: 774052016076901576}
   - component: {fileID: 8723139031414356814}
+  - component: {fileID: 6674182036971003343}
+  - component: {fileID: -5365749637895579964}
   m_Layer: 0
   m_Name: SlimeBoss
   m_TagString: Untagged
@@ -103,6 +105,45 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6674182036971003343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899548420961027498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ed8c0f14e128f46abcba5a733474c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 2
+  timer: {fileID: -5365749637895579964}
+  name: slimeboss
+  maxDamage: 12
+  minDamage: 10
+  text: {fileID: 2263863211611442274}
+  attackCD: 0
+  playerTime: {fileID: 0}
+  attack: 0
+  anim: {fileID: 8723139031414356814}
+--- !u!114 &-5365749637895579964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1899548420961027498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07907df76e39cc24faae1c0a7a5f2c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timer: {fileID: 2263863211611442274}
+  minutes: 0
+  seconds: 55
+  miliseconds: 0
+  enabled: 0
 --- !u!1 &2027379212618493649
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +169,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2027379212618493649}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -137,7 +178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.735271, y: 0.4795926}
   m_AnchorMax: {x: 0.8737085, y: 0.52859265}
-  m_AnchoredPosition: {x: 0.00024414062, y: -4.460022}
+  m_AnchoredPosition: {x: 0.00024414062, y: -4.460083}
   m_SizeDelta: {x: 9.616455, y: -0.32624817}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3935199631584958291
@@ -359,6 +400,7 @@ MonoBehaviour:
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
+  anim: {fileID: 0}
 --- !u!114 &8105861361636506604
 MonoBehaviour:
   m_ObjectHideFlags: 0

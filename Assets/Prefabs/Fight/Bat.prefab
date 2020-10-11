@@ -260,6 +260,7 @@ MonoBehaviour:
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
+  anim: {fileID: 5552629806380064400}
 --- !u!114 &5306383046894745676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -277,8 +278,6 @@ MonoBehaviour:
   seconds: 30
   miliseconds: 0
   enabled: 0
-  textDamage: {fileID: 1633492937649665565, guid: acb09978ba91e854fb59c5afd7d75c16, type: 3}
-  canv: {fileID: 8925235203500011749, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
 --- !u!1 &5987638080468530209
 GameObject:
   m_ObjectHideFlags: 0

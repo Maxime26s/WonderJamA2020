@@ -143,6 +143,7 @@ MonoBehaviour:
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
+  anim: {fileID: 6873843376223277892}
 --- !u!1 &7276720551592722725
 GameObject:
   m_ObjectHideFlags: 0

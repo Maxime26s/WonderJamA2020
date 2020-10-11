@@ -79,7 +79,7 @@ public class Inventory : MonoBehaviour
     {
         Debug.Log(anim.parameterCount);
         anim.SetBool("attacking", true);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         anim.SetBool("attacking", false);
     }
 }
