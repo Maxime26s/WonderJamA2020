@@ -218,7 +218,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 6870179443598421342}
   minutes: 0
-  seconds: 55
+  seconds: 45
   miliseconds: 0
   running: 0
   player: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
   type: 1
   timer: {fileID: 7197637379124818597}
   name: firemageboss
-  maxDamage: 10
-  minDamage: 8
+  maxDamage: 6
+  minDamage: 3
   text: {fileID: 6870179443598421342}
   attackCD: 0
   playerTime: {fileID: 0}

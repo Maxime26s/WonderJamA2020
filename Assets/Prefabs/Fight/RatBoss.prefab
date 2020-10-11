@@ -217,8 +217,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 6041593504521521152}
-  minutes: 1
-  seconds: 0
+  minutes: 0
+  seconds: 50
   miliseconds: 0
   running: 0
   player: 0
@@ -237,8 +237,8 @@ MonoBehaviour:
   type: 0
   timer: {fileID: 3451526080803168727}
   name: ratboss
-  maxDamage: 8
-  minDamage: 6
+  maxDamage: 6
+  minDamage: 3
   text: {fileID: 6041593504521521152}
   attackCD: 0
   playerTime: {fileID: 0}

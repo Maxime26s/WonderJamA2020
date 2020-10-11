@@ -120,8 +120,8 @@ MonoBehaviour:
   type: 2
   timer: {fileID: -5365749637895579964}
   name: slimeboss
-  maxDamage: 12
-  minDamage: 10
+  maxDamage: 7
+  minDamage: 4
   text: {fileID: 2263863211611442274}
   attackCD: 0
   playerTime: {fileID: 0}

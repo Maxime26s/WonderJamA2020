@@ -119,7 +119,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 3971122715782784410}
   minutes: 0
-  seconds: 30
+  seconds: 25
   miliseconds: 0
   running: 0
   player: 0
@@ -138,8 +138,8 @@ MonoBehaviour:
   type: 1
   timer: {fileID: 1084719767181539978}
   name: skeleton
-  maxDamage: 6
-  minDamage: 5
+  maxDamage: 3
+  minDamage: 2
   text: {fileID: 3971122715782784410}
   attackCD: 0
   playerTime: {fileID: 0}

@@ -351,8 +351,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3571816589786647885}
-  minutes: 1
-  seconds: 30
+  minutes: 0
+  seconds: 50
   miliseconds: 0
   running: 0
   player: 0
@@ -371,8 +371,8 @@ MonoBehaviour:
   type: 0
   timer: {fileID: 8669861935599472776}
   name: goblinboss
-  maxDamage: 8
-  minDamage: 7
+  maxDamage: 6
+  minDamage: 3
   text: {fileID: 3571816589786647885}
   attackCD: 0
   playerTime: {fileID: 0}
