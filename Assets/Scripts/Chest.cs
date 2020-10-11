@@ -8,6 +8,7 @@ public class Chest : MonoBehaviour
 {
     bool right = false;
     bool first = true;
+    public bool Labyrinthe = false;
     int amount;
     public Vector2 range;
     bool stop = false;
@@ -52,9 +53,7 @@ public class Chest : MonoBehaviour
                 }
                 StartCoroutine(WaitAndLeave());
             }
-
-            float x = Input.GetAxisRaw("Horizontal");
-            if(x > 0.4  && (right || first))
+            if (!Labyrinthe)
             {
                 first = false;
                 amount--;
@@ -75,6 +74,7 @@ public class Chest : MonoBehaviour
                 this.GetComponent<AudioSource>().Play();
                 Instantiate(particleShake, transform.position, Quaternion.identity);
             }
+            
         }
     }
 }
