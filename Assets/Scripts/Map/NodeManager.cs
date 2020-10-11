@@ -96,10 +96,9 @@ public class NodeManager : MonoBehaviour
             }
             if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.Space))
             {
-                //NextLevel();
-
-                
-                if(currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
+                if(currentNode.GetComponent<Node>().nodeType != GameManager.NodeType.Enemy)
+                    NextLevel();
+                else if(currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
                 {
                     if(currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
                         GameManager.Instance.skipEnemy = false;
@@ -158,6 +157,7 @@ public class NodeManager : MonoBehaviour
                 }
                 else
                 {
+                    nextNode[0].GetComponent<Node>().RefreshType(GameManager.NodeType.Enemy);
                     GameObject temp;
                     switch (oldType)
                     {

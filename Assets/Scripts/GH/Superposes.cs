@@ -6,7 +6,6 @@ using UnityEngine;
 public class Superposes : MonoBehaviour
 {
     public GHController ghc;
-    private bool trigg = false;
     private bool wrong;
 
     private void OnTriggerStay2D(Collider2D other)
