@@ -71,7 +71,7 @@ public class retourner_carte : MonoBehaviour
 
         if (!aDown)
         {
-            if (Input.GetButton("A"))
+            if (Input.GetButton("A") && !over)
             {
                 aDown = true;
                 images[i].sprite = sprites[randoms[i]];

@@ -1,43 +1,19 @@
 fileFormatVersion: 2
-guid: 5ac1f9c2beb82424f972037ce637daa0
+guid: bd58f944c82d7eb4f8cceeb6b0d6be6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5741236565027165081
-    second: Goblin1_Attack_0
+      213: 5162411998443523775
+    second: rock_attack_0
   - first:
-      213: -5963377855913821372
-    second: Goblin1_Attack_1
+      213: 7655369891538900865
+    second: rock_attack_1
   - first:
-      213: -3168354472931903879
-    second: Goblin1_Attack_2
+      213: 7864089416018264603
+    second: rock_attack_2
   - first:
-      213: -7963252241673184108
-    second: Goblin1_Attack_3
-  - first:
-      213: 6126357936621872240
-    second: Goblin1_Attack_4
-  - first:
-      213: -1007557200332384628
-    second: Goblin1_Attack_5
-  - first:
-      213: 398361845476853149
-    second: Goblin1_Attack_0
-  - first:
-      213: -441322085262174954
-    second: Goblin1_Attack_1
-  - first:
-      213: -7154631242894669305
-    second: Goblin1_Attack_2
-  - first:
-      213: -2070238469929179011
-    second: Goblin1_Attack_3
-  - first:
-      213: 1134535043050421947
-    second: Goblin1_Attack_4
-  - first:
-      213: -328793750261956414
-    second: Goblin1_Attack_5
+      213: 4533559135085016533
+    second: rock_attack_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -68,7 +44,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -125,49 +101,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Goblin1_Attack_0
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 1088
-        width: 384
-        height: 416
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9587b3ecf3478500800000000000000
-      internalID: 398361845476853149
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin1_Attack_1
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 1088
-        width: 416
-        height: 416
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 615d964d6eb10e9f0800000000000000
-      internalID: -441322085262174954
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Goblin1_Attack_2
+      name: rock_attack_0
       rect:
         serializedVersion: 2
         x: 64
@@ -181,20 +115,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 70a0a5c9ac4a5bc90800000000000000
-      internalID: -7154631242894669305
+      spriteID: fbec0776c5294a740800000000000000
+      internalID: 5162411998443523775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin1_Attack_3
+      name: rock_attack_1
       rect:
         serializedVersion: 2
-        x: 544
+        x: 576
         y: 576
-        width: 416
-        height: 448
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +136,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d78e58784190543e0800000000000000
-      internalID: -2070238469929179011
+      spriteID: 18795614b565d3a60800000000000000
+      internalID: 7655369891538900865
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin1_Attack_4
+      name: rock_attack_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 64
         y: 64
-        width: 416
-        height: 416
+        width: 384
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbeb0425c9daebf00800000000000000
-      internalID: 1134535043050421947
+      spriteID: b128dab78abd22d60800000000000000
+      internalID: 7864089416018264603
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Goblin1_Attack_5
+      name: rock_attack_3
       rect:
         serializedVersion: 2
         x: 576
         y: 64
         width: 384
-        height: 416
+        height: 384
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,8 +178,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2c0844f73d3ef6bf0800000000000000
-      internalID: -328793750261956414
+      spriteID: 5d538f673007aee30800000000000000
+      internalID: 4533559135085016533
       vertices: []
       indices: 
       edges: []
