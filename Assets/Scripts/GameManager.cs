@@ -169,10 +169,10 @@ public class GameManager : MonoBehaviour
         {
             yield return new WaitForSeconds(0.5f);
             map.SetActive(false);
-            SceneManager.LoadScene("Trap", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Memory", LoadSceneMode.Additive);
             mapManager.NextLevel();
             yield return new WaitForSeconds(0.1f);
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Trap"));
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName("Memory"));
         }
         StartCoroutine(Wait());
     }
