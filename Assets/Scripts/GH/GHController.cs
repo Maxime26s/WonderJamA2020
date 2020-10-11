@@ -15,6 +15,7 @@ public class GHController : MonoBehaviour
         {
             yield return new WaitForSeconds(24f);
             int resultat = (int)(comboMax / total * hit);
+            Debug.Log(resultat);
             GameManager.Instance.AjoutTemps(resultat);
             result.SetActive(true); //change for a fade
             TextMeshProUGUI text = result.GetComponentInChildren<TextMeshProUGUI>();

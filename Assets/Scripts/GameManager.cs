@@ -28,6 +28,7 @@ public class GameManager : MonoBehaviour
     }
 
     public List<GameObject> enemies = new List<GameObject>(); //miniboss = better boss
+    public List<GameObject> miniBoss = new List<GameObject>();
     public List<GameObject> treasures = new List<GameObject>();
     public List<GameObject> traps = new List<GameObject>();
     public List<GameObject> cards = new List<GameObject>();
