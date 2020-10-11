@@ -13,7 +13,7 @@ public class Chest : MonoBehaviour
     bool stop = false;
     public GameObject reward, particle;
     public List<Spell> loots = new List<Spell>();
-    public Image spellImage;
+    public Image spellSprite;
     public TextMeshProUGUI spellText;
 
     // Start is called before the first frame update
@@ -36,9 +36,9 @@ public class Chest : MonoBehaviour
                     gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     Spell given = loots[Random.Range(0, 15)];
                     spellText.gameObject.SetActive(true);
-                    spellImage.gameObject.SetActive(true);
+                    spellSprite.gameObject.SetActive(true);
                     spellText.text = given.name;
-                    spellImage.sprite = given.sprite;
+                    spellSprite.sprite = given.sprite;
                     Inventory.Instance.AddSpell(given.name);
                     reward.SetActive(true);
                     yield return new WaitForSeconds(3f);

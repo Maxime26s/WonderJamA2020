@@ -46,7 +46,8 @@ public class Timer : MonoBehaviour
                 seconds = 0;
                 miliseconds = 0;
                 running = false;
-                GameManager.Instance.LoadDeath();
+                if(player)
+                    GameManager.Instance.LoadDeath();
             }
             RefreshText();
         }

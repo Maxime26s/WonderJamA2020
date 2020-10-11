@@ -29,7 +29,7 @@ public class AnimManager : MonoBehaviour
             animator.SetBool("Play", true);
             yield return new WaitForSeconds(0.5f);
             animator.SetBool("Play", false);
-            SceneManager.LoadScene("Map", LoadSceneMode.Additive);
+            SceneManager.LoadScene("Intro", LoadSceneMode.Additive);
             gameObject.SetActive(false);
         }
         StartCoroutine(OnAndOff());
