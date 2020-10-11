@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5090d5b7c4e197641a132c23b1092dfb, type: 3}
-  m_Name: Fireball
+  m_Name: Boule de feu
   m_EditorClassIdentifier: 
-  name: fireball
+  name: Boue de feu
   type: 1
   sprite: {fileID: 21300000, guid: 68a5b13b0cffc834ba0f9e2fbb11d312, type: 3}
   material: {fileID: 2100000, guid: 7834f73b060064140b47edf65fb5ad48, type: 2}
-  damage: 3
-  listeInputs:
-  - {fileID: 11400000, guid: 0e288f91361a7674d8cc6ec441fecd10, type: 2}
-  - {fileID: 11400000, guid: ab033d325baec0e4aba51ef245033e78, type: 2}
-  - {fileID: 11400000, guid: 7b78894972cf66744bac5a4f16d47e66, type: 2}
+  damage: 5
+  listeInputs: []
+  difficulty: 3
