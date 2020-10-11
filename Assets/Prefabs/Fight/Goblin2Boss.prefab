@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3646072171400902745}
   m_Layer: 0
   m_Name: Goblin2Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -287,7 +287,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: f16a0554a73956943a2097b276d8c354, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -361,6 +361,7 @@ MonoBehaviour:
   attack: 0
   anim: {fileID: 0}
   calledEnd: 0
+  lastBoss: 0
 --- !u!114 &3646072171400902745
 MonoBehaviour:
   m_ObjectHideFlags: 0
