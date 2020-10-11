@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class IntroScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class IntroScript : MonoBehaviour
     public GameObject xelor;
     public GameObject rolex;
     public GameObject nuke;
+    public List<GameObject> eyes;
     public List<AudioClip> sounds;
 
     // Start is called before the first frame update
@@ -53,14 +55,14 @@ public class IntroScript : MonoBehaviour
     IEnumerator ShowProps() 
     {
         yield return new WaitForSeconds(12);
-        for(float i = 0; i <= 0.1f; i += 0.0005f) 
+        for(float i = 0; i <= 0.1f; i += 0.1f * Time.deltaTime) 
         {
             Color c = xelor.GetComponent<SpriteRenderer>().color;
             c.a = i;
             xelor.GetComponent<SpriteRenderer>().color = c;
             yield return null;
         }
-        for(float i = 0; i <= 0.1f; i += 0.0005f) 
+        for(float i = 0; i <= 0.1f; i += 0.1f * Time.deltaTime) 
         {
             Color c = nuke.GetComponent<SpriteRenderer>().color;
             c.a = i;
@@ -68,22 +70,22 @@ public class IntroScript : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(3);
-        for(float i = 0.1f; i > 0; i -= 0.0005f) 
+        for(float i = 0.1f; i > 0; i -= 0.1f * Time.deltaTime) 
         {
             Color c = xelor.GetComponent<SpriteRenderer>().color;
             c.a = i;
             xelor.GetComponent<SpriteRenderer>().color = c;
             yield return null;
         }
-        for(float i = 0.1f; i > 0; i -= 0.0005f) 
+        for(float i = 0.1f; i > 0; i -= 0.1f * Time.deltaTime) 
         {
             Color c = nuke.GetComponent<SpriteRenderer>().color;
             c.a = i;
             nuke.GetComponent<SpriteRenderer>().color = c;
             yield return null;
         }
-        yield return new WaitForSeconds(5);
-        for(float i = 0; i <= 0.1f; i += 0.0005f) 
+        yield return new WaitForSeconds(3);
+        for(float i = 0; i <= 0.1f; i += 0.1f * Time.deltaTime) 
         {
             Color c = rolex.GetComponent<SpriteRenderer>().color;
             c.a = i;
@@ -91,16 +93,24 @@ public class IntroScript : MonoBehaviour
             yield return null;
         }
         
-        for(float i = earth.transform.position.y; i >= -3f; i -= 0.01f) 
+        for(float i = earth.transform.position.y; i >= -3f; i -= 1f * Time.deltaTime) 
         {
             earth.transform.position = new Vector3(0, i, 0);
             yield return null;
+        }
+
+        for(float i = 0; i <= 100f; i += 1f * Time.deltaTime) 
+        {
+            foreach(GameObject eye in eyes)
+            {
+                eye.GetComponent<Light2D>().intensity = i;
+            }
         }
     }
 
     IEnumerator MoveText() 
     {
-        for(float i = -400; i <= 2000f; i += textSpeed) 
+        for(float i = -400; i <= 2000f; i += textSpeed * Time.deltaTime) 
         {
             text.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, i);
             yield return null;
@@ -110,7 +120,7 @@ public class IntroScript : MonoBehaviour
 
     IEnumerator FadeIn() 
     {
-        for(float ft = 1f; ft >= 0; ft -= fadeSpeed) 
+        for(float ft = 1f; ft >= 0; ft -= fadeSpeed * Time.deltaTime) 
         {
             Color c = fade.GetComponent<SpriteRenderer>().color;
             c.a = ft;
@@ -121,18 +131,20 @@ public class IntroScript : MonoBehaviour
 
     IEnumerator FadeOut() 
     {
-        for(float ft = 0f; ft <= 1f; ft += fadeSpeed) 
+        for(float ft = 0f; ft <= 1f; ft += fadeSpeed * Time.deltaTime) 
         {
             Color c = fade.GetComponent<SpriteRenderer>().color;
             c.a = ft;
             fade.GetComponent<SpriteRenderer>().color = c;
-            yield return null;
+            
         }
+        Application.LoadLevel(2);
+        yield return null;
     }
 
     IEnumerator ApproachEarth() 
     {
-        for(float size = 1f; size <= 800f; size++) 
+        for(float size = 1f; size <= 4f; size += 1 * Time.deltaTime) 
         {
             earth.transform.localScale += new Vector3(0.001f, 0.001f, 0);
             yield return null;

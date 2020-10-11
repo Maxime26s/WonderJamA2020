@@ -1,0 +1,13 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MovingBotRight
+  m_Controller: {fileID: 9100000, guid: 95159072bad04d949b2aa5387ab972bd, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: b4ae07e3981b19443a3bd94f3ce7eaf0, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: b4ae07e3981b19443a3bd94f3ce7eaf0, type: 2}
