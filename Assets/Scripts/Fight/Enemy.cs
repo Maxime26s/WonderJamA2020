@@ -17,6 +17,7 @@ public class Enemy : MonoBehaviour
     public Animator anim;
     public bool calledEnd;
     public bool lastBoss;
+    public AudioClip hitSound;
 
     List<Type> types = new List<Type> { Type.Fire, Type.Water, Type.Air, Type.Earth };
 
@@ -30,6 +31,7 @@ public class Enemy : MonoBehaviour
         playerTime = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
         attackCD = Random.Range(4.0f, 6.0f);
         StartCoroutine(WaitCoolDown());
+        
     }
 
     // Update is called once per frame
@@ -38,7 +40,30 @@ public class Enemy : MonoBehaviour
         if(attack)
         {
             attackCD = Random.Range(3.0f, 5.0f);
-            playerTime.LoseTime(Random.Range(minDamage, maxDamage));
+            playerTime.RemoveTime(Random.Range((int)minDamage, (int)maxDamage), Random.Range(10, 90));
+            IEnumerator Red()
+            {
+                for (float j = 1f; j >= 0f; j -= 0.01f + Time.deltaTime)
+                {
+                    Color c = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().color;
+                    c.g = j;
+                    c.b = j;
+                    GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().color = c;
+                    yield return null;
+                }
+                GameObject.FindWithTag("Hit").GetComponent<AudioSource>().clip = hitSound;
+                GameObject.FindWithTag("Hit").GetComponent<AudioSource>().Play();
+                yield return new WaitForSeconds(0.3f);
+                for (float j = 0f; j <= 1f; j += 0.01f + Time.deltaTime)
+                {
+                    Color c = GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().color;
+                    c.g = j;
+                    c.b = j;
+                    GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().color = c;
+                    yield return null;
+                }
+            }
+            StartCoroutine(Red());
             attack = false;
 
             if (lastBoss)

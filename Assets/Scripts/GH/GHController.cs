@@ -37,6 +37,7 @@ public class GHController : MonoBehaviour
             text.text = string.Format("+{0:##} secondes", resultat);
             yield return new WaitForSeconds(2f);
             GameManager.Instance.LoadMap();
+            MusicManager.Instance.MapMusic();
         }
         StartCoroutine(Manager());
     }

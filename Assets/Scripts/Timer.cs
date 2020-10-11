@@ -40,16 +40,7 @@ public class Timer : MonoBehaviour
             }
 
             miliseconds -= Time.deltaTime * 100;
-            if(minutes < 0)
-            {
-                minutes = 0;
-                seconds = 0;
-                miliseconds = 0;
-                running = false;
-                if(player)
-                    GameManager.Instance.LoadDeath();
-            }
-            RefreshText();
+            DeathCheck();
         }
     }
 
@@ -80,6 +71,7 @@ public class Timer : MonoBehaviour
         {
             seconds += secondes;
         }
+        DeathCheck();
     }
 
     public void RemoveTime(float secondes)
@@ -95,15 +87,35 @@ public class Timer : MonoBehaviour
         {
             seconds -= secondes;
         }
+        DeathCheck();
     }
 
-    public void LoseTime(float damage)
+    public void RemoveTime(float secondes, float millisecondes)
     {
-        seconds -= damage;
-        //GameObject txt = Instantiate(textDamage, new Vector2(transform.position.x + Random.Range(-100f, 100f), transform.position.y + Random.Range(-100f, 100f)), Quaternion.identity);
-        //txt.transform.SetParent(timer.transform, false);
-        //txt.GetComponent<TextMeshProUGUI>().text = "-" + (float)Mathf.Round(damage * 100f) / 100f;
-        //StartCoroutine(TakingDamage(txt));
+        if (millisecondes >= miliseconds)
+        {
+            seconds--;
+            millisecondes -= miliseconds;
+            miliseconds = 100;
+            miliseconds -= millisecondes;
+        }
+        else
+        {
+            miliseconds -= millisecondes;
+        }
+
+        if (secondes >= seconds)
+        {
+            minutes--;
+            secondes -= seconds;
+            seconds = 59;
+            seconds -= secondes;
+        }
+        else
+        {
+            seconds -= secondes;
+        }
+        DeathCheck();
     }
 
     IEnumerator TakingDamage(GameObject go)
@@ -120,5 +132,19 @@ public class Timer : MonoBehaviour
         }
         
         Destroy(go);
+    }
+
+    void DeathCheck()
+    {
+        if (minutes < 0)
+        {
+            minutes = 0;
+            seconds = 0;
+            miliseconds = 0;
+            running = false;
+            if (player)
+                GameManager.Instance.LoadDeath();
+        }
+        RefreshText();
     }
 }

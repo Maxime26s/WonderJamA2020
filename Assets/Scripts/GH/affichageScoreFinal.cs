@@ -25,6 +25,7 @@ public class affichageScoreFinal : MonoBehaviour
             tmp.SetText("+" + finalsScore.timeAdded + "s");
             bouton.SetActive(true);
             outline.SetActive(true);
+            MusicManager.Instance.MapMusic();
         }
     }
 }

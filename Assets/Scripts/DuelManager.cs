@@ -14,6 +14,7 @@ public class DuelManager : MonoBehaviour
     public string buttonPressedName = "";
     string lastSpell = "";
     float multDebuff = 1f;
+    bool over;
 
     public float arbitraryMultiplier;
     public Inventory inventory;
@@ -30,12 +31,14 @@ public class DuelManager : MonoBehaviour
     public AnimOnly playerAnim;
     public List<ParticleSystem> particles;
     public List<AudioClip> particleSounds;
+    public AudioClip hitSound;
 
 
     // Start is called before the first frame update
     void Start()
     {
         timer = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
+        MusicManager.Instance.FightMusic();
     }
 
     private void OnEnable()
@@ -46,11 +49,6 @@ public class DuelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            GameManager.Instance.LoadMap();
-        }
-
         if (!initialized)
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy");
@@ -75,7 +73,7 @@ public class DuelManager : MonoBehaviour
         }
 
 
-        if (!buttonPressed)
+        if (!buttonPressed && !over)
         {
             //A
             if (Input.GetButton("A"))
@@ -206,7 +204,7 @@ public class DuelManager : MonoBehaviour
             currentSequence.Clear();
             for (int j = 0; j < combo.Count; j++)
                 combo[j].color = new Color32(255, 255, 255, 255);
-            timer.LoseTime(currentSpell.damage);
+            timer.RemoveTime((int)currentSpell.damage, (int)((currentSpell.damage - (int)currentSpell.damage) * 100f));
         }
 
         if (spellCasted != null)
@@ -261,7 +259,34 @@ public class DuelManager : MonoBehaviour
 
             lastSpell = spellCasted.name;
             currentSequence.Clear();
-            enemy.GetComponent<Timer>().LoseTime(spellCasted.damage * multDebuff * effectivBuff);
+            float temp = spellCasted.damage * multDebuff * effectivBuff;
+            enemy.GetComponent<Timer>().RemoveTime((int)temp, (int)((temp - (int)temp) * 100f));
+
+            IEnumerator Red()
+            {
+                for (float j = 1f; j >= 0f; j -= 0.01f + Time.deltaTime)
+                {
+                    Color c = enemy.GetComponent<SpriteRenderer>().color;
+                    c.g = j;
+                    c.b = j;
+                    enemy.GetComponent<SpriteRenderer>().color = c;
+                    yield return null;
+                }
+                GameObject.FindWithTag("Hit").GetComponent<AudioSource>().clip = hitSound;
+                GameObject.FindWithTag("Hit").GetComponent<AudioSource>().Play();
+                yield return new WaitForSeconds(0.3f);
+                for (float j = 0f; j <= 1f; j += 0.01f + Time.deltaTime)
+                {
+                    Color c = enemy.GetComponent<SpriteRenderer>().color;
+                    c.g = j;
+                    c.b = j;
+                    enemy.GetComponent<SpriteRenderer>().color = c;
+                    yield return null;
+                }
+            }
+            StartCoroutine(Red());
+            
+
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(0.15f);
@@ -286,7 +311,7 @@ public class DuelManager : MonoBehaviour
     public void UpdateHeader(Spell spell)
     {
         spellName.text = spell.name;
-        spellDamage.text = "Dégats: " + spell.damage;
+        spellDamage.text = "Degats: " + spell.damage;
         spellIcon.sprite = spell.sprite;
         spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
@@ -349,7 +374,9 @@ public class DuelManager : MonoBehaviour
 
     public void EndFight()
     {
-        enemy.GetComponent<SpriteRenderer>().enabled = false;
+        MusicManager.Instance.MapMusic();
+        enemy.SetActive(false);
+        over = true;
         Instantiate(smoke, new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
         this.GetComponent<AudioSource>().clip = particleSounds[4];
         this.GetComponent<AudioSource>().Play();

@@ -248,7 +248,7 @@ GameObject:
   - component: {fileID: 3646072171400902745}
   m_Layer: 0
   m_Name: Goblin2Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -261,7 +261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3646072171400902725}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3646072171250876010}
@@ -287,7 +287,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: f16a0554a73956943a2097b276d8c354, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -353,14 +353,16 @@ MonoBehaviour:
   type: 3
   timer: {fileID: 3646072171400902745}
   name: goblin2
-  maxDamage: 10
-  minDamage: 9
+  maxDamage: 8
+  minDamage: 4
   text: {fileID: 3646072170177607585}
   attackCD: 0
   playerTime: {fileID: 0}
   attack: 0
   anim: {fileID: 0}
   calledEnd: 0
+  lastBoss: 0
+  hitSound: {fileID: 0}
 --- !u!114 &3646072171400902745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,8 +376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3646072170177607585}
-  minutes: 1
-  seconds: 5
+  minutes: 0
+  seconds: 45
   miliseconds: 0
   running: 0
   player: 0
