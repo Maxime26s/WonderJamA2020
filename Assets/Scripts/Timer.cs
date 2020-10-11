@@ -69,7 +69,7 @@ public class Timer : MonoBehaviour
         }
         else
         {
-            seconds -= secondes;
+            seconds += secondes;
         }
     }
 

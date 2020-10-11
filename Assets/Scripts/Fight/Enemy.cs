@@ -39,9 +39,10 @@ public class Enemy : MonoBehaviour
             //Do anim stuff
         }
 
-        if(timer.minutes == 0 && timer.seconds == 0 && timer.miliseconds <= 0)
+        if(timer.miliseconds <= 0 && timer.seconds <= 0 && timer.minutes <= 0)
         {
             GameObject.FindGameObjectWithTag("DuelManager").GetComponent<DuelManager>().EndFight();
+            Debug.Log("n");
         }
 
     }

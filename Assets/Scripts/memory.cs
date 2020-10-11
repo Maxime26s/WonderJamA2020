@@ -30,7 +30,8 @@ public class memory : MonoBehaviour
 
     bool show1 = true;
     bool reussi = false;
-    
+    bool buttonPressed = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -52,6 +53,13 @@ public class memory : MonoBehaviour
     {
         if (!stop)
         {
+            if (!Input.GetButton("A")
+            && !Input.GetButton("B")
+            && !Input.GetButton("X")
+            && !Input.GetButton("Y"))
+            {
+                buttonPressed = false;
+            }
             if (startSeconds  - 30 >= GameManager.Instance.mapManager.timer.minutes * 60 + GameManager.Instance.mapManager.timer.seconds )
             {
                 stop = true;
@@ -68,63 +76,73 @@ public class memory : MonoBehaviour
                 show1 = false;
             }
 
-            if (Input.GetButtonDown("A"))
+            if (!buttonPressed)
             {
-                if(0 == button_to_be_pressed)
+                if (Input.GetButton("A"))
                 {
-                    progress++;
-                    StartCoroutine(showGood());
+                    buttonPressed = true;
+                    if (0 == button_to_be_pressed)
+                    {
+                        progress++;
+                        StartCoroutine(showGood());
+                    }
+                    else
+                    {
+                        progress = 0;
+                        StartCoroutine(showWrong());
+                    }
                 }
-                else
+                if (Input.GetButton("B"))
                 {
-                    progress = 0;
-                    StartCoroutine(showWrong());
+                    buttonPressed = true;
+                    if (1 == button_to_be_pressed)
+                    {
+                        progress++;
+                        StartCoroutine(showGood());
+                    }
+                    else
+                    {
+                        progress = 0;
+                        StartCoroutine(showWrong());
+                    }
+                }
+                if (Input.GetButton("X"))
+                {
+                    buttonPressed = true;
+                    if (2 == button_to_be_pressed)
+                    {
+                        progress++;
+                        StartCoroutine(showGood());
+                    }
+                    else
+                    {
+                        progress = 0;
+                        StartCoroutine(showWrong());
+                    }
+                }
+                if (Input.GetButton("Y"))
+                {
+                    buttonPressed = true;
+                    if (3 == button_to_be_pressed)
+                    {
+                        progress++;
+                        StartCoroutine(showGood());
+                    }
+                    else
+                    {
+                        progress = 0;
+                        StartCoroutine(showWrong());
+                    }
                 }
             }
-            if (Input.GetButtonDown("B"))
-            {
-                if (1 == button_to_be_pressed)
-                {
-                    progress++;
-                    StartCoroutine(showGood());
-                }
-                else
-                {
-                    progress = 0;
-                    StartCoroutine(showWrong());
-                }
-            }
-            if (Input.GetButtonDown("X"))
-            {
-                if (2 == button_to_be_pressed)
-                {
-                    progress++;
-                    StartCoroutine(showGood());
-                }
-                else
-                {
-                    progress = 0;
-                    StartCoroutine(showWrong());
-                }
-            }
-            if (Input.GetButtonDown("Y"))
-            {
-                if (3 == button_to_be_pressed)
-                {
-                    progress++;
-                    StartCoroutine(showGood());
-                }
-                else
-                {
-                    progress=0;
-                    StartCoroutine(showWrong());
-                }
-            }
+
+            Debug.Log(progress);
+            
             if(progress == 5)
             {
                 reussi = true;
                 good.sprite = bien;
-                mot.text = "Bravo!!!";
+                //mot.text = "Bravo!!!";
                 IEnumerator WaitASec()
                 {
                     yield return new WaitForSeconds(1.5f);
@@ -155,19 +173,19 @@ public class memory : MonoBehaviour
     IEnumerator showWrong()
     {
         good.sprite = mauvais;
-        mot.text = "Oupss! Essaie encore!";
+        //mot.text = "Oupss! Essaie encore!";
         yield return new WaitForSeconds(0.4f);
         good.sprite = invisible;
-        mot.text = "";
+        //mot.text = "";
 
     }
     IEnumerator showGood()
     {
         good.sprite = bien;
-        mot.text = "Oui!";
+        //mot.text = "Oui!";
         yield return new WaitForSeconds(0.4f);
         good.sprite = invisible;
-        mot.text = "";
+        //mot.text = "";
 
     }
 }
