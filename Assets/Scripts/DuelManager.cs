@@ -14,6 +14,7 @@ public class DuelManager : MonoBehaviour
     public string buttonPressedName = "";
     string lastSpell = "";
     float multDebuff = 1f;
+    bool over;
 
     public float arbitraryMultiplier;
     public Inventory inventory;
@@ -36,6 +37,7 @@ public class DuelManager : MonoBehaviour
     void Start()
     {
         timer = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
+        MusicManager.Instance.FightMusic();
     }
 
     private void OnEnable()
@@ -75,7 +77,7 @@ public class DuelManager : MonoBehaviour
         }
 
 
-        if (!buttonPressed)
+        if (!buttonPressed && !over)
         {
             //A
             if (Input.GetButton("A"))
@@ -311,7 +313,7 @@ public class DuelManager : MonoBehaviour
     public void UpdateHeader(Spell spell)
     {
         spellName.text = spell.name;
-        spellDamage.text = "Dégats: " + spell.damage;
+        spellDamage.text = "Degats: " + spell.damage;
         spellIcon.sprite = spell.sprite;
         spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
@@ -374,7 +376,9 @@ public class DuelManager : MonoBehaviour
 
     public void EndFight()
     {
-        enemy.GetComponent<SpriteRenderer>().enabled = false;
+        MusicManager.Instance.MapMusic();
+        enemy.SetActive(false);
+        over = true;
         Instantiate(smoke, new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
         this.GetComponent<AudioSource>().clip = particleSounds[4];
         this.GetComponent<AudioSource>().Play();

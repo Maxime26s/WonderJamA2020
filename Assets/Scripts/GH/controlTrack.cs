@@ -18,6 +18,8 @@ public class controlTrack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MusicManager.Instance.StopAll();
+
         if (selectorBase <= 0 || selectorBase>3)
         {
             selectorBase = Random.Range(0, 3);
