@@ -95,6 +95,7 @@ public class Timer : MonoBehaviour
         {
             seconds -= secondes;
         }
+        DeathCheck();
     }
 
     public void RemoveTime(float secondes, float millisecondes)
@@ -122,6 +123,7 @@ public class Timer : MonoBehaviour
         {
             seconds -= secondes;
         }
+        DeathCheck();
     }
 
     public void LoseTime(float damage)
@@ -147,5 +149,19 @@ public class Timer : MonoBehaviour
         }
         
         Destroy(go);
+    }
+
+    void DeathCheck()
+    {
+        if (minutes < 0)
+        {
+            minutes = 0;
+            seconds = 0;
+            miliseconds = 0;
+            running = false;
+            if (player)
+                GameManager.Instance.LoadDeath();
+        }
+        RefreshText();
     }
 }
