@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer.enabled = true;
+        timer.running = true;
         playerTime = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
         attackCD = Random.Range(4.0f, 6.0f);
         StartCoroutine(WaitCoolDown());

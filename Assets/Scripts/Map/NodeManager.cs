@@ -34,7 +34,7 @@ public class NodeManager : MonoBehaviour
     private void OnEnable()
     {
         timer.RefreshText();
-        timer.enabled = false;
+        timer.running = false;
         timer.timer.color = new Color32(152, 221, 227, 255);
         if (end)
         {
@@ -53,7 +53,7 @@ public class NodeManager : MonoBehaviour
 
     private void OnDisable()
     {
-        timer.enabled = true;
+        timer.running = true;
         timer.timer.color = new Color32(255, 255, 255, 255);
     }
 
