@@ -14,6 +14,7 @@ public class Enemy : MonoBehaviour
     public float attackCD;
     public Timer playerTime;
     public bool attack;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class Enemy : MonoBehaviour
             attack = false;
             
             StartCoroutine(WaitCoolDown());
+            StartCoroutine(AttackAnim());
             //Do anim stuff
         }
 
@@ -48,5 +50,13 @@ public class Enemy : MonoBehaviour
     {
         yield return new WaitForSeconds(attackCD);
         attack = true;
+    }
+
+    public IEnumerator AttackAnim()
+    {
+        Debug.Log(anim.parameterCount);
+        anim.SetBool("attacking", true);
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("attacking", false);
     }
 }

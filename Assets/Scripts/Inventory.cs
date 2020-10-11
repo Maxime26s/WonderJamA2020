@@ -77,9 +77,9 @@ public class Inventory : MonoBehaviour
 
     public IEnumerator AttackAnim()
     {
+        Debug.Log(anim.parameterCount);
         anim.SetBool("attacking", true);
         yield return new WaitForSeconds(2f);
         anim.SetBool("attacking", false);
     }
-
 }
