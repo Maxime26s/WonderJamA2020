@@ -5,7 +5,7 @@ using TMPro;
 
 public class GHController : MonoBehaviour
 {
-    public int hit = 0, combo = 0, comboMax = 0, total;
+    public float hit = 0, combo = 0, comboMax = 0, total;
     public GameObject result;
     // Start is called before the first frame update
     void Start()
