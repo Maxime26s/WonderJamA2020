@@ -19,8 +19,8 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         timer.enabled = true;
-        playerTime = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
-        attackCD = Random.Range(3.0f, 5.0f);
+        playerTime = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
+        attackCD = Random.Range(4.0f, 6.0f);
         StartCoroutine(WaitCoolDown());
     }
 

@@ -32,7 +32,7 @@ public class DuelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        timer = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
     }
 
     private void OnEnable()
@@ -51,7 +51,8 @@ public class DuelManager : MonoBehaviour
         if (!initialized)
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy");
-            OnPlayerCreated();
+            if(enemy != null)
+                OnPlayerCreated();
         }
 
         if (Input.GetAxisRaw("Horizontal") <= 0.2
@@ -194,8 +195,6 @@ public class DuelManager : MonoBehaviour
         }
 
         doublePress = false;
-
-        Debug.Log(currentSpell.damage);
 
     }
 
@@ -348,7 +347,7 @@ public class DuelManager : MonoBehaviour
             enemyElement.sprite = spellChoice[3].sprite;
             enemyElement.material = spellChoice[3].material;
         }
-        timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
+        //timer = GameObject.FindGameObjectWithTag("Timer").GetComponent<Timer>();
         initialized = true;
     }
 
