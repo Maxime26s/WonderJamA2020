@@ -327,6 +327,7 @@ public class NodeManager : MonoBehaviour
     IEnumerator WaitAnimationDungeon(string name)
     {
         Animator animator = dungeons[GameManager.Instance.dungeon].GetComponent<Animator>();
+        yield return new WaitForSeconds(1f);
         animator.SetBool(name, true);
         yield return new WaitForSeconds(0.1f);
         animator.SetBool(name, false);
