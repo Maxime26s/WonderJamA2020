@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DuelManager : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class DuelManager : MonoBehaviour
     public Image spellIcon;
     public List<Image> combo, spellChoice;
     public Sprite transparent;
+    public Spell currentSpell = null;
 
 
     // Start is called before the first frame update
@@ -37,6 +39,11 @@ public class DuelManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameManager.Instance.LoadMap();
+        }
+
         if (!initialized)
             OnPlayerCreated();
 
@@ -100,28 +107,28 @@ public class DuelManager : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal") == -1)
             {
                 OnBoutonDown("LEFT");
-                buttonPressedName = "Horizontal";
+                buttonPressedName = "";
             }
 
             //joystick droite
             if (Input.GetAxisRaw("Horizontal") == 1)
             {
                 OnBoutonDown("RIGHT");
-                buttonPressedName = "Horizontal";
+                buttonPressedName = "";
             }
 
             //joystick bas
             if (Input.GetAxisRaw("Vertical") == -1)
             {
                 OnBoutonDown("UP");
-                buttonPressedName = "Vertical";
+                buttonPressedName = "";
             }
 
             //joystick haut
             if (Input.GetAxisRaw("Vertical") == 1)
             {
                 OnBoutonDown("DOWN");
-                buttonPressedName = "Vertical";
+                buttonPressedName = "";
             }
 
 
@@ -173,18 +180,19 @@ public class DuelManager : MonoBehaviour
         bool allFailed = true;
         Spell spellCasted = null;
 
-        foreach (Spell spell in inventory.spells)
-        {
+        //foreach (Spell spell in inventory.spells)
+        //{
             bool failed = false;
             for (int i = 0; i < currentSequence.Count; i++)
             {
-                if (i < spell.listeInputs.Count)
+                if (i < currentSpell.listeInputs.Count)
                 {
-                    if (currentSequence[i] == spell.listeInputs[i].name && !failed)
+                    if (currentSequence[i] == currentSpell.listeInputs[i].name && !failed)
                     {
-                        if (i + 1 == spell.listeInputs.Count)
+                        combo[i].color = new Color32(100, 100, 100, 255);
+                        if (i + 1 == currentSpell.listeInputs.Count)
                         {
-                            spellCasted = spell;
+                            spellCasted = currentSpell;
                             currentSequence.Clear();
                         }
                     }
@@ -199,11 +207,13 @@ public class DuelManager : MonoBehaviour
             }
             if (!failed)
                 allFailed = false;
-        }
+        //}
 
         if (allFailed)
         {
             currentSequence.Clear();
+            for (int j = 0; j < combo.Count; j++)
+                combo[j].color = new Color32(255, 255, 255, 255);
             Debug.Log("fail");
         }
         if (spellCasted != null)
@@ -211,6 +221,13 @@ public class DuelManager : MonoBehaviour
             //Do stuff
             Debug.Log(spellCasted.name + " casted");
             currentSequence.Clear();
+            IEnumerator wait()
+            {
+                yield return new WaitForSeconds(0.15f);
+                for (int j = 0; j < combo.Count; j++)
+                    combo[j].color = new Color32(255, 255, 255, 255);
+            }
+            StartCoroutine(wait());
         }
     }
 
@@ -218,9 +235,10 @@ public class DuelManager : MonoBehaviour
     {
         if (buttonPressed)
             doublePress = true;
+        else
+            buttonPressedName = name;
         buttonPressed = true;
         currentSequence.Add(name);
-        buttonPressedName = name;
         Debug.Log(name);
     }
 
@@ -230,6 +248,7 @@ public class DuelManager : MonoBehaviour
         spellName.text = spell.name;
         spellDamage.text = "Damage: " + spell.damage;
         spellIcon.sprite = spell.sprite;
+        spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
         {
             if (i >= spell.listeInputs.Count)
@@ -241,6 +260,7 @@ public class DuelManager : MonoBehaviour
                 combo[i].sprite = spell.listeInputs[i].sprite;
             }
         }
+        currentSpell = spell;
     }
 
     public void OnPlayerCreated()
@@ -254,6 +274,7 @@ public class DuelManager : MonoBehaviour
         {
             spellChoice[i].enabled = true;
             spellChoice[i].sprite = inventory.spells[i].sprite;
+            spellChoice[i].material = inventory.spells[i].material;
         }
         Debug.Log(inventory.spells[0].name);
         UpdateHeader(inventory.spells[0]);

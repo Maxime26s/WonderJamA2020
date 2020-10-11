@@ -15,6 +15,7 @@ MonoBehaviour:
   name: whirlwind
   type: 3
   sprite: {fileID: 21300000, guid: 95192de1a7de8994faa4a0572748aca4, type: 3}
+  material: {fileID: 2100000, guid: 7056f6ba03956e64d8d8ff562dfe8faf, type: 2}
   damage: 1.5
   listeInputs:
   - {fileID: 11400000, guid: 8ea619d1a52b2194ab025685a8f99353, type: 2}
