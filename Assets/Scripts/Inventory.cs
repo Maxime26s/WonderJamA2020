@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public List<Spell> prefabs = new List<Spell>();
     public List<BoutonManette> boutons = new List<BoutonManette>();
     bool firstIt = true;
+    public Animator anim;
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +73,13 @@ public class Inventory : MonoBehaviour
         {
             spell.listeInputs.Add(boutons[Random.Range(0, 7)]);
         }
+    }
+
+    public IEnumerator AttackAnim()
+    {
+        anim.SetBool("attacking", true);
+        yield return new WaitForSeconds(2f);
+        anim.SetBool("attacking", false);
     }
 
 }

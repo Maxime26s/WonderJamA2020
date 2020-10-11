@@ -51,7 +51,7 @@ public class DuelManager : MonoBehaviour
         if (!initialized)
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy");
-            if(enemy != null)
+            if (enemy != null)
                 OnPlayerCreated();
         }
 
@@ -242,6 +242,7 @@ public class DuelManager : MonoBehaviour
 
         if (spellCasted != null)
         {
+            StartCoroutine(inventory.AttackAnim());
             //Do stuff
             float effectivBuff = 1f;
             Type enType = enemy.GetComponent<Enemy>().type;
@@ -283,6 +284,7 @@ public class DuelManager : MonoBehaviour
 
     public void OnBoutonDown(string name)
     {
+        Debug.Log(name);
         if (buttonPressed)
             doublePress = true;
         else
