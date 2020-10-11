@@ -15,7 +15,7 @@ public class DuelManager : MonoBehaviour
     string lastSpell = "";
     float multDebuff = 1f;
 
-
+    public float arbitraryMultiplier;
     public Inventory inventory;
     public Timer timer;
     public List<string> currentSequence = new List<string>();
@@ -237,7 +237,7 @@ public class DuelManager : MonoBehaviour
 
             lastSpell = spellCasted.name;
             currentSequence.Clear();
-            enemy.GetComponent<Timer>().LoseTime(spellCasted.damage * multDebuff * effectivBuff);
+            enemy.GetComponent<Timer>().LoseTime(spellCasted.damage * multDebuff * effectivBuff * arbitraryMultiplier);
             IEnumerator wait()
             {
                 yield return new WaitForSeconds(0.15f);
@@ -282,6 +282,7 @@ public class DuelManager : MonoBehaviour
     public void OnPlayerCreated()
     {
         inventory = Inventory.Instance;
+        Debug.Log(inventory);
         currentSequence.Clear();
         for (int i = 0; i < spellChoice.Count; i++)
         {

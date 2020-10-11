@@ -286,6 +286,10 @@ PrefabInstance:
       propertyPath: enemyElement
       value: 
       objectReference: {fileID: 1351243759}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: arbitraryMultiplier
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4685059928132820802, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
       propertyPath: m_Name
       value: DuelManager
@@ -808,6 +812,7 @@ MonoBehaviour:
   - {fileID: 1694840887664535685, guid: 074af2f05ae87314c92bce7adb3ca6ad, type: 3}
   - {fileID: 1090007585743130752, guid: d43f8b042c3ba3746bc75033e807619a, type: 3}
   - {fileID: 1730403283090195557, guid: 417273fbaf4a65c418f22a92caaa2b8b, type: 3}
+  - {fileID: 3962405786148548759, guid: 8c8983601644e6e40bbac5bdff3d2c51, type: 3}
   miniBosses:
   - {fileID: 3543145751167527314, guid: 8645b1f0723a4164596909d4cb9b8020, type: 3}
   - {fileID: 3731080356701163383, guid: 2f3506e9e5d717e468b326fb4e06de4b, type: 3}
@@ -817,6 +822,7 @@ MonoBehaviour:
   - {fileID: 1423518110676449200, guid: b552db48ea6a28c4f9f6c21c74636eda, type: 3}
   - {fileID: 7043511566158061783, guid: fc3341d658ac58b4eaf20ff969772cc7, type: 3}
   - {fileID: 1899548420961027498, guid: c672f1a9dde7e86459ee71aafac7b437, type: 3}
+  - {fileID: 3493299595337903517, guid: 7c11d96245ce9d7469818fb8d81d32f4, type: 3}
   boss: {fileID: 0}
   offsety: 3
   enemy: {fileID: 0}
