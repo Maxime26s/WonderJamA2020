@@ -241,8 +241,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3493299596342467940}
-  minutes: 50
-  seconds: 0
+  minutes: 0
+  seconds: 50
   miliseconds: 0
   running: 0
   player: 0
