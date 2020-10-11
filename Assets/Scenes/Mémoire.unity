@@ -427,6 +427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1167410342}
   - component: {fileID: 1167410341}
+  - component: {fileID: 1167410343}
   m_Layer: 0
   m_Name: "S\xE9quenceButtons"
   m_TagString: Untagged
@@ -499,6 +500,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1167410343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1167410340}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba7ba53a8a2e5243bd4e08accdf75b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteButton: {fileID: 1167410341}
+  aButton: {fileID: 21300000, guid: 9eb014ede783b274498a46598880a464, type: 3}
+  bButton: {fileID: 21300000, guid: 576f444a686740c41bdab9e16514a158, type: 3}
+  xButton: {fileID: 21300000, guid: 5a132f13498a4b14588f86b4a7080b8a, type: 3}
+  yButton: {fileID: 21300000, guid: 6acdb46205a7f1341bbe655a75a88c14, type: 3}
+  entreeUser:
+  - {fileID: 21300000, guid: 0f9efbbabf4fd3f46921d3c426355217, type: 3}
+  - {fileID: 21300000, guid: 0f9efbbabf4fd3f46921d3c426355217, type: 3}
+  - {fileID: 21300000, guid: 0f9efbbabf4fd3f46921d3c426355217, type: 3}
+  - {fileID: 21300000, guid: 0f9efbbabf4fd3f46921d3c426355217, type: 3}
+  compteur: 0
+  nombre: 00000000000000000000000000000000
 --- !u!1 &1610083229
 GameObject:
   m_ObjectHideFlags: 0
