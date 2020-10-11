@@ -287,7 +287,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 60ef334e9a52742409083efc5cd2ad03, type: 2}
+  - {fileID: 2100000, guid: c7abdfbe72574e74ba6217aeb9adbba8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -361,6 +361,7 @@ MonoBehaviour:
   attack: 0
   anim: {fileID: 7790352549354622963}
   calledEnd: 0
+  lastBoss: 0
 --- !u!114 &4152591383701604143
 MonoBehaviour:
   m_ObjectHideFlags: 0
