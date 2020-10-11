@@ -227,6 +227,8 @@ MonoBehaviour:
   attack: 0
   anim: {fileID: 1694840887664535686}
   calledEnd: 0
+  lastBoss: 0
+  hitSound: {fileID: 8300000, guid: 518a424028750b14c99e3b5d9515f3b9, type: 3}
 --- !u!114 &7941779927471090428
 MonoBehaviour:
   m_ObjectHideFlags: 0

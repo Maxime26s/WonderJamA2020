@@ -31,6 +31,7 @@ public class DuelManager : MonoBehaviour
     public AnimOnly playerAnim;
     public List<ParticleSystem> particles;
     public List<AudioClip> particleSounds;
+    public AudioClip hitSound;
 
 
     // Start is called before the first frame update
@@ -276,6 +277,8 @@ public class DuelManager : MonoBehaviour
                     enemy.GetComponent<SpriteRenderer>().color = c;
                     yield return null;
                 }
+                GameObject.FindWithTag("Hit").GetComponent<AudioSource>().clip = hitSound;
+                GameObject.FindWithTag("Hit").GetComponent<AudioSource>().Play();
                 yield return new WaitForSeconds(0.3f);
                 for (float j = 0f; j <= 1f; j += 0.01f + Time.deltaTime)
                 {

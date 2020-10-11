@@ -47,4 +47,9 @@ public class AnimManager : MonoBehaviour
     {
         EventSystem.current.GetComponent<EventSystem>().SetSelectedGameObject(instructionB2.gameObject);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }

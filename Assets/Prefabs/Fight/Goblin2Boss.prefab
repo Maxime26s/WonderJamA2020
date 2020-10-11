@@ -362,6 +362,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   calledEnd: 0
   lastBoss: 0
+  hitSound: {fileID: 0}
 --- !u!114 &3646072171400902745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,8 +376,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timer: {fileID: 3646072170177607585}
-  minutes: 45
-  seconds: 0
+  minutes: 0
+  seconds: 45
   miliseconds: 0
   running: 0
   player: 0
