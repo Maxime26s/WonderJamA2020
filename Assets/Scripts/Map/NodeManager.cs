@@ -73,7 +73,7 @@ public class NodeManager : MonoBehaviour
     {
         if (!stop)
         {
-            float y = -Input.GetAxisRaw("Vertical");
+            float y = Input.GetAxisRaw("Vertical");
             if (Mathf.Abs(y) > 0.2)
             {
                 if (y > 0 && currentIndex > 0 && !onCd)
@@ -96,9 +96,7 @@ public class NodeManager : MonoBehaviour
             }
             if (Input.GetButtonDown("A") || Input.GetKeyDown(KeyCode.Space))
             {
-                if(currentNode.GetComponent<Node>().nodeType != GameManager.NodeType.Enemy)
-                    NextLevel();
-                else if(currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
+                if(currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
                 {
                     if(currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
                         GameManager.Instance.skipEnemy = false;
