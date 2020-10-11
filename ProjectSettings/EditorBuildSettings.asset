@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 069e56c637fd81e4fb6637433f27af0c
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: fe50d4455402c2643ae5a74f2380e6f3
   - enabled: 1
@@ -33,6 +36,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Death.unity
     guid: 377835aaf9ca22f43851e82e3ac48b8a
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 069e56c637fd81e4fb6637433f27af0c
+    path: Assets/Scenes/Ending.unity
+    guid: 3a8c80db5ef88ac44839820d566c6014
   m_configObjects: {}

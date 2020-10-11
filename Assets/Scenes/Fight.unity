@@ -223,6 +223,14 @@ PrefabInstance:
       value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particles.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particleSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
       propertyPath: inventory
       value: 
       objectReference: {fileID: 0}
@@ -287,6 +295,46 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1351243759}
     - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particles.Array.data[0]
+      value: 
+      objectReference: {fileID: 7747116698369769448, guid: 48804ace1e87648418033de2e095b35a, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particles.Array.data[1]
+      value: 
+      objectReference: {fileID: 2684471411808616190, guid: 33950c79b18129b458e70649cb5840c3, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particles.Array.data[2]
+      value: 
+      objectReference: {fileID: 5280710692295262305, guid: 085a848f917c8f1479b45dcf264c99bc, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particles.Array.data[3]
+      value: 
+      objectReference: {fileID: 3718664804064869566, guid: 1f15988b7e354844d8acc57403874c73, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particleSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 21a230ebd51a45245bcf83e111581e40, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particleSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8ee6e9e739ffbc6488404df8b19ced77, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particleSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 25821216513dbec4aab4f3d3e0341899, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particleSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2159b449e3da9aa408fa4b76f0b43587, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: smoke
+      value: 
+      objectReference: {fileID: 7177936447513888868, guid: ddf0614ba5c0e544698361181abf64c7, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: particleSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7421167ad5fbd67469f0bb7d7a67c209, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
       propertyPath: arbitraryMultiplier
       value: 4
       objectReference: {fileID: 0}
@@ -300,6 +348,107 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+--- !u!1 &348437384 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4685059928132820802, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+  m_PrefabInstance: {fileID: 348437383}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &348437385
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 348437384}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &473307562 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8925235203311430470, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
@@ -822,8 +971,8 @@ MonoBehaviour:
   - {fileID: 1423518110676449200, guid: b552db48ea6a28c4f9f6c21c74636eda, type: 3}
   - {fileID: 7043511566158061783, guid: fc3341d658ac58b4eaf20ff969772cc7, type: 3}
   - {fileID: 1899548420961027498, guid: c672f1a9dde7e86459ee71aafac7b437, type: 3}
+  boss: {fileID: 3543145751167527314, guid: efc8663e2b307b6418a5ff863904eddb, type: 3}
   - {fileID: 3493299595337903517, guid: 7c11d96245ce9d7469818fb8d81d32f4, type: 3}
-  boss: {fileID: 0}
   offsety: 3
   enemy: {fileID: 0}
   player: {fileID: 1989114049299320152, guid: bbf004f1151b2c54d99657acf7aa7001, type: 3}

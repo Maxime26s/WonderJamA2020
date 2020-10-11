@@ -1,157 +1,43 @@
 fileFormatVersion: 2
-guid: ad3fe3765aabfcf4e9e47df1472dd3d8
+guid: b3f04921aedad6d44ad9eb5c1edb3dd5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8290322504604027014
-    second: Xelor_Attack_0
+      213: -6194541536978759332
+    second: Xelor_Attack_Emission_0
   - first:
-      213: 3440394659511363758
-    second: Xelor_Attack_1
+      213: 1208897631546142115
+    second: Xelor_Attack_Emission_1
   - first:
-      213: -4328976699750936666
-    second: Xelor_Attack_2
+      213: 2084566423087948284
+    second: Xelor_Attack_Emission_2
   - first:
-      213: -8423215071829863254
-    second: Xelor_Attack_3
+      213: 8056917910497188004
+    second: Xelor_Attack_Emission_3
   - first:
-      213: 2299626189948970929
-    second: Xelor_Attack_4
+      213: -6306045391633507516
+    second: Xelor_Attack_Emission_4
   - first:
-      213: -7055567475766954381
-    second: Xelor_Attack_5
+      213: -1413502049743880727
+    second: Xelor_Attack_Emission_5
   - first:
-      213: -1309001102281564291
-    second: Xelor_Attack_6
+      213: 6363370694505642013
+    second: Xelor_Attack_Emission_6
   - first:
-      213: 1131780325846248973
-    second: Xelor_Attack_7
+      213: -2844330120253966764
+    second: Xelor_Attack_Emission_7
   - first:
-      213: -7762910631840122182
-    second: Xelor_Attack_8
+      213: -6213657002845240723
+    second: Xelor_Attack_Emission_8
   - first:
-      213: -1526842539233891851
-    second: Xelor_Attack_9
+      213: -4373559894627771992
+    second: Xelor_Attack_Emission_9
   - first:
-      213: 4764123863324800631
-    second: Xelor_Attack_10
+      213: -8328570650257496525
+    second: Xelor_Attack_Emission_10
   - first:
-      213: -7953352806484230097
-    second: Xelor_Attack_11
-  - first:
-      213: 4904179350240504590
-    second: Xelor_Attack_12
-  - first:
-      213: 2258845228768525407
-    second: Xelor_Attack_13
-  - first:
-      213: 2989994895618958843
-    second: Xelor_Attack_14
-  - first:
-      213: -9103762093828079733
-    second: Xelor_Attack_15
-  - first:
-      213: 51411939722117137
-    second: Xelor_Attack_16
-  - first:
-      213: 8230447083923472673
-    second: Xelor_Attack_17
-  - first:
-      213: -7348880490313456455
-    second: Xelor_Attack_18
-  - first:
-      213: 112092658616802030
-    second: Xelor_Attack_19
-  - first:
-      213: 1473740288297991328
-    second: Xelor_Attack_20
-  - first:
-      213: -9100139870408499322
-    second: Xelor_Attack_21
-  - first:
-      213: -3505143899589640773
-    second: Xelor_Attack_22
-  - first:
-      213: 2256868489224069260
-    second: Xelor_Attack_23
-  - first:
-      213: 5891114432678714320
-    second: Xelor_Attack_24
-  - first:
-      213: 2207783826900360127
-    second: Xelor_Attack_25
-  - first:
-      213: -2978453545152499556
-    second: Xelor_Attack_26
-  - first:
-      213: 7839470878338011358
-    second: Xelor_Attack_27
-  - first:
-      213: -1422134100439081848
-    second: Xelor_Attack_28
-  - first:
-      213: 3146552588161007015
-    second: Xelor_Attack_29
-  - first:
-      213: 4418973905390235947
-    second: Xelor_Attack_30
-  - first:
-      213: 2342353844630369900
-    second: Xelor_Attack_31
-  - first:
-      213: -8422274676353594000
-    second: Xelor_Attack_32
-  - first:
-      213: -6746128885729308446
-    second: Xelor_Attack_33
-  - first:
-      213: -2862009942448280944
-    second: Xelor_Attack_34
-  - first:
-      213: 1050796851668519276
-    second: Xelor_Attack_35
-  - first:
-      213: 3383179360933273361
-    second: Xelor_Attack_36
-  - first:
-      213: 472826911620766995
-    second: Xelor_Attack_37
-  - first:
-      213: 2646902368047005661
-    second: Xelor_Attack_38
-  - first:
-      213: -6754225019473444728
-    second: Xelor_Attack_39
-  - first:
-      213: -2723005791349521456
-    second: Xelor_Attack_0
-  - first:
-      213: 8586806619222699838
-    second: Xelor_Attack_1
-  - first:
-      213: -3535765724760013158
-    second: Xelor_Attack_2
-  - first:
-      213: 8483350406517924261
-    second: Xelor_Attack_3
-  - first:
-      213: -5936124499127594411
-    second: Xelor_Attack_4
-  - first:
-      213: -8102240290592541557
-    second: Xelor_Attack_5
-  - first:
-      213: 7941989858327267474
-    second: Xelor_Attack_6
-  - first:
-      213: -6683236323143616143
-    second: Xelor_Attack_7
-  - first:
-      213: 2787461217650751718
-    second: Xelor_Attack_8
-  - first:
-      213: -8054815899362243517
-    second: Xelor_Attack_9
+      213: -4104930955409240195
+    second: Xelor_Attack_Emission_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -216,7 +102,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -228,7 +114,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -239,7 +125,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Xelor_Attack_0
+      name: Xelor_Attack_Emission_0
       rect:
         serializedVersion: 2
         x: 0
@@ -247,20 +133,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d3c74de8a0f53ad0800000000000000
-      internalID: -2723005791349521456
+      spriteID: c519afdca41980aa0800000000000000
+      internalID: -6194541536978759332
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_1
+      name: Xelor_Attack_Emission_1
       rect:
         serializedVersion: 2
         x: 1024
@@ -268,20 +154,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e3fedb510277a2770800000000000000
-      internalID: 8586806619222699838
+      spriteID: 3ad6e1aadfdd6c010800000000000000
+      internalID: 1208897631546142115
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_2
+      name: Xelor_Attack_Emission_2
       rect:
         serializedVersion: 2
         x: 2048
@@ -289,20 +175,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a968dae7ecf6eeec0800000000000000
-      internalID: -3535765724760013158
+      spriteID: cf12dd60e1eddec10800000000000000
+      internalID: 2084566423087948284
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_3
+      name: Xelor_Attack_Emission_3
       rect:
         serializedVersion: 2
         x: 0
@@ -310,20 +196,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a1aaad7f3aeab570800000000000000
-      internalID: 8483350406517924261
+      spriteID: 4a8daa7f62cefcf60800000000000000
+      internalID: 8056917910497188004
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_4
+      name: Xelor_Attack_Emission_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -331,41 +217,41 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 552910f0836ae9da0800000000000000
-      internalID: -5936124499127594411
+      spriteID: 44b123e802d6c78a0800000000000000
+      internalID: -6306045391633507516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_5
+      name: Xelor_Attack_Emission_5
       rect:
         serializedVersion: 2
         x: 2048
-        y: 2057
+        y: 2048
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b84bf5a126f0f8f80800000000000000
-      internalID: -8102240290592541557
+      spriteID: 9edbab3ff5b326ce0800000000000000
+      internalID: -1413502049743880727
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_6
+      name: Xelor_Attack_Emission_6
       rect:
         serializedVersion: 2
         x: 0
@@ -373,20 +259,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2980a5b92bd973e60800000000000000
-      internalID: 7941989858327267474
+      spriteID: d18b32c9eeb3f4850800000000000000
+      internalID: 6363370694505642013
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_7
+      name: Xelor_Attack_Emission_7
       rect:
         serializedVersion: 2
         x: 1024
@@ -394,20 +280,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 179790139ff5043a0800000000000000
-      internalID: -6683236323143616143
+      spriteID: 456715653d8e688d0800000000000000
+      internalID: -2844330120253966764
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_8
+      name: Xelor_Attack_Emission_8
       rect:
         serializedVersion: 2
         x: 2048
@@ -415,20 +301,20 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e83047753d0fa620800000000000000
-      internalID: 2787461217650751718
+      spriteID: d628a4590e7a4c9a0800000000000000
+      internalID: -6213657002845240723
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Xelor_Attack_9
+      name: Xelor_Attack_Emission_9
       rect:
         serializedVersion: 2
         x: 0
@@ -436,14 +322,56 @@ TextureImporter:
         width: 1024
         height: 1024
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 34c4853ad9b873090800000000000000
-      internalID: -8054815899362243517
+      spriteID: 8a911dca27efd43c0800000000000000
+      internalID: -4373559894627771992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xelor_Attack_Emission_10
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33668a8ce19fa6c80800000000000000
+      internalID: -8328570650257496525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Xelor_Attack_Emission_11
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 1024
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7fc35f7b0b5807c0800000000000000
+      internalID: -4104930955409240195
       vertices: []
       indices: 
       edges: []

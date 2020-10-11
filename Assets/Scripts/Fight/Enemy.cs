@@ -15,10 +15,12 @@ public class Enemy : MonoBehaviour
     public Timer playerTime;
     public bool attack;
     public Animator anim;
+    public bool calledEnd;
 
     // Start is called before the first frame update
     void Start()
     {
+        calledEnd = false;
         timer.running = true;
         playerTime = GameManager.Instance.mapManager.timer.GetComponentInChildren<Timer>();
         attackCD = Random.Range(4.0f, 6.0f);
@@ -39,10 +41,10 @@ public class Enemy : MonoBehaviour
             //Do anim stuff
         }
 
-        if(timer.miliseconds <= 0 && timer.seconds <= 0 && timer.minutes <= 0)
+        if(timer.miliseconds <= 0 && timer.seconds <= 0 && timer.minutes <= 0 && !calledEnd)
         {
+            calledEnd = true;
             GameObject.FindGameObjectWithTag("DuelManager").GetComponent<DuelManager>().EndFight();
-            Debug.Log("n");
         }
 
     }
