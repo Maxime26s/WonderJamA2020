@@ -28,7 +28,6 @@ public class NodeManager : MonoBehaviour
     bool onCd = false;
     public bool stop = false;
     bool end = false;
-    bool aDown = false;
     bool dungeonSwitch = false;
 
     public int nbPoints;
@@ -81,14 +80,12 @@ public class NodeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!Input.GetButton("A"))
-            aDown = false;
-
         if (!stop)
         {
             float y = Input.GetAxisRaw("Vertical");
             if (Mathf.Abs(y) > 0.2)
             {
+                Debug.Log(Input.anyKey.ToString() + " " + y);
                 if (y > 0 && currentIndex > 0 && !onCd)
                 {
                     currentIndex--;
@@ -107,11 +104,8 @@ public class NodeManager : MonoBehaviour
             {
                 onCd = false;
             }
-            if (!aDown)
-            {
                 if ((Input.GetButton("A")) || Input.GetKeyDown(KeyCode.Space))
                 {
-                    aDown = true;
                     if (currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
                     {
                         if (currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
@@ -124,7 +118,6 @@ public class NodeManager : MonoBehaviour
                         GameManager.Instance.LoadScenesFromMap();
                     }
                 }
-            }
         }
     }
 

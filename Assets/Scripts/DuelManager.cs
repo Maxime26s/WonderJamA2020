@@ -59,10 +59,8 @@ public class DuelManager : MonoBehaviour
                 OnPlayerCreated();
         }
 
-        if (Input.GetAxisRaw("Horizontal") <= 0.2
-            && Input.GetAxisRaw("Vertical") <= 0.2
-            && Input.GetAxisRaw("Horizontal") >= -0.2
-            && Input.GetAxisRaw("Vertical") >= -0.2
+        if (Mathf.Abs(Input.GetAxisRaw("Horizontal")) < 0.2
+            && Mathf.Abs(Input.GetAxisRaw("Vertical")) < 0.2
             && !Input.GetButton("A")
             && !Input.GetButton("B")
             && !Input.GetButton("X")
@@ -100,7 +98,7 @@ public class DuelManager : MonoBehaviour
             }
 
             //joystick gauche
-            if (Input.GetAxisRaw("Horizontal") == -1)
+            if (Input.GetAxisRaw("Horizontal") < -0.85)
             {
                 OnBoutonDown("LEFT");
                 if (!buttonPressed)
@@ -108,7 +106,7 @@ public class DuelManager : MonoBehaviour
             }
 
             //joystick droite
-            if (Input.GetAxisRaw("Horizontal") == 1)
+            if (Input.GetAxisRaw("Horizontal") > 0.85)
             {
                 OnBoutonDown("RIGHT");
                 if (!buttonPressed)
@@ -116,7 +114,7 @@ public class DuelManager : MonoBehaviour
             }
 
             //joystick bas
-            if (Input.GetAxisRaw("Vertical") == 1)
+            if (Input.GetAxisRaw("Vertical") > 0.85)
             {
                 OnBoutonDown("UP");
                 if (!buttonPressed)
@@ -124,7 +122,7 @@ public class DuelManager : MonoBehaviour
             }
 
             //joystick haut
-            if (Input.GetAxisRaw("Vertical") == -1)
+            if (Input.GetAxisRaw("Vertical") < -0.85)
             {
                 OnBoutonDown("DOWN");
                 if (!buttonPressed)
@@ -142,25 +140,25 @@ public class DuelManager : MonoBehaviour
         }
 
         //Dpad droite
-        if (Input.GetAxisRaw("Horizontal2") == 1)
+        if (Input.GetAxisRaw("Horizontal2") > 0.85)
         {
                 UpdateHeader(inventory.spells[1]);
         }
 
         //Dpad gauche
-        if (Input.GetAxisRaw("Horizontal2") == -1)
+        if (Input.GetAxisRaw("Horizontal2") < -0.85)
         {
                 UpdateHeader(inventory.spells[3]);
         }
 
         //Dpad haut
-        if (Input.GetAxisRaw("Vertical2") == -1)
+        if (Input.GetAxisRaw("Vertical2") < -0.85)
         {
             UpdateHeader(inventory.spells[0]);
         }
 
         //Dpad bas
-        if (Input.GetAxisRaw("Vertical2") == 1)
+        if (Input.GetAxisRaw("Vertical2") > 0.85)
         {
             UpdateHeader(inventory.spells[2]);
         }

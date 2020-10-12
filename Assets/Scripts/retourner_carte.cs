@@ -29,7 +29,7 @@ public class retourner_carte : MonoBehaviour
     List<int> randoms= new List<int>();
     bool neutre = true;
     bool over = false;
-    bool aDown = false;
+    bool stop = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -59,22 +59,17 @@ public class retourner_carte : MonoBehaviour
         for(int i =0; i<3; i++)
         {
             randoms.Add(Random.Range(0, nbSprite));
-            
         }
-       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!Input.GetButton("A"))
-            aDown = false;
-
-        if (!aDown)
+        if (!stop)
         {
-            if (Input.GetButton("A") && !over)
+            if ((Input.GetButton("A") || Input.GetKeyDown(KeyCode.Space)) && !over)
             {
-                aDown = true;
+                stop = true;
                 images[i].sprite = sprites[randoms[i]];
                 images[i].material = defaultMaterial;
                 over = true;
@@ -120,7 +115,7 @@ public class retourner_carte : MonoBehaviour
                 }
                 StartCoroutine(RetourMap());
             }
-            if (Input.GetAxis("Horizontal") > 0.9 && neutre && !over)
+            if (Input.GetAxis("Horizontal") > 0.2 && neutre && !over)
             {
                 neutre = false;
                 images[i].sprite = verso;
@@ -131,7 +126,7 @@ public class retourner_carte : MonoBehaviour
                 }
                 images[i].sprite = verso_selected;
             }
-            if (Input.GetAxis("Horizontal") < -0.9 && neutre && !over)
+            else if (Input.GetAxis("Horizontal") < -0.2 && neutre && !over)
             {
                 neutre = false;
                 images[i].sprite = verso;
@@ -142,10 +137,9 @@ public class retourner_carte : MonoBehaviour
                 }
                 images[i].sprite = verso_selected;
             }
-            if (Input.GetAxis("Horizontal") < 0.2 && Input.GetAxis("Horizontal") > -0.2)
+            if (Mathf.Abs(Input.GetAxis("Horizontal")) < 0.2)
             {
                 neutre = true;
-
             }
         }
     }

@@ -34,9 +34,9 @@ public class Chest : MonoBehaviour
                 IEnumerator WaitAndLeave()
                 {
                     Instantiate(particleDestroy, transform.position, Quaternion.identity);
-                    this.GetComponent<AudioSource>().clip = explosion;
-                    this.GetComponent<AudioSource>().volume = 0.1f;
-                    this.GetComponent<AudioSource>().Play();
+                    GetComponent<AudioSource>().clip = explosion;
+                    GetComponent<AudioSource>().volume = 0.1f;
+                    GetComponent<AudioSource>().Play();
                     gameObject.GetComponent<SpriteRenderer>().enabled = false;
                     Spell given = loots[Random.Range(0, 15)];
                     spellText.gameObject.SetActive(true);
@@ -54,7 +54,7 @@ public class Chest : MonoBehaviour
             }
 
             float x = Input.GetAxisRaw("Horizontal");
-            if(x > 0.4  && (right || first))
+            if(x > 0.4 && (right || first))
             {
                 first = false;
                 amount--;
@@ -63,7 +63,7 @@ public class Chest : MonoBehaviour
                 float scale = Random.Range(0.8f, 1.1f);
                 transform.localScale = new Vector3(scale, scale, 1);
                 Instantiate(particleShake, transform.position, Quaternion.identity);
-                this.GetComponent<AudioSource>().Play();
+                GetComponent<AudioSource>().Play();
             } else if (x < -0.4 && (!right || first))
             {
                 first = false;
@@ -72,7 +72,7 @@ public class Chest : MonoBehaviour
                 transform.eulerAngles = new Vector3(0, 0, Random.Range(-25, -5));
                 float scale = Random.Range(0.8f, 1.1f);
                 transform.localScale = new Vector3(scale, scale, 1);
-                this.GetComponent<AudioSource>().Play();
+                GetComponent<AudioSource>().Play();
                 Instantiate(particleShake, transform.position, Quaternion.identity);
             }
         }
