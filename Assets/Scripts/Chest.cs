@@ -53,7 +53,7 @@ public class Chest : MonoBehaviour
                 StartCoroutine(WaitAndLeave());
             }
 
-            float x = Input.GetAxisRaw("Horizontal");
+            float x = InputManager.Instance.x1;
             if(x > 0.4 && (right || first))
             {
                 first = false;

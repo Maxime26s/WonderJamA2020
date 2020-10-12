@@ -42,7 +42,7 @@ public class IntroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.anyKey)
+        if(InputManager.Instance.a || InputManager.Instance.b || InputManager.Instance.x || InputManager.Instance.y)
         {
             SceneManager.LoadScene("Map");
         }

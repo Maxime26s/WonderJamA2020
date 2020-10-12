@@ -22,7 +22,7 @@ public class SpamMiniGame : MonoBehaviour
     public void Update()
     {
         
-         if (Input.GetButtonDown("A"))
+         if (InputManager.Instance.a)
         {
             image.sprite = imageAPushed;
             if (n > 0)
@@ -31,7 +31,7 @@ public class SpamMiniGame : MonoBehaviour
                 text.text = "Appuyez " + n + " fois sur le boutton A pour ouvrir le coffre.";
             }
         }
-        if (Input.GetButtonUp("A"))
+        if (!InputManager.Instance.a)
         {
             image.sprite = imageA;
         }

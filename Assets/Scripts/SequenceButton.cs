@@ -120,7 +120,7 @@ public class SequenceButton : MonoBehaviour
     }
     public void CheckButton()
     {
-        if (Input.GetButtonDown("A"))
+        if (InputManager.Instance.a)
         {
             if (nomButton[nombre[compteur]] == "A")
             {
@@ -135,7 +135,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("B"))
+        else if (InputManager.Instance.b)
         {
             if (nomButton[nombre[compteur]] == "B")
             {
@@ -150,7 +150,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("X"))
+        else if (InputManager.Instance.x)
         {
             if (nomButton[nombre[compteur]] == "X")
             {
@@ -164,7 +164,7 @@ public class SequenceButton : MonoBehaviour
                 compteur = 0;
             }
 
-        } else if (Input.GetButtonDown("Y"))
+        } else if (InputManager.Instance.y)
         {
             if (nomButton[nombre[compteur]] == "Y")
             {
@@ -182,7 +182,7 @@ public class SequenceButton : MonoBehaviour
         }
     public void CheckButton1()
         {
-        if (Input.GetButtonDown("A"))
+        if (InputManager.Instance.a)
         {
             if (nomButton[nombre[compteur - 1]] == "A")
             {
@@ -195,7 +195,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("B"))
+        else if (InputManager.Instance.b)
         {
             if (nomButton[nombre[compteur - 1]] == "B")
             {
@@ -208,7 +208,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("X"))
+        else if (InputManager.Instance.x)
         {
             if (nomButton[nombre[compteur - 1]] == "X")
             {
@@ -221,7 +221,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("Y"))
+        else if (InputManager.Instance.y)
         {
             if (nomButton[nombre[compteur - 1]] == "Y")
             {
@@ -242,7 +242,7 @@ public class SequenceButton : MonoBehaviour
         }
     public void CheckButton2()
     {
-        if (Input.GetButtonDown("A"))
+        if (InputManager.Instance.a)
         {
             if (nomButton[nombre[compteur - 2]] == "A")
             {
@@ -255,7 +255,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("B"))
+        else if (InputManager.Instance.b)
         {
             if (nomButton[nombre[compteur-2]] == "B")
             {
@@ -268,7 +268,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("X"))
+        else if (InputManager.Instance.x)
         {
             if (nomButton[nombre[compteur - 2]] == "X")
             {
@@ -281,7 +281,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("Y"))
+        else if (InputManager.Instance.y)
         {
             if (nomButton[nombre[compteur - 2]] == "Y")
             {
@@ -301,7 +301,7 @@ public class SequenceButton : MonoBehaviour
     }
         public void CheckButton3()
     {
-        if (Input.GetButtonDown("A"))
+        if (InputManager.Instance.a)
         {
             if (nomButton[nombre[compteur - 3]] == "A")
             {
@@ -314,7 +314,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("B"))
+        else if (InputManager.Instance.b)
         {
             if (nomButton[nombre[compteur - 3]] == "B")
             {
@@ -327,7 +327,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("X"))
+        else if (InputManager.Instance.x)
         {
             if (nomButton[nombre[compteur - 3]] == "X")
             {
@@ -340,7 +340,7 @@ public class SequenceButton : MonoBehaviour
             }
 
         }
-        else if (Input.GetButtonDown("Y"))
+        else if (InputManager.Instance.y)
         {
             if (nomButton[nombre[compteur - 3]] == "Y")
             {

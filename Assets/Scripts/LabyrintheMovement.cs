@@ -22,7 +22,7 @@ public class LabyrintheMovement : MonoBehaviour
     }
     public void Update()
     {
-        Vector2 moveInput = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
+        Vector2 moveInput = new Vector2(InputManager.Instance.x1, InputManager.Instance.y1);
         moveVelocity = moveInput.normalized * playerSpeed;
 
             if (moveInput == Vector2.zero)

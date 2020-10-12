@@ -67,7 +67,7 @@ public class retourner_carte : MonoBehaviour
     {
         if (!stop)
         {
-            if ((Input.GetButton("A") || Input.GetKeyDown(KeyCode.Space)) && !over)
+            if ((InputManager.Instance.a) && !over)
             {
                 stop = true;
                 images[i].sprite = sprites[randoms[i]];
@@ -115,7 +115,7 @@ public class retourner_carte : MonoBehaviour
                 }
                 StartCoroutine(RetourMap());
             }
-            if (Input.GetAxis("Horizontal") > 0.2 && neutre && !over)
+            if (InputManager.Instance.x1 > 0.2 && neutre && !over)
             {
                 neutre = false;
                 images[i].sprite = verso;
@@ -126,7 +126,7 @@ public class retourner_carte : MonoBehaviour
                 }
                 images[i].sprite = verso_selected;
             }
-            else if (Input.GetAxis("Horizontal") < -0.2 && neutre && !over)
+            else if (InputManager.Instance.x1 < -0.2 && neutre && !over)
             {
                 neutre = false;
                 images[i].sprite = verso;
@@ -137,7 +137,7 @@ public class retourner_carte : MonoBehaviour
                 }
                 images[i].sprite = verso_selected;
             }
-            if (Mathf.Abs(Input.GetAxis("Horizontal")) < 0.2)
+            if (Mathf.Abs(InputManager.Instance.x1) < 0.2)
             {
                 neutre = true;
             }

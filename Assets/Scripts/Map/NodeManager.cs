@@ -82,10 +82,9 @@ public class NodeManager : MonoBehaviour
     {
         if (!stop)
         {
-            float y = Input.GetAxisRaw("Vertical");
+            float y = InputManager.Instance.y1;
             if (Mathf.Abs(y) > 0.2)
             {
-                Debug.Log(Input.anyKey.ToString() + " " + y);
                 if (y > 0 && currentIndex > 0 && !onCd)
                 {
                     currentIndex--;
@@ -104,7 +103,7 @@ public class NodeManager : MonoBehaviour
             {
                 onCd = false;
             }
-                if ((Input.GetButton("A")) || Input.GetKeyDown(KeyCode.Space))
+                if (InputManager.Instance.a)
                 {
                     if (currentNode == start || GameManager.Instance.skipEnemy && currentNode.GetComponent<Node>().nodeType == GameManager.NodeType.Enemy)
                     {

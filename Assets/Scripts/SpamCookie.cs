@@ -44,7 +44,7 @@ public class SpamCookie : MonoBehaviour
             miliseconds -= Time.deltaTime * 100;
             timer.text = string.Format("{0}:{1}", seconds, (int)miliseconds);
 
-            if (Input.GetButtonDown("A"))
+            if (InputManager.Instance.a)
             {
                 sprite.sprite = buttonAPushed;
                 n++;
@@ -59,7 +59,7 @@ public class SpamCookie : MonoBehaviour
                 }
 
             }
-            if (Input.GetButtonUp("A"))
+            if (!InputManager.Instance.a)
             {
                 sprite.sprite = buttonA;
             }

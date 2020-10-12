@@ -60,10 +60,10 @@ public class memory : MonoBehaviour
     {
         if (!stop)
         {
-            if (!Input.GetButton("A")
-            && !Input.GetButton("B")
-            && !Input.GetButton("X")
-            && !Input.GetButton("Y"))
+            if (!InputManager.Instance.a
+            && !InputManager.Instance.b
+            && !InputManager.Instance.x
+            && !InputManager.Instance.y)
             {
                 buttonPressed = false;
             }
@@ -79,7 +79,7 @@ public class memory : MonoBehaviour
 
             if (!buttonPressed)
             {
-                if (Input.GetButton("A"))
+                if (InputManager.Instance.a)
                 {
                     buttonPressed = true;
                     if (0 == button_to_be_pressed)
@@ -94,7 +94,7 @@ public class memory : MonoBehaviour
                         StartCoroutine(showWrong());
                     }
                 }
-                if (Input.GetButton("B"))
+                if (InputManager.Instance.b)
                 {
                     buttonPressed = true;
                     if (1 == button_to_be_pressed)
@@ -109,7 +109,7 @@ public class memory : MonoBehaviour
                         StartCoroutine(showWrong());
                     }
                 }
-                if (Input.GetButton("X"))
+                if (InputManager.Instance.x)
                 {
                     buttonPressed = true;
                     if (2 == button_to_be_pressed)
@@ -124,7 +124,7 @@ public class memory : MonoBehaviour
                         StartCoroutine(showWrong());
                     }
                 }
-                if (Input.GetButton("Y"))
+                if (InputManager.Instance.y)
                 {
                     buttonPressed = true;
                     if (3 == button_to_be_pressed)
