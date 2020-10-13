@@ -42,7 +42,7 @@ public class SpamMiniGame : MonoBehaviour
             StartCoroutine(WaitAndPrint());
             if (ok)
             {
-                Application.LoadLevel(2);
+                GameManager.Instance.LoadMap();
             }
         }
     }

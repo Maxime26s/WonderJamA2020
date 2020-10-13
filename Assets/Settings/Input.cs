@@ -24,7 +24,7 @@ public class @Input : IInputActionCollection, IDisposable
                     ""id"": ""94b0d569-4ce9-4d7f-8f9c-ed8c60325752"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
-                    ""interactions"": """"
+                    ""interactions"": ""Tap""
                 },
                 {
                     ""name"": ""B"",

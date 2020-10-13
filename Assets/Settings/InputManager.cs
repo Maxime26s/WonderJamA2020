@@ -10,6 +10,8 @@ public class InputManager : MonoBehaviour
 
     public float x1, y1, x2, y2;
     public bool a, b, x, y;
+    public bool aTap, bTap, xTap, yTap;
+    public Coroutine aCo, bCo, xCo, yCo;
 
     private void Awake()
     {
@@ -34,6 +36,55 @@ public class InputManager : MonoBehaviour
 
         input.Game.Vertical2.performed += ctx => y2 = ctx.ReadValue<float>();
         input.Game.Vertical2.canceled += ctx => y2 = 0;
+
+        IEnumerator Tap(char button)
+        {
+            switch (button)
+            {
+                case 'a':
+                    aTap = true;
+                    break;
+                case 'b':
+                    bTap = true;
+                    break;
+                case 'x':
+                    xTap = true;
+                    break;
+                case 'y':
+                    yTap = true;
+                    break;
+            }
+
+            yield return new WaitForSeconds(0.03f);
+
+            switch (button)
+            {
+                case 'a':
+                    aTap = false;
+                    break;
+                case 'b':
+                    bTap = false;
+                    break;
+                case 'x':
+                    xTap = false;
+                    break;
+                case 'y':
+                    yTap = false;
+                    break;
+            }
+        }
+
+        input.Game.A.started += ctx => { if(aCo != null) StopCoroutine(aCo); aCo = StartCoroutine(Tap('a')); };
+        //input.Game.A.canceled += ctx => { StopCoroutine(aCo); StartCoroutine(aCo); };
+
+        input.Game.B.started += ctx => { if (bCo != null) StopCoroutine(bCo); bCo = StartCoroutine(Tap('b')); };
+        //input.Game.B.canceled += ctx => { StopCoroutine(bCo); StartCoroutine(bCo); };
+
+        input.Game.X.started += ctx => { if (xCo != null) StopCoroutine(xCo); bCo = StartCoroutine(Tap('x')); };
+        //input.Game.X.canceled += ctx => { StopCoroutine(xCo); StartCoroutine(xCo); };
+
+        input.Game.Y.started += ctx => { if (yCo != null) StopCoroutine(yCo); bCo = StartCoroutine(Tap('y')); };
+        //input.Game.Y.canceled += ctx => { StopCoroutine(yCo); StartCoroutine(yCo); };
     }
 
     private void Update()
@@ -42,8 +93,6 @@ public class InputManager : MonoBehaviour
         b = input.Game.B.triggered;
         x = input.Game.X.triggered;
         y = input.Game.Y.triggered;
-        if (input.Game.A.triggered)
-            Debug.Log("update" + Time.frameCount);
     }
 
     private void OnEnable()

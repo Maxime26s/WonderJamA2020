@@ -143,7 +143,7 @@ public class IntroScript : MonoBehaviour
             c.a = ft;
             fade.GetComponent<SpriteRenderer>().color = c;
         }
-        Application.LoadLevel(2);
+        SceneManager.LoadScene(2);
         yield return null;
     }
 

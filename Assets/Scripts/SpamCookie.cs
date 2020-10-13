@@ -27,8 +27,8 @@ public class SpamCookie : MonoBehaviour
         n = 0;
         StartCoroutine(WaitAndPrint());
     }
-    
-        
+
+
 
     // Update is called once per frame
     public void Update()
@@ -51,11 +51,11 @@ public class SpamCookie : MonoBehaviour
                 points.text = "" + n;
                 if (!ok1)
                 {
-                    for(int i = 0; i < 20; i++)
+                    for (int i = 0; i < 20; i++)
                     {
                         StartCoroutine("FadeOut");
                     }
-                    
+
                 }
 
             }
@@ -68,7 +68,7 @@ public class SpamCookie : MonoBehaviour
                 ok = false;
                 good = true;
                 text.text = "Félicitations vous avez gagné " + n + " secondes";
-                StartCoroutine(WaitAndPrint());           
+                StartCoroutine(WaitAndPrint());
             }
         }
     }
@@ -77,21 +77,21 @@ public class SpamCookie : MonoBehaviour
         yield return new WaitForSeconds(5f);
         if (!ok1)
         {
-            for(int i = 0; i < 20; i++)
+            for (int i = 0; i < 20; i++)
             {
-                 StartCoroutine("FadeIn");
+                StartCoroutine("FadeIn");
             }
-       
-        }      
+
+        }
         ok = true;
         if (good)
         {
-          Application.LoadLevel(2);
-        } 
+            GameManager.Instance.LoadMap();
+        }
     }
     IEnumerator FadeIn()
     {
-        
+
         for (float f = 0.00f; f < 1; f += 1 * Time.deltaTime)
         {
             Color r = Go.GetComponent<SpriteRenderer>().color;

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using TMPro;
 
 public class Superposes : MonoBehaviour
@@ -17,18 +18,28 @@ public class Superposes : MonoBehaviour
 
     private void Update()
     {
-        bool a = input.Game.A.triggered, b = input.Game.B.triggered, x = input.Game.X.triggered, y = input.Game.Y.triggered;
+        /*
+        a = input.Game.A.triggered;
+        b = input.Game.B.triggered;
+        x = input.Game.X.triggered;
+        y = input.Game.Y.triggered;
+        */
     }
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (true)
         {
-            a = input.Game.A.triggered;
-            if (a)
-                Debug.Log("stay" + Time.frameCount + other.name);
+            a = InputManager.Instance.aTap;
+            b = InputManager.Instance.bTap;
+            x = InputManager.Instance.xTap;
+            y = InputManager.Instance.yTap;
+
+            //a = input.Game.A.triggered;
+            //if (a)
+                //Debug.Log("stay" + Time.frameCount + other.name);
             //bool a = input.Game.A.triggered, b = input.Game.B.triggered, x = input.Game.X.triggered, y = input.Game.Y.triggered;
-            Debug.Log(a.ToString() + b.ToString() + x.ToString() + y.ToString());
+            //Debug.Log(a.ToString() + b.ToString() + x.ToString() + y.ToString());
             if (a || b || x || y )
             {
                 if (a && other.name == "A" || b && other.name == "B" || x && other.name == "X" || y && other.name == "Y")
