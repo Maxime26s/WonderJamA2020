@@ -58,7 +58,7 @@ public class DuelManager : MonoBehaviour
         {
             enemy = GameObject.FindGameObjectWithTag("Enemy");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            if(player != null)
+            if (player != null)
                 playerAnim = player.GetComponent<AnimOnly>();
             if (enemy != null && playerAnim != null)
                 OnPlayerCreated();
@@ -147,13 +147,13 @@ public class DuelManager : MonoBehaviour
         //Dpad droite
         if (InputManager.Instance.x2 > 0.85)
         {
-                UpdateHeader(inventory.spells[1]);
+            UpdateHeader(inventory.spells[1]);
         }
 
         //Dpad gauche
         if (InputManager.Instance.x2 < -0.85)
         {
-                UpdateHeader(inventory.spells[3]);
+            UpdateHeader(inventory.spells[3]);
         }
 
         //Dpad haut
@@ -218,22 +218,22 @@ public class DuelManager : MonoBehaviour
             Type enType = enemy.GetComponent<Enemy>().type;
             Type spType = spellCasted.type;
 
-            if(spType == Type.Water)
+            if (spType == Type.Water)
             {
                 Instantiate(particles[0], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
                 this.GetComponent<AudioSource>().clip = particleSounds[0];
             }
-            else if(spType == Type.Air)
+            else if (spType == Type.Air)
             {
                 Instantiate(particles[1], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
                 this.GetComponent<AudioSource>().clip = particleSounds[1];
             }
-            else if(spType == Type.Earth)
+            else if (spType == Type.Earth)
             {
                 Instantiate(particles[2], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
                 this.GetComponent<AudioSource>().clip = particleSounds[2];
             }
-            else if(spType == Type.Fire)
+            else if (spType == Type.Fire)
             {
                 Instantiate(particles[3], new Vector3(enemy.transform.position.x, enemy.transform.position.y, 10), Quaternion.identity);
                 this.GetComponent<AudioSource>().clip = particleSounds[3];
@@ -272,10 +272,15 @@ public class DuelManager : MonoBehaviour
             float temp = spellCasted.damage * multDebuff * 0.75f * effectivBuff;
             enemy.GetComponent<Timer>().RemoveTime((int)temp, (int)((temp - (int)temp) * 100f));
 
-            float tempSpellMult = multDebuff * effectivBuff;
+            float templol;
+            if (lastSpell == currentSpell.name)
+                templol = multDebuff * 0.7f;
+            else
+                templol = 1;
+            float tempSpellMult = templol * effectivBuff;
             if (tempSpellMult >= 1f)
                 spellMult.color = new Color32(79, 240, 122, 255);
-            else if(tempSpellMult < 1f)
+            else if (tempSpellMult < 1f)
                 spellMult.color = new Color32(255, 54, 74, 255); ;
             spellMult.text = string.Format("x{0:0.00}", tempSpellMult);
 
@@ -302,7 +307,7 @@ public class DuelManager : MonoBehaviour
                 }
             }
             StartCoroutine(Red());
-            
+
 
             IEnumerator wait()
             {
@@ -332,7 +337,7 @@ public class DuelManager : MonoBehaviour
     public void UpdateHeader(Spell spell)
     {
         spellName.text = spell.name;
-        spellDamage.text = "Degats: " + spell.damage;
+        spellDamage.text = "Dmg: " + spell.damage;
         spellIcon.sprite = spell.sprite;
         spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
@@ -350,7 +355,7 @@ public class DuelManager : MonoBehaviour
 
         float templol;
         if (lastSpell == currentSpell.name)
-            templol = multDebuff;
+            templol = multDebuff * 0.7f;
         else
             templol = 1;
         float tempSpellMult = templol * TypeMult();
