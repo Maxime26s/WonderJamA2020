@@ -473,6 +473,14 @@ PrefabInstance:
       propertyPath: spellMult
       value: 
       objectReference: {fileID: 1070741014}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 5248648292224129002, guid: b019908b89f0b9846a3084f046c96d7b, type: 3}
+    - target: {fileID: 4685059928132820801, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 8925235203644224237}
     - target: {fileID: 4685059928132820802, guid: b94d16c128e3143499c173d5b1f9e897, type: 3}
       propertyPath: m_Name
       value: DuelManager
@@ -1563,6 +1571,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811320, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8925235203353556252, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
       propertyPath: m_fontSizeMax
       value: 1000
@@ -1697,3 +1709,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+--- !u!1 &8925235203644224237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8925235203500011749, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+  m_PrefabInstance: {fileID: 8925235203644224236}
+  m_PrefabAsset: {fileID: 0}

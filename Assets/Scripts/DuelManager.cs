@@ -34,6 +34,8 @@ public class DuelManager : MonoBehaviour
     public List<AudioClip> particleSounds;
     public AudioClip hitSound;
 
+    public GameObject text, canvas;
+
     Input input;
 
     // Start is called before the first frame update
@@ -245,6 +247,13 @@ public class DuelManager : MonoBehaviour
             {
                 effectivBuff = 1.5f;
             }
+            else if (spType == Type.Fire && enType == Type.Fire
+                || spType == Type.Water && enType == Type.Water
+                || spType == Type.Air && enType == Type.Air
+                || spType == Type.Earth && enType == Type.Earth)
+            {
+                effectivBuff = 0.5f;
+            }
             else if (spType == Type.Fire && enType == Type.Water
                 || spType == Type.Water && enType == Type.Air
                 || spType == Type.Air && enType == Type.Earth
@@ -302,6 +311,10 @@ public class DuelManager : MonoBehaviour
                     combo[j].color = new Color32(255, 255, 255, 255);
             }
             StartCoroutine(wait());
+
+            GameObject damageNumber;
+            Destroy(damageNumber = Instantiate(text, canvas.transform), 0.75f);
+            damageNumber.GetComponent<TextMeshProUGUI>().text = string.Format("-{0:0.00} seondes", temp);
         }
     }
 
@@ -372,8 +385,8 @@ public class DuelManager : MonoBehaviour
     {
         if (enemy.GetComponent<Enemy>().type == Type.Air)
         {
-            enemyElement.sprite = spellChoice[1].sprite;
-            enemyElement.material = spellChoice[1].material;
+            enemyElement.sprite = spellChoice[0].sprite;
+            enemyElement.material = spellChoice[0].material;
         }
         if (enemy.GetComponent<Enemy>().type == Type.Fire)
         {
@@ -382,8 +395,8 @@ public class DuelManager : MonoBehaviour
         }
         if (enemy.GetComponent<Enemy>().type == Type.Earth)
         {
-            enemyElement.sprite = spellChoice[0].sprite;
-            enemyElement.material = spellChoice[0].material;
+            enemyElement.sprite = spellChoice[1].sprite;
+            enemyElement.material = spellChoice[1].material;
         }
         if (enemy.GetComponent<Enemy>().type == Type.Water)
         {
@@ -423,6 +436,13 @@ public class DuelManager : MonoBehaviour
             || enType == Type.Earth && spType == Type.Fire)
         {
             return 1.5f;
+        }
+        else if (spType == Type.Fire && enType == Type.Fire
+            || spType == Type.Water && enType == Type.Water
+            || spType == Type.Air && enType == Type.Air
+            || spType == Type.Earth && enType == Type.Earth)
+        {
+            return 0.5f;
         }
         else if (spType == Type.Fire && enType == Type.Water
             || spType == Type.Water && enType == Type.Air

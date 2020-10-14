@@ -28,8 +28,8 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         spells.Clear();
-        AddSpell("Eboulement");
         AddSpell("Vents violents");
+        AddSpell("Eboulement");
         AddSpell("Vague de chaleur");
         AddSpell("Vague");
         firstIt = false;
@@ -56,7 +56,7 @@ public class Inventory : MonoBehaviour
             spells.Add(added);
 
         for (int i = 0; i < spells.Count; i++)
-            if (added.type == spells[i].type && added.difficulty > spells[i].difficulty)
+            if (added.type == spells[i].type && added.damage >= spells[i].damage)
                 spells[i] = added;
     }
 
