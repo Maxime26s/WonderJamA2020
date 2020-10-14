@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 
 public class FightManager : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class FightManager : MonoBehaviour
     public GameObject boss;
     public float offsety;
     public GameObject enemy, player;
+
+    public List<Sprite> bgs = new List<Sprite>();
+
+    public SpriteRenderer bg;
+    public Light2D light2D;
 
     // Start is called before the first frame update
     void Start()
@@ -44,6 +50,15 @@ public class FightManager : MonoBehaviour
             case GameManager.NodeType.Boss:
                 enemy = Instantiate(boss, new Vector2(boss.transform.position.x, boss.transform.position.y - offsety), Quaternion.identity);
                 break;
+        }
+
+        int rng = Random.Range(0, bgs.Count);
+        bg.sprite = bgs[rng];
+        if (rng == 1)
+        {
+            light2D.color = new Color(250, 180, 90);
+            light2D.transform.position = new Vector2(-2, -1.5f);
+            light2D.intensity = 0.015f;
         }
     }
 }

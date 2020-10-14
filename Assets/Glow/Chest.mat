@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_GraphGlowUnlit1
+  m_Name: Chest
   m_Shader: {fileID: -6465566751694194690, guid: 3859dca5fcd42674885c3658aa86b040, type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4

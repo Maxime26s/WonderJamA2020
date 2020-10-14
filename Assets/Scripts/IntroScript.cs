@@ -22,6 +22,18 @@ public class IntroScript : MonoBehaviour
     public List<AudioClip> sounds;
     public bool input;
 
+    Input inputManager;
+
+    private void Awake()
+    {
+        inputManager = new Input();
+    }
+
+    private void OnEnable()
+    {
+        inputManager.Game.Enable();
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +54,7 @@ public class IntroScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(InputManager.Instance.a || InputManager.Instance.b || InputManager.Instance.x || InputManager.Instance.y)
+        if(inputManager.Game.Skip.triggered)
         {
             SceneManager.LoadScene("Map");
         }
@@ -122,28 +134,25 @@ public class IntroScript : MonoBehaviour
             yield return null;
         }
         SceneManager.LoadScene("Map");
+        StartCoroutine(FadeOut());
     }
 
     IEnumerator FadeIn() 
     {
-        for(float ft = 1f; ft >= 0; ft -= fadeSpeed * Time.deltaTime) 
+        for (float ft = 1f; ft >= 0; ft -= fadeSpeed * Time.deltaTime)
         {
-            Color c = fade.GetComponent<SpriteRenderer>().color;
-            c.a = ft;
-            fade.GetComponent<SpriteRenderer>().color = c;
-            yield return null;
+            fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, ft);
         }
+        yield return null;
     }
 
     IEnumerator FadeOut() 
     {
         for(float ft = 0f; ft <= 1f; ft += fadeSpeed * Time.deltaTime) 
         {
-            Color c = fade.GetComponent<SpriteRenderer>().color;
-            c.a = ft;
-            fade.GetComponent<SpriteRenderer>().color = c;
+            fade.GetComponent<SpriteRenderer>().color = new Color(0, 0, 0, ft);
         }
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Map");
         yield return null;
     }
 

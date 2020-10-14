@@ -38,7 +38,8 @@ public class memory : MonoBehaviour
         button_affiche.sprite = invisible;
         for(int i = 0; i < images.Count; i++)
         {
-            images[i].sprite = invisible;
+            images[i].color = new Color32(255, 255, 255, 0);
+            images[i].sprite = bien;
         }
         startSeconds = GameManager.Instance.mapManager.timer.minutes * 60 + GameManager.Instance.mapManager.timer.seconds;
         sprites.Add(abut);
@@ -84,13 +85,10 @@ public class memory : MonoBehaviour
                     buttonPressed = true;
                     if (0 == button_to_be_pressed)
                     {
-                        progress++;
                         StartCoroutine(showGood());
                     }
                     else
                     {
-                        images[progress].sprite = mauvais;
-                        progress = 0;
                         StartCoroutine(showWrong());
                     }
                 }
@@ -99,13 +97,10 @@ public class memory : MonoBehaviour
                     buttonPressed = true;
                     if (1 == button_to_be_pressed)
                     {
-                        progress++;
                         StartCoroutine(showGood());
                     }
                     else
                     {
-                        images[progress].sprite = mauvais;
-                        progress = 0;
                         StartCoroutine(showWrong());
                     }
                 }
@@ -114,13 +109,10 @@ public class memory : MonoBehaviour
                     buttonPressed = true;
                     if (2 == button_to_be_pressed)
                     {
-                        progress++;
                         StartCoroutine(showGood());
                     }
                     else
                     {
-                        images[progress].sprite = mauvais;
-                        progress = 0;
                         StartCoroutine(showWrong());
                     }
                 }
@@ -129,13 +121,10 @@ public class memory : MonoBehaviour
                     buttonPressed = true;
                     if (3 == button_to_be_pressed)
                     {
-                        progress++;
                         StartCoroutine(showGood());
                     }
                     else
                     {
-                        images[progress].sprite = mauvais;
-                        progress = 0;
                         StartCoroutine(showWrong());
                     }
                 }
@@ -163,7 +152,7 @@ public class memory : MonoBehaviour
     }
     IEnumerator showsec(int nb)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         for (int i = 0; i < nb; i++)
         {
             button_affiche.sprite = sprites[secance[i]];
@@ -175,16 +164,22 @@ public class memory : MonoBehaviour
     }
     IEnumerator showWrong()
     {
+        images[progress].sprite = mauvais;
+        images[progress].color = new Color32(255, 255, 255, 255);
+        progress = 0;
         yield return new WaitForSeconds(0.1f);
         for (int i = 0; i < images.Count; i++)
         {
-            images[i].sprite = invisible;
+            images[i].color = new Color32(255, 255, 255, 0);
+            images[i].sprite = bien;
         }
 
     }
     IEnumerator showGood()
     {
+        progress++;
         images[progress-1].sprite = bien;
+        images[progress - 1].color = new Color32(255, 255, 255, 255);
         yield return null;
     }
 }

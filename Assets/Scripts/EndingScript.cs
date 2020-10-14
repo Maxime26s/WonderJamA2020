@@ -31,7 +31,6 @@ public class EndingScript : MonoBehaviour
             GameObject newStar = Instantiate(star, new Vector3(Random.Range(-halfWidth, halfWidth), Random.Range(-halfHeight, halfHeight), 0), Quaternion.identity);
             newStar.GetComponent<Animator>().Play("Star Twinkle", 0, Random.Range(0.0f, 1.0f));
         }
-
         StartCoroutine("EndStory");
     }
 
@@ -172,7 +171,7 @@ public class EndingScript : MonoBehaviour
 
     IEnumerator RollCredits()
     {
-        for(float i = -560; i <= 2400f; i += textSpeed * Time.deltaTime) 
+        for(float i = -560; i <= 2600; i += textSpeed * Time.deltaTime) 
         {
             text.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, i);
             yield return null;

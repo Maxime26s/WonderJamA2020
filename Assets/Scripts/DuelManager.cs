@@ -23,6 +23,7 @@ public class DuelManager : MonoBehaviour
 
     public TextMeshProUGUI spellName;
     public TextMeshProUGUI spellDamage;
+    public TextMeshProUGUI spellMult;
     public Image spellIcon, enemyElement;
     public List<Image> combo, spellChoice;
     public Sprite transparent;
@@ -253,14 +254,21 @@ public class DuelManager : MonoBehaviour
             }
 
             if (lastSpell == spellCasted.name)
-                multDebuff *= 0.7f;
+                multDebuff *= 0.75f;
             else
                 multDebuff = 1f;
 
             lastSpell = spellCasted.name;
             currentSequence.Clear();
-            float temp = spellCasted.damage * multDebuff * effectivBuff;
+            float temp = spellCasted.damage * multDebuff * 0.75f * effectivBuff;
             enemy.GetComponent<Timer>().RemoveTime((int)temp, (int)((temp - (int)temp) * 100f));
+
+            float tempSpellMult = multDebuff * effectivBuff;
+            if (tempSpellMult >= 1f)
+                spellMult.color = new Color32(79, 240, 122, 255);
+            else if(tempSpellMult < 1f)
+                spellMult.color = new Color32(255, 54, 74, 255); ;
+            spellMult.text = string.Format("x{0:0.00}", tempSpellMult);
 
             IEnumerator Red()
             {
@@ -326,6 +334,18 @@ public class DuelManager : MonoBehaviour
             }
         }
         currentSpell = spell;
+
+        float templol;
+        if (lastSpell == currentSpell.name)
+            templol = multDebuff;
+        else
+            templol = 1;
+        float tempSpellMult = templol * TypeMult();
+        if (tempSpellMult >= 1f)
+            spellMult.color = new Color32(79, 240, 122, 255);
+        else if (tempSpellMult < 1f)
+            spellMult.color = new Color32(255, 54, 74, 255); ;
+        spellMult.text = string.Format("x{0:0.00}", tempSpellMult);
     }
 
     public void OnPlayerCreated()
@@ -392,4 +412,28 @@ public class DuelManager : MonoBehaviour
         yield return null;
     }
 
+    float TypeMult()
+    {
+        Type enType = enemy.GetComponent<Enemy>().type;
+        Type spType = currentSpell.type;
+
+        if (enType == Type.Fire && spType == Type.Water
+            || enType == Type.Water && spType == Type.Air
+            || enType == Type.Air && spType == Type.Earth
+            || enType == Type.Earth && spType == Type.Fire)
+        {
+            return 1.5f;
+        }
+        else if (spType == Type.Fire && enType == Type.Water
+            || spType == Type.Water && enType == Type.Air
+            || spType == Type.Air && enType == Type.Earth
+            || spType == Type.Earth && enType == Type.Fire)
+        {
+            return 0.5f;
+        }
+        else
+        {
+            return 1f;
+        }
+    }
 }

@@ -30,7 +30,7 @@ public class AnimManager : MonoBehaviour
         {
             transition.SetActive(true);
             animator.SetBool("Play", true);
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.75f);
             animator.SetBool("Play", false);
             SceneManager.LoadScene("Intro", LoadSceneMode.Additive);
             gameObject.SetActive(false);

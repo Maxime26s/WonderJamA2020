@@ -81,6 +81,14 @@ public class @Input : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Axis"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Skip"",
+                    ""type"": ""Button"",
+                    ""id"": ""2a73e505-53aa-414d-9533-0671507aaabd"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -98,7 +106,18 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""7010ed1e-8eb1-4a23-b600-6ad8d0f7b70f"",
-                    ""path"": ""<Keyboard>/1"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""A"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a907e8ae-be6d-4884-92b7-690a7311c1fa"",
+                    ""path"": ""<Keyboard>/space"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -120,7 +139,7 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""699454ef-faa1-4b1c-aae7-f2364e2777eb"",
-                    ""path"": ""<Keyboard>/2"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -142,7 +161,7 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""088b87d3-4016-4882-ade4-bbc29165e632"",
-                    ""path"": ""<Keyboard>/3"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -164,7 +183,7 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""fff43054-e76f-4cd5-a093-b29535064566"",
-                    ""path"": ""<Keyboard>/4"",
+                    ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -296,7 +315,7 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""968782eb-1195-4920-89ab-852c2feadc32"",
-                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -307,7 +326,7 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""2ed4c7c8-7cd6-4603-b217-b2fe56cda012"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""path"": ""<Keyboard>/3"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -329,7 +348,7 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": ""negative"",
                     ""id"": ""c123440b-a865-40c9-84b7-05a96d1b072a"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""path"": ""<Keyboard>/4"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -340,13 +359,68 @@ public class @Input : IInputActionCollection, IDisposable
                 {
                     ""name"": ""positive"",
                     ""id"": ""fab47829-b7eb-4c7a-8b36-06a171c21cb2"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""path"": ""<Keyboard>/2"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Vertical2"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d278685a-7b64-483d-99db-73a3f909cb80"",
+                    ""path"": ""<Keyboard>/anyKey"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""818599a7-7774-40a2-805f-038215f3b406"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc18e9ba-5ed5-44ed-bd1d-ccd2617513fd"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a6672917-2175-4fa8-af68-3945defdf9b9"",
+                    ""path"": ""<Gamepad>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""238fa5e2-6ce2-477e-82db-35008a1f412c"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Skip"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -363,6 +437,7 @@ public class @Input : IInputActionCollection, IDisposable
         m_Game_Vertical = m_Game.FindAction("Vertical", throwIfNotFound: true);
         m_Game_Horizontal2 = m_Game.FindAction("Horizontal2", throwIfNotFound: true);
         m_Game_Vertical2 = m_Game.FindAction("Vertical2", throwIfNotFound: true);
+        m_Game_Skip = m_Game.FindAction("Skip", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -420,6 +495,7 @@ public class @Input : IInputActionCollection, IDisposable
     private readonly InputAction m_Game_Vertical;
     private readonly InputAction m_Game_Horizontal2;
     private readonly InputAction m_Game_Vertical2;
+    private readonly InputAction m_Game_Skip;
     public struct GameActions
     {
         private @Input m_Wrapper;
@@ -432,6 +508,7 @@ public class @Input : IInputActionCollection, IDisposable
         public InputAction @Vertical => m_Wrapper.m_Game_Vertical;
         public InputAction @Horizontal2 => m_Wrapper.m_Game_Horizontal2;
         public InputAction @Vertical2 => m_Wrapper.m_Game_Vertical2;
+        public InputAction @Skip => m_Wrapper.m_Game_Skip;
         public InputActionMap Get() { return m_Wrapper.m_Game; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -465,6 +542,9 @@ public class @Input : IInputActionCollection, IDisposable
                 @Vertical2.started -= m_Wrapper.m_GameActionsCallbackInterface.OnVertical2;
                 @Vertical2.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnVertical2;
                 @Vertical2.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnVertical2;
+                @Skip.started -= m_Wrapper.m_GameActionsCallbackInterface.OnSkip;
+                @Skip.performed -= m_Wrapper.m_GameActionsCallbackInterface.OnSkip;
+                @Skip.canceled -= m_Wrapper.m_GameActionsCallbackInterface.OnSkip;
             }
             m_Wrapper.m_GameActionsCallbackInterface = instance;
             if (instance != null)
@@ -493,6 +573,9 @@ public class @Input : IInputActionCollection, IDisposable
                 @Vertical2.started += instance.OnVertical2;
                 @Vertical2.performed += instance.OnVertical2;
                 @Vertical2.canceled += instance.OnVertical2;
+                @Skip.started += instance.OnSkip;
+                @Skip.performed += instance.OnSkip;
+                @Skip.canceled += instance.OnSkip;
             }
         }
     }
@@ -507,5 +590,6 @@ public class @Input : IInputActionCollection, IDisposable
         void OnVertical(InputAction.CallbackContext context);
         void OnHorizontal2(InputAction.CallbackContext context);
         void OnVertical2(InputAction.CallbackContext context);
+        void OnSkip(InputAction.CallbackContext context);
     }
 }

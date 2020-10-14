@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
     public GameObject map;
     public NodeManager mapManager;
 
+    public float transWait;
+
 
     public enum NodeType
     {
@@ -107,10 +109,10 @@ public class GameManager : MonoBehaviour
         IEnumerator Wait()
         {
             SceneTransition();
-            yield return new WaitForSeconds(0.5f);
-            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+            yield return new WaitForSeconds(transWait);
             map.SetActive(true);
-            yield return new WaitForSeconds(0.5f);
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+            yield return new WaitForSeconds(transWait);
             mapManager.stop = false;
         }
         StartCoroutine(Wait());
@@ -120,11 +122,11 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
-            yield return new WaitForSeconds(0.5f);
-            map.SetActive(false);
+            yield return new WaitForSeconds(transWait);
             SceneManager.LoadScene("Fight", LoadSceneMode.Additive);
             mapManager.NextLevel();
             yield return new WaitForSeconds(0.1f);
+            map.SetActive(false);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Fight"));
         }
         StartCoroutine(Wait());
@@ -134,11 +136,11 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
-            yield return new WaitForSeconds(0.5f);
-            map.SetActive(false);
+            yield return new WaitForSeconds(transWait);
             SceneManager.LoadScene("Chest", LoadSceneMode.Additive);
             mapManager.NextLevel();
             yield return new WaitForSeconds(0.1f);
+            map.SetActive(false);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Chest"));
         }
         StartCoroutine(Wait());
@@ -148,11 +150,11 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
-            yield return new WaitForSeconds(0.5f);
-            map.SetActive(false);
+            yield return new WaitForSeconds(transWait);
             SceneManager.LoadScene("Card", LoadSceneMode.Additive);
             mapManager.NextLevel();
             yield return new WaitForSeconds(0.1f);
+            map.SetActive(false);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Card"));
         }
         StartCoroutine(Wait());
@@ -162,11 +164,11 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
-            yield return new WaitForSeconds(0.5f);
-            map.SetActive(false);
+            yield return new WaitForSeconds(transWait);
             SceneManager.LoadScene("GH", LoadSceneMode.Additive);
             mapManager.NextLevel();
             yield return new WaitForSeconds(0.1f);
+            map.SetActive(false);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("GH"));
         }
         StartCoroutine(Wait());
@@ -176,11 +178,11 @@ public class GameManager : MonoBehaviour
     {
         IEnumerator Wait()
         {
-            yield return new WaitForSeconds(0.5f);
-            map.SetActive(false);
+            yield return new WaitForSeconds(transWait);
             SceneManager.LoadScene("Memory", LoadSceneMode.Additive);
             mapManager.NextLevel();
             yield return new WaitForSeconds(0.1f);
+            map.SetActive(false);
             SceneManager.SetActiveScene(SceneManager.GetSceneByName("Memory"));
         }
         StartCoroutine(Wait());
@@ -191,7 +193,7 @@ public class GameManager : MonoBehaviour
         IEnumerator Wait()
         {
             SceneManager.LoadScene("Death");
-            yield return new WaitForSeconds(0f);
+            yield return null;
             /*
             SceneTransition();
             yield return new WaitForSeconds(0.5f);
