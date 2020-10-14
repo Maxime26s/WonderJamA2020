@@ -41,7 +41,7 @@ public class Chest : MonoBehaviour
                     Spell given = loots[Random.Range(0, 15)];
                     spellText.gameObject.SetActive(true);
                     spellSprite.gameObject.SetActive(true);
-                    spellText.text = given.name + "\n" + "Degats: " + given.damage;
+                    spellText.text = given.name + "\n" + "Dmg: " + given.damage;
                     spellSprite.sprite = given.sprite;
                     spellSprite.material = given.material;
                     Inventory.Instance.AddSpell(given.name);

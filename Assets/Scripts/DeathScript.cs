@@ -14,7 +14,7 @@ public class DeathScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(AnimateText("La terre n'est plus"));
+        StartCoroutine(AnimateText("Earth is no more"));
     }
 
     // Update is called once per frame

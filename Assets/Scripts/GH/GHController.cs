@@ -34,7 +34,7 @@ public class GHController : MonoBehaviour
                 text.color = new Color32(255, 54, 74, 255);
             else
                 text.color = new Color32(79, 240, 122, 255);
-            text.text = string.Format("+{0:##} secondes", resultat);
+            text.text = string.Format("+{0:##} seconds", resultat);
             yield return new WaitForSeconds(2f);
             GameManager.Instance.LoadMap();
             MusicManager.Instance.MapMusic();

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5090d5b7c4e197641a132c23b1092dfb, type: 3}
   m_Name: "\xC9boulement"
   m_EditorClassIdentifier: 
-  name: Eboulement
+  name: Landslide
   type: 0
   sprite: {fileID: 21300000, guid: 590717ab4c263dd44891795c1d85f7d7, type: 3}
   material: {fileID: 2100000, guid: 2ec4bcdcf846ba74299ca99b971261ba, type: 2}

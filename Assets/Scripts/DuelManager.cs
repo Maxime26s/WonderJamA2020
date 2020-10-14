@@ -272,7 +272,12 @@ public class DuelManager : MonoBehaviour
             float temp = spellCasted.damage * multDebuff * 0.75f * effectivBuff;
             enemy.GetComponent<Timer>().RemoveTime((int)temp, (int)((temp - (int)temp) * 100f));
 
-            float tempSpellMult = multDebuff * effectivBuff;
+            float templol;
+            if (lastSpell == currentSpell.name)
+                templol = multDebuff * 0.7f;
+            else
+                templol = 1;
+            float tempSpellMult = templol * effectivBuff;
             if (tempSpellMult >= 1f)
                 spellMult.color = new Color32(79, 240, 122, 255);
             else if(tempSpellMult < 1f)
@@ -332,7 +337,7 @@ public class DuelManager : MonoBehaviour
     public void UpdateHeader(Spell spell)
     {
         spellName.text = spell.name;
-        spellDamage.text = "Degats: " + spell.damage;
+        spellDamage.text = "Dmg: " + spell.damage;
         spellIcon.sprite = spell.sprite;
         spellIcon.material = spell.material;
         for (int i = 0; i < combo.Count; i++)
@@ -350,7 +355,7 @@ public class DuelManager : MonoBehaviour
 
         float templol;
         if (lastSpell == currentSpell.name)
-            templol = multDebuff;
+            templol = multDebuff * 0.7f;
         else
             templol = 1;
         float tempSpellMult = templol * TypeMult();

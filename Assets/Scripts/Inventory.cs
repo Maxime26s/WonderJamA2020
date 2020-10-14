@@ -28,10 +28,10 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         spells.Clear();
-        AddSpell("Vents violents");
-        AddSpell("Eboulement");
-        AddSpell("Vague de chaleur");
-        AddSpell("Vague");
+        AddSpell("Strong Wind");
+        AddSpell("Landslide");
+        AddSpell("Heat Wave");
+        AddSpell("Wave");
         firstIt = false;
     }
 

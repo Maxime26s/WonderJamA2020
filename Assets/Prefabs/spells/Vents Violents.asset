@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5090d5b7c4e197641a132c23b1092dfb, type: 3}
   m_Name: Vents Violents
   m_EditorClassIdentifier: 
-  name: Vents violents
+  name: Strong Wind
   type: 3
   sprite: {fileID: 21300000, guid: 95192de1a7de8994faa4a0572748aca4, type: 3}
   material: {fileID: 2100000, guid: 7056f6ba03956e64d8d8ff562dfe8faf, type: 2}

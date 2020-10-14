@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class memory : MonoBehaviour
 {
@@ -61,6 +62,7 @@ public class memory : MonoBehaviour
     {
         if (!stop)
         {
+            InputSystem.Update();
             if (!InputManager.Instance.a
             && !InputManager.Instance.b
             && !InputManager.Instance.x
@@ -178,7 +180,7 @@ public class memory : MonoBehaviour
     IEnumerator showGood()
     {
         progress++;
-        images[progress-1].sprite = bien;
+        images[progress - 1].sprite = bien;
         images[progress - 1].color = new Color32(255, 255, 255, 255);
         yield return null;
     }

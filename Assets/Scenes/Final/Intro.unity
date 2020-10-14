@@ -418,11 +418,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dans une galaxie assez proche...\n\n\n\n\n\n\n\n\n\n\nLe monde est sur
-    le point d'exploser.\n\n\n\n\nL'odieux Ensorceleur du temps, xelor, a plant\xE9
-    une ogive temporelle au plus profond de son labyrinthe mal\xE9fique.\n\n\n\n\n\nune
-    seule personne dans l'univers peut sauver la situation: \nLoutro, le dernier
-    de l'ordre des Mages temporels.\n\n\n\n\n\n10 minutes avant l'explosion du monde...\n"
+  m_text: "in a near galaxy...\n\n\n\n\n\n\n\n\n\n\nThe entire world is about to
+    explode.\n\n\n\n\nThe odious sorceler of time, xelor, has planted a temporal
+    warhead in the deepest layer of his maleficient labyrinth.\n\n\n\n\n\nThere is
+    only one person who can stop him: \nLoutro, the last member of the order of the
+    temporal Magi.\n\n\n\n\n\nonly 10 minutes left before the explosion of the world...\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80387a2b18402da4e998f7aabb49a369, type: 2}
   m_sharedMaterial: {fileID: 651582503291921377, guid: 80387a2b18402da4e998f7aabb49a369, type: 2}

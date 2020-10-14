@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5090d5b7c4e197641a132c23b1092dfb, type: 3}
   m_Name: Heat Wave
   m_EditorClassIdentifier: 
-  name: Vague de chaleur
+  name: Heat Wave
   type: 1
   sprite: {fileID: 21300000, guid: 09667610d56b16e4d91cdddfcd831ba4, type: 3}
   material: {fileID: 2100000, guid: 7834f73b060064140b47edf65fb5ad48, type: 2}
