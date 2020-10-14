@@ -1575,6 +1575,46 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.43489584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5651042
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.19907407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 132.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -135
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811321, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811322, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_fontSize
+      value: 204.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8925235203109811322, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 50334975
+      objectReference: {fileID: 0}
     - target: {fileID: 8925235203353556252, guid: 2133fb3eb9dd6d64da4fcad5f0cbb48f, type: 3}
       propertyPath: m_fontSizeMax
       value: 1000

@@ -16,6 +16,6 @@ MonoBehaviour:
   type: 2
   sprite: {fileID: 21300000, guid: 2197899fc75da694d94c9bebda021450, type: 3}
   material: {fileID: 2100000, guid: 8e64b8495b924ae4c9fdf168ef8ab1ed, type: 2}
-  damage: 3.5
+  damage: 4.5
   listeInputs: []
   difficulty: 3

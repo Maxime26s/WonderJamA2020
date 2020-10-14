@@ -314,7 +314,7 @@ public class DuelManager : MonoBehaviour
 
             GameObject damageNumber;
             Destroy(damageNumber = Instantiate(text, canvas.transform), 0.75f);
-            damageNumber.GetComponent<TextMeshProUGUI>().text = string.Format("-{0:0.00} seondes", temp);
+            damageNumber.GetComponent<TextMeshProUGUI>().text = string.Format("-{0:0.00} s", temp);
         }
     }
 
